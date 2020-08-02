@@ -378,6 +378,9 @@
 			height:20px;
 			margin:40px auto;
 		}
+		#fenYeLan .active{
+			background-color: #0066B3;
+		}
 		.fenYeTiao{
 			float:left;
 			width:59px;
@@ -640,32 +643,21 @@
 							<el-button class="shiXiangBut" @click="searchFunc" type="primary">搜索</el-button>
 						</div>
 					</div>
+				
 					<el-row style="height:520px;" :gutter="20">
-						<el-col :span="8" v-for="item in matterNameList.slice(beginTiao,endTiao)">
+						<el-col :span="8" v-for="item in matterNameList.slice((currPage-1)*pageSize,currPage*pageSize)">
 							<div class="affairKuang" :tabindex="item.label">
 								<div class="affairKuangNoe">{{item.matterName}}</div>
-								<!--<div class="affairKuangTwo">{{item.site}}</div>-->
 								<div class="affairKuangThree">
 									<span class="affairKuangLeft">{{item.fangShiLeft}}</span>
-									<!--<span class="affairKuangRight">{{item.fangShiRight}}</span>-->
-									<!--{{item.fangShiLeft}}&nbsp&nbsp{{item.fangShiRight}}-->
 								</div>
 							</div>
 						</el-col>
 					</el-row>
 					<div id="fenYeLan">
-						<div @click="kongZhiBE(0,9)" class="fenYeTiao clickFen"></div>
-						<div v-for="index of matterListYeShu" @click="kongZhiBE(index*9,(index+1)*9)" class="fenYeTiao" ></div>
-						<!--<div @click="kongZhiBE(0,9,'')" class="fenYeTiao clickFen"></div>
-						<div v-for="(index,item) of matterListYeShu-1" @click="kongZhiBE(index*9,(index+1)*9,item)" class="fenYeTiao" ></div>-->
-
-						<!--<div @click="kongZhiBE(0,9)" class="fenYeTiao clickFen"></div>
-						<div @click="kongZhiBE(9,18)" class="fenYeTiao"></div>
-						<div @click="kongZhiBE(18,27)" class="fenYeTiao"></div>
-						<div @click="kongZhiBE(27,36)" class="fenYeTiao"></div>
-						<div @click="kongZhiBE(36,45)" class="fenYeTiao"></div>
-						<div @click="kongZhiBE(45,54)" class="fenYeTiao"></div>
-						<div @click="kongZhiBE(54,63)" class="fenYeTiao"></div>-->
+						<el-pagination background @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currPage"
+							 :page-size="pageSize" layout="total, prev, pager, next" size="9" :total="matterNameList.length"> 
+						</el-pagination>
 					</div>
 				</div>
 				<!--广告位-->

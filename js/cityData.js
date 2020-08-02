@@ -4058,10 +4058,11 @@ window.onload = function(){
                 chengshiName:"北京市",
                 xianName:"东城区",
 
-                beginTiao: 0,	//限制循环数量开始
-                endTiao: 9,		//限制循环数量结尾
-                // matterListLength: 0,//matterNameList数组长度条数
-                matterListYeShu: 0,//matterNameList数组页数
+                // beginTiao: 0,	//限制循环数量开始
+                // endTiao: 9,		//限制循环数量结尾
+                // // matterListLength: 0,//matterNameList数组长度条数
+                // matterListYeShu: 0,//matterNameList数组页数
+                // matterListTiaoShu: 143,//matterNameList数组条数
 
                 province:"",
                 activeName: 'first',//企业导航标识符
@@ -4265,22 +4266,49 @@ window.onload = function(){
                 ],	
 
                 matterNameList:[],//事项名称循环集合
+
+                pageSize: 9,        //分页煤业条数
+                currPage: 1,        //分页当前页
             }
         },
         //声明方法
         methods : {
+            //搜索
             searchFunc:function(){
-                debugger
+                // debugger
                 //字符串方法indexOf
                 var len = this.matterNameList.length;
                 var arr = [];
-                for(var i=0;i<len;i++){
-                    //如果字符串中不包含目标字符会返回-1
-                    if(this.matterNameList[i].matterName.indexOf(this.affairName)>=0){
-                        //arr.push(this.matterNameList[i].matterName);
+                // this.matterNameList=[]
+                //判断输入框是否为空
+                if(this.affairName==""){
+                    this.handleClick()
+                }else{
+                    for(var i=0;i<len;i++){
+                        //如果字符串中不包含目标字符会返回-1
+                        if(this.matterNameList[i].matterName.indexOf(this.affairName)>=0){
+                            //arr.push(this.matterNameList[i].matterName);
+                            arr.push(
+                                {label:this.matterNameList[i].label, navigation:this.matterNameList[i].navigation, screeningBut:this.matterNameList[i].screeningBut, 
+                                    matterName:this.matterNameList[i].matterName, site:this.matterNameList[i].site, 
+                                    fangShiLeft:this.matterNameList[i].fangShiLeft, fangShiRight:this.matterNameList[i].fangShiRight}
+                            )
+                        }
+                    }
+                    //判断搜索是否为空
+                    if(arr ==undefined || arr.length <= 0 ){
+                        this.matterNameList=[]
+                    }else{
+                        this.matterNameList=[]
+                        for(var i=0;i<arr.length;i++){
+                            this.matterNameList.push(
+                                {label:arr[i].label, navigation:arr[i].navigation, screeningBut:arr[i].screeningBut, 
+                                        matterName:arr[i].matterName, site:arr[i].site, 
+                                    fangShiLeft:arr[i].fangShiLeft, fangShiRight:arr[i].fangShiRight}
+                            )
+                        }
                     }
                 }
-                console.log(arr);
             },
             shengshiquSHfunc:function(){
                 this.shengDiv = true
@@ -4351,7 +4379,7 @@ window.onload = function(){
                 }else if(this.activeName=="fourth"){
                     this.matterZhanList(4)
                 }
-                this.matterNLLength()
+                
             },
             //点击企业导航下的列表按钮后事项名称push到事项名称循环集合
             butZhanList:function(numBut){
@@ -4372,27 +4400,36 @@ window.onload = function(){
                 this.beginTiao=0 	//限制循环数量开始
                 this.endTiao=9		//限制循环数量结尾
                 this.butZhanList(numBut)
-                this.matterNLLength()
             },
-            //控制分页起始条和结束条
-            kongZhiBE:function(begin,end,iiitem){
-                iiitem = true
-                this.beginTiao=begin 	//限制循环数量开始
-                this.endTiao=end		//限制循环数量结尾
-                iiitem.thisList=true;
-            },
+            // //控制分页起始条和结束条
+            // kongZhiBE:function(begin,end,iiitem){
+            //     iiitem = true
+            //     this.beginTiao=begin 	//限制循环数量开始
+            //     this.endTiao=end		//限制循环数量结尾
+            //     iiitem.thisList=true;
+            // },
             //获取matterNameList数组页数
-            matterNLLength:function(){
-                var listLength=this.matterNameList.length
-                if(listLength%9==0){
-                    this.matterListYeShu=parseInt(listLength/9)
-                }else{
-                    this.matterListYeShu=Math.ceil(listLength/9)
-                }
-                if(this.matterListYeShu>=1){
-                    this.matterListYeShu=this.matterListYeShu-1
-                }
-            }
+            // matterNLLength:function(){
+            //     var listLength=this.matterNameList.length
+            //     if(listLength%9==0){
+            //         this.matterListYeShu=parseInt(listLength/9)
+            //     }else{
+            //         this.matterListYeShu=Math.ceil(listLength/9)
+            //     }
+            //     if(this.matterListYeShu>=1){
+            //         this.matterListYeShu=this.matterListYeShu-1
+            //     }
+            // },
+
+            //分页
+            handleSizeChange:function(val){
+                //每页几条
+                this.pageSize=val;
+            },
+            //控制分页
+            handleCurrentChange:function(val){
+                this.currPage=val
+            },
         },
         created:function(){
             this.cityListData = JSON.parse(localStorage.getItem("cityListData"))
