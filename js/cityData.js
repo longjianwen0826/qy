@@ -4054,9 +4054,9 @@ window.onload = function(){
                 shengDiv:true,
                 chengshiDiv:false,
                 xianDiv:false,
-                shengName:"广东省",
-                chengshiName:"广州市",
-                xianName:"天河区",
+                shengName:"北京市",
+                chengshiName:"北京市",
+                xianName:"东城区",
 
                 beginTiao: 0,	//限制循环数量开始
                 endTiao: 9,		//限制循环数量结尾
@@ -4239,13 +4239,10 @@ window.onload = function(){
                 if(matter=="first"){
                     this.butZhanList(this.theMattersOne,num)
                 }else if(matter=="second"){
-                    alert(matter,num)
                     this.butZhanList(this.theMattersTwo,num)
                 }else if(matter=="third"){
-                    alert(matter,num)
                     this.butZhanList(this.theMattersThree,num)
                 }else if(matter=="fourth"){
-                    alert(matter,num)
                     this.butZhanList(this.theMattersFour,num)
                 }
                 this.matterNLLength()

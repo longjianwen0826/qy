@@ -550,18 +550,18 @@
 				<el-tabs v-model="activeName" id="enterpriseDaoHang" @tab-click="handleClick">
 					<el-tab-pane label="全部" name="first">
 						<div v-for="item in enterpriseMes">
-							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName=='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-							<div class="butSizeFalse" v-else-if="item.isOk==false&&shengName=='广东省'">
+							<div class="butSizeFalse" v-else-if="item.isOk==false&&shengName=='北京市'">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
 
 							
-							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName!='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
@@ -571,18 +571,18 @@
 					</el-tab-pane>
 					<el-tab-pane label="新办企业" name="second">
 						<div v-for="item in enterpriseMes">
-							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName=='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-							<div class="butSizeFalse" v-else-if="item.classifyMes==1&&item.isOk==false&&shengName=='广东省'">
+							<div class="butSizeFalse" v-else-if="item.classifyMes==1&&item.isOk==false&&shengName=='北京市'">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
 
 							
-							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName!='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
@@ -591,18 +591,18 @@
 					</el-tab-pane>
 					<el-tab-pane label="企业日常" name="third">
 						<div v-for="item in enterpriseMes">
-							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName=='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-							<div class="butSizeFalse" v-else-if="item.classifyMes==2&&item.isOk==false&&shengName=='广东省'">
+							<div class="butSizeFalse" v-else-if="item.classifyMes==2&&item.isOk==false&&shengName=='北京市'">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
 
 							
-							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName!='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
@@ -611,18 +611,18 @@
 					</el-tab-pane>
 					<el-tab-pane label="投资项目" name="fourth">
 						<div v-for="item in enterpriseMes">
-							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName=='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-							<div class="butSizeFalse" v-else-if="item.classifyMes==3&&item.isOk==false&&shengName=='广东省'">
+							<div class="butSizeFalse" v-else-if="item.classifyMes==3&&item.isOk==false&&shengName=='北京市'">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
 
 
-							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName!='北京市'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
