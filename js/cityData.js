@@ -4126,37 +4126,37 @@ window.onload = function(){
                     {label:"22",screeningBut:1,matterName: '全部生活饮用水卫生新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                 ],	
                 theMattersTwo: [			//事项名称选项(新办企业)，用于循环
-                    {label:"1",screeningBut:2,matterName: '新办企业生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:2,matterName: '新办企业工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:3,matterName: '新办企业核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:5,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:5,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:3,matterName: '新办企业养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:2,matterName: '新办企业核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:3,matterName: '新办企业生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:2,matterName: '新办企业基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"1",screeningBut:11,matterName: '新办企业生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"2",screeningBut:11,matterName: '新办企业工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"3",screeningBut:11,matterName: '新办企业核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"4",screeningBut:12,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"5",screeningBut:12,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"6",screeningBut:14,matterName: '新办企业养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"7",screeningBut:15,matterName: '新办企业核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"8",screeningBut:14,matterName: '新办企业生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"9",screeningBut:15,matterName: '新办企业基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                 ],
                 theMattersThree: [			//事项名称选项（企业日常），用于循环
-                    {label:"1",screeningBut:11,matterName: '企业日常生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:11,matterName: '企业日常工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:11,matterName: '企业日常核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:12,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:12,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:12,matterName: '企业日常养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:15,matterName: '企业日常核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:15,matterName: '企业日常生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:15,matterName: '企业日常基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"1",screeningBut:4,matterName: '企业日常生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"2",screeningBut:5,matterName: '企业日常工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"3",screeningBut:5,matterName: '企业日常核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"4",screeningBut:5,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"5",screeningBut:4,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"6",screeningBut:6,matterName: '企业日常养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"7",screeningBut:6,matterName: '企业日常核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"8",screeningBut:7,matterName: '企业日常生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"9",screeningBut:7,matterName: '企业日常基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                 ],
                 theMattersFour: [			//事项名称选项（投资项目），用于循环
-                    {label:"1",screeningBut:2,matterName: '投资项目生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:3,matterName: '投资项目工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:3,matterName: '投资项目核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:2,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:3,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:2,matterName: '投资项目养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:3,matterName: '投资项目核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:2,matterName: '投资项目生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:3,matterName: '投资项目基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"1",screeningBut:8,matterName: '投资项目生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"2",screeningBut:8,matterName: '投资项目工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"3",screeningBut:9,matterName: '投资项目核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"4",screeningBut:9,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"5",screeningBut:8,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"6",screeningBut:9,matterName: '投资项目养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"7",screeningBut:16,matterName: '投资项目核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"8",screeningBut:16,matterName: '投资项目生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"9",screeningBut:16,matterName: '投资项目基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                 ],
                 matterNameList:[],//事项名称循环集合
             }
@@ -4224,6 +4224,7 @@ window.onload = function(){
             //点击企业导航下的列表按钮后事项名称push到事项名称循环集合
             butZhanList:function(matter,num){
                 this.matterNameList=[]
+                // alert(matter[1].screeningBut,)
                 for(var i=0;i<matter.length;i++){
                     if(matter[i].screeningBut==num){
                         this.matterNameList.push(
@@ -4262,6 +4263,9 @@ window.onload = function(){
                     this.matterListYeShu=parseInt(listLength/9)
                 }else{
                     this.matterListYeShu=Math.ceil(listLength/9)
+                }
+                if(this.matterListYeShu>=1){
+                    this.matterListYeShu=this.matterListYeShu-1
                 }
             }
         },
