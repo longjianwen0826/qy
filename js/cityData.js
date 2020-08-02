@@ -4054,9 +4054,9 @@ window.onload = function(){
                 shengDiv:true,
                 chengshiDiv:false,
                 xianDiv:false,
-                shengName:"广东省",
-                chengshiName:"广州市",
-                xianName:"天河区",
+                shengName:"北京市",
+                chengshiName:"北京市",
+                xianName:"东城区",
 
                 beginTiao: 0,	//限制循环数量开始
                 endTiao: 9,		//限制循环数量结尾
@@ -4182,6 +4182,7 @@ window.onload = function(){
             },
             //点击市
             clickShiFunc:function(iitem,iitemName){
+                this.xianName="";//将默认县的值先置空
                 this.chengshiDiv =false;
                 this.xianData = this.cityListData[iitem];
                 this.xianDiv = true;
