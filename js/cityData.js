@@ -4301,6 +4301,19 @@ window.onload = function(){
         },
         //声明方法
         methods : {
+            searchFunc:function(){
+                debugger
+                //字符串方法indexOf
+                var len = this.matterNameList.length;
+                var arr = [];
+                for(var i=0;i<len;i++){
+                    //如果字符串中不包含目标字符会返回-1
+                    if(this.matterNameList[i].matterName.indexOf(this.affairName)>=0){
+                        //arr.push(this.matterNameList[i].matterName);
+                    }
+                }
+                console.log(arr);
+            },
             shengshiquSHfunc:function(){
                 this.shengDiv = true
                 this.chengshiDiv = false

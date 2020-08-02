@@ -637,7 +637,7 @@
 						<div class="affairSouSuo">
 							<el-input placeholder="请输入关键字" size="small" prefix-icon="el-icon-search"  v-model="affairName" class="shiXiangInput">
 							</el-input>
-							<el-button class="shiXiangBut" type="primary">搜索</el-button>
+							<el-button class="shiXiangBut" @click="searchFunc" type="primary">搜索</el-button>
 						</div>
 					</div>
 					<el-row style="height:520px;" :gutter="20">
