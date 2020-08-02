@@ -4102,200 +4102,168 @@ window.onload = function(){
                         butName:'获得水电气',isOk:true,classifyMes:3},
                 ],	
                 theMattersOne: [			//事项名称选项(全部)，用于循环
-                    //信息查询
-                    {label:"1",screeningBut:1,matterName: '建筑施工企业资质认定（总承包特级、一级及部分专业一级除外）-资质注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:1,matterName: '律师事务所信息查询',site:'公共服务局',fangShiLeft:'公共服务局',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:1,matterName: '执业律师信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:1,matterName: '法律援助机构信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:1,matterName: '仲裁委员会机构查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:1,matterName: '社会团体成立、变更、注销登记',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:1,matterName: '办税指南查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:1,matterName: '仲裁委员会人员查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:1,matterName: '公共信用信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //行业许可
-                    {label:"10",screeningBut:2,matterName: '网约车平台公司或分公司许可证件补办',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"11",screeningBut:2,matterName: '勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"12",screeningBut:2,matterName: '畜禽定点屠宰厂（场）设置审批',site:'市管理局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"13",screeningBut:2,matterName: '生猪定点屠宰厂（场）设置审查',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"14",screeningBut:2,matterName: '道路旅客运输经营许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"15",screeningBut:2,matterName: '放射性物品道路运输许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"16",screeningBut:2,matterName: '演出经纪机构设立审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"17",screeningBut:2,matterName: '旅行社设立许可（国内和入境社的设立）',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"18",screeningBut:2,matterName: '药品零售企业许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //项目审批
-                    {label:"19",screeningBut:3,matterName: '勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"20",screeningBut:3,matterName: '生产建设项目水土保持方案审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"21",screeningBut:3,matterName: '洪水影响评价类审批（河道管理范围内建设项目工程建设方案审批）',site:'市管理局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"22",screeningBut:3,matterName: '高速公路更新采伐护路林审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"23",screeningBut:3,matterName: '利用省重要沼泽湿地审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"24",screeningBut:3,matterName: '河道管理范围内建设项目工程建设方案审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"25",screeningBut:3,matterName: '诊疗项目查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"26",screeningBut:3,matterName: '煤矿建设项目初步设计文件审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"27",screeningBut:3,matterName: '发展和改革委员会',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //就业参保
-                    {label:"28",screeningBut:4,matterName: '增值税发票查验',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"29",screeningBut:4,matterName: '信用等级A类纳税人查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"30",screeningBut:4,matterName: '一般纳税人资格查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"31",screeningBut:4,matterName: '完税证明查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"32",screeningBut:4,matterName: '信用承诺查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"33",screeningBut:4,matterName: '一般纳税人资格',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"34",screeningBut:4,matterName: '税务登记信息查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"35",screeningBut:4,matterName: '核发税务登记证件',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"36",screeningBut:4,matterName: '纳税申报',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //办税服务
-                    {label:"37",screeningBut:5,matterName: '增值税发票查验',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"38",screeningBut:5,matterName: '信用等级A类纳税人查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"39",screeningBut:5,matterName: '一般纳税人资格查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"40",screeningBut:5,matterName: '完税证明查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"41",screeningBut:5,matterName: '信用承诺查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"42",screeningBut:5,matterName: '一般纳税人资格',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"43",screeningBut:5,matterName: '税务登记信息查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"44",screeningBut:5,matterName: '核发税务登记证件',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"45",screeningBut:5,matterName: '纳税申报',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //证书查验
-                    {label:"46",screeningBut:6,matterName: '企业证照查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"47",screeningBut:6,matterName: '港口经营许可证注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"48",screeningBut:6,matterName: '港口经营许可证注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"49",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"50",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"51",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"52",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"53",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"54",screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //发票管理
-                    {label:"55",screeningBut:7,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"56",screeningBut:7,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"57",screeningBut:7,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"58",screeningBut:7,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"59",screeningBut:7,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"60",screeningBut:7,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"61",screeningBut:7,matterName: '核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"62",screeningBut:7,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"63",screeningBut:7,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //工程建设
-                    {label:"64",screeningBut:8,matterName: '市水务局-生产建设项目水土保持设施自主验收报备',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"65",screeningBut:8,matterName: '国家重点航道工程建设项目竣工验收',site:'水利厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"66",screeningBut:8,matterName: '公路工程交竣工质量鉴定',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"67",screeningBut:8,matterName: '工程建设项目政策指引',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"68",screeningBut:8,matterName: '工程建设项目公示',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"69",screeningBut:8,matterName: '工程建设项目办事指南',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"70",screeningBut:8,matterName: '建筑施工企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"71",screeningBut:8,matterName: '施工图审查机构',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"72",screeningBut:8,matterName: '河道范围内建设项目工程建设',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //获得水电气
-                    {label:"73",screeningBut:9,matterName: '生活饮用水卫生许可新办',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"74",screeningBut:9,matterName: '新（补）办取水许可',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"75",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"76",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"77",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"78",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"79",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"80",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"81",screeningBut:9,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //不动产登记
-                    {label:"82",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"83",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"84",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"85",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"86",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"87",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"88",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"88",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"89",screeningBut:10,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //文体教育
-                    {label:"90",screeningBut:11,matterName: '设立社会艺术水平考级机构审批',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"91",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"92",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"93",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"94",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"95",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"96",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"97",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"98",screeningBut:11,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //招聘会信息查询
-                    {label:"99",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"100",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"101",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"102",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"103",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"104",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"105",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"106",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"107",screeningBut:12,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //职业资格
-                    {label:"108",screeningBut:13,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"109",screeningBut:13,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"110",screeningBut:13,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"111",screeningBut:13,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"112",screeningBut:13,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"113",screeningBut:13,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"114",screeningBut:13,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"115",screeningBut:13,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"116",screeningBut:13,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //资质认证
-                    {label:"117",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"118",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"119",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"120",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"121",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"122",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"123",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"124",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"125",screeningBut:14,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //法律服务
-                    {label:"126",screeningBut:15,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"127",screeningBut:15,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"128",screeningBut:15,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"129",screeningBut:15,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"130",screeningBut:15,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"131",screeningBut:15,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"132",screeningBut:15,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"133",screeningBut:15,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"134",screeningBut:15,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    //企业工商
-                    {label:"135",screeningBut:16,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"136",screeningBut:16,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"137",screeningBut:16,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"138",screeningBut:16,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"139",screeningBut:16,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"140",screeningBut:16,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"141",screeningBut:16,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"142",screeningBut:16,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"143",screeningBut:16,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //信息查询1
+                    {label:"1",navigation: 1,screeningBut:1,matterName: '建筑施工企业资质认定（总承包特级、一级及部分专业一级除外）-资质注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"2",navigation: 1,screeningBut:1,matterName: '律师事务所信息查询',site:'公共服务局',fangShiLeft:'公共服务局',fangShiRight:'办事指南'},
+                    {label:"3",navigation: 1,screeningBut:1,matterName: '执业律师信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"4",navigation: 1,screeningBut:1,matterName: '法律援助机构信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"5",navigation: 1,screeningBut:1,matterName: '仲裁委员会机构查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"6",navigation: 1,screeningBut:1,matterName: '社会团体成立、变更、注销登记',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"7",navigation: 1,screeningBut:1,matterName: '办税指南查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"8",navigation: 1,screeningBut:1,matterName: '仲裁委员会人员查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"9",navigation: 1,screeningBut:1,matterName: '公共信用信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //行业许可2
+                    {label:"10",navigation: 1,screeningBut:2,matterName: '网约车平台公司或分公司许可证件补办',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"11",navigation: 1,screeningBut:2,matterName: '勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"12",navigation: 1,screeningBut:2,matterName: '畜禽定点屠宰厂（场）设置审批',site:'市管理局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"13",navigation: 1,screeningBut:2,matterName: '生猪定点屠宰厂（场）设置审查',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"14",navigation: 1,screeningBut:2,matterName: '道路旅客运输经营许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"15",navigation: 1,screeningBut:2,matterName: '放射性物品道路运输许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"16",navigation: 1,screeningBut:2,matterName: '演出经纪机构设立审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"17",navigation: 1,screeningBut:2,matterName: '旅行社设立许可（国内和入境社的设立）',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"18",navigation: 1,screeningBut:2,matterName: '药品零售企业许可',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //项目审批3
+                    {label:"19",navigation: 1,screeningBut:3,matterName: '勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"20",navigation: 1,screeningBut:3,matterName: '生产建设项目水土保持方案审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"21",navigation: 1,screeningBut:3,matterName: '洪水影响评价类审批（河道管理范围内建设项目工程建设方案审批）',site:'市管理局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"22",navigation: 1,screeningBut:3,matterName: '高速公路更新采伐护路林审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"23",navigation: 1,screeningBut:3,matterName: '利用省重要沼泽湿地审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"24",navigation: 1,screeningBut:3,matterName: '河道管理范围内建设项目工程建设方案审批',site:'发展和改革委员会',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"25",navigation: 1,screeningBut:3,matterName: '诊疗项目查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"26",navigation: 1,screeningBut:3,matterName: '煤矿建设项目初步设计文件审批',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"27",navigation: 1,screeningBut:3,matterName: '发展和改革委员会',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //就业参保4
+                    {label:"28",navigation: 3,screeningBut:4,matterName: '增值税发票查验',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"29",navigation: 3,screeningBut:4,matterName: '信用等级A类纳税人查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"30",navigation: 3,screeningBut:4,matterName: '一般纳税人资格查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"31",navigation: 3,screeningBut:4,matterName: '完税证明查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"32",navigation: 3,screeningBut:4,matterName: '信用承诺查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"33",navigation: 3,screeningBut:4,matterName: '一般纳税人资格',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"34",navigation: 3,screeningBut:4,matterName: '税务登记信息查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"35",navigation: 3,screeningBut:4,matterName: '核发税务登记证件',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"36",navigation: 3,screeningBut:4,matterName: '纳税申报',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //办税服务5
+                    {label:"37",navigation: 3,screeningBut:5,matterName: '增值税发票查验',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"38",navigation: 3,screeningBut:5,matterName: '信用等级A类纳税人查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"39",navigation: 3,screeningBut:5,matterName: '一般纳税人资格查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"40",navigation: 3,screeningBut:5,matterName: '完税证明查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"41",navigation: 3,screeningBut:5,matterName: '信用承诺查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"42",navigation: 3,screeningBut:5,matterName: '一般纳税人资格',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"43",navigation: 3,screeningBut:5,matterName: '税务登记信息查询',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"44",navigation: 3,screeningBut:5,matterName: '核发税务登记证件',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"45",navigation: 3,screeningBut:5,matterName: '纳税申报',site:'税务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //证书查验6
+                    {label:"46",navigation: 3,screeningBut:6,matterName: '企业证照查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"47",navigation: 3,screeningBut:6,matterName: '港口经营许可证注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"48",navigation: 3,screeningBut:6,matterName: '港口经营许可证注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"49",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"50",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"51",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"52",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"53",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"54",navigation: 3,screeningBut:6,matterName: '化妆品生产许可证',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //发票管理7
+                    {label:"55",navigation: 3,screeningBut:7,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"56",navigation: 3,screeningBut:7,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"57",navigation: 3,screeningBut:7,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"58",navigation: 3,screeningBut:7,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"59",navigation: 3,screeningBut:7,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"60",navigation: 3,screeningBut:7,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"61",navigation: 3,screeningBut:7,matterName: '核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"62",navigation: 3,screeningBut:7,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"63",navigation: 3,screeningBut:7,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //工程建设8
+                    {label:"64",navigation: 4,screeningBut:8,matterName: '市水务局-生产建设项目水土保持设施自主验收报备',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"65",navigation: 4,screeningBut:8,matterName: '国家重点航道工程建设项目竣工验收',site:'水利厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"66",navigation: 4,screeningBut:8,matterName: '公路工程交竣工质量鉴定',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"67",navigation: 4,screeningBut:8,matterName: '工程建设项目政策指引',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"68",navigation: 4,screeningBut:8,matterName: '工程建设项目公示',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"69",navigation: 4,screeningBut:8,matterName: '工程建设项目办事指南',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"70",navigation: 4,screeningBut:8,matterName: '建筑施工企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"71",navigation: 4,screeningBut:8,matterName: '施工图审查机构',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"72",navigation: 4,screeningBut:8,matterName: '河道范围内建设项目工程建设',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //获得水电气16
+                    {label:"73",navigation: 4,screeningBut:16,matterName: '生活饮用水卫生许可新办',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"74",navigation: 4,screeningBut:16,matterName: '新（补）办取水许可',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"75",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"76",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"77",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"78",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"79",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"80",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"81",navigation: 4,screeningBut:16,matterName: '取水许可延续',site:'水利局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //不动产登记9
+                    {label:"82",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"83",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"84",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"85",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"86",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"87",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"88",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"88",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"89",navigation: 4,screeningBut:9,matterName: '不动产登记办理进度查询',site:'不动产登记中心',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //文体教程13
+                    {label:"90",navigation: 1,screeningBut:13,matterName: '设立社会艺术水平考级机构审批',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"91",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"92",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"93",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"94",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"95",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"96",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"97",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"98",navigation: 1,screeningBut:13,matterName: '中小学地方课程教材审定',site:'教育局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //招聘会信息查询10
+                    {label:"99",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"100",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"101",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"102",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"103",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"104",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"105",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"106",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"107",navigation: 2,screeningBut:10,matterName: '招聘会信息查询',site:'人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //职业资格11
+                    {label:"108",navigation: 2,screeningBut:11,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"109",navigation: 2,screeningBut:11,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"110",navigation: 2,screeningBut:11,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"111",navigation: 2,screeningBut:11,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"112",navigation: 2,screeningBut:11,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"113",navigation: 2,screeningBut:11,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"114",navigation: 2,screeningBut:11,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"115",navigation: 2,screeningBut:11,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"116",navigation: 2,screeningBut:11,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //资质认证12
+                    {label:"117",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"118",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"119",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"120",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"121",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"122",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"123",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"124",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"125",navigation: 2,screeningBut:12,matterName: '工程监理企业资质',site:'住房和城乡建设厅',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //法律服务14
+                    {label:"126",navigation: 2,screeningBut:14,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"127",navigation: 2,screeningBut:14,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"128",navigation: 2,screeningBut:14,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"129",navigation: 2,screeningBut:14,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"130",navigation: 2,screeningBut:14,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"131",navigation: 2,screeningBut:14,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"132",navigation: 2,screeningBut:14,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"133",navigation: 2,screeningBut:14,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"134",navigation: 2,screeningBut:14,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    //企业工商15
+                    {label:"135",navigation: 2,screeningBut:15,matterName: '生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"136",navigation: 2,screeningBut:15,matterName: '工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"137",navigation: 2,screeningBut:15,matterName: '核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"138",navigation: 2,screeningBut:15,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"139",navigation: 2,screeningBut:15,matterName: '养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"140",navigation: 2,screeningBut:15,matterName: '养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"141",navigation: 2,screeningBut:15,matterName: '核定一次性伤残补助金/伤残津贴/护理',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"142",navigation: 2,screeningBut:15,matterName: '生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
+                    {label:"143",navigation: 2,screeningBut:15,matterName: '基本医疗保险视同缴费年限认定',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                 ],	
-                theMattersTwo: [			//事项名称选项(新办企业)，用于循环
-                    {label:"1",screeningBut:11,matterName: '新办企业生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:11,matterName: '新办企业工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:11,matterName: '新办企业核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:12,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:12,matterName: '新办企业养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:14,matterName: '新办企业养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:15,matterName: '新办企业核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:14,matterName: '新办企业生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:15,matterName: '新办企业基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                ],
-                theMattersThree: [			//事项名称选项（企业日常），用于循环
-                    {label:"1",screeningBut:4,matterName: '企业日常生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:5,matterName: '企业日常工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:5,matterName: '企业日常核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:5,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:4,matterName: '企业日常养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:6,matterName: '企业日常养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:6,matterName: '企业日常核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:7,matterName: '企业日常生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:7,matterName: '企业日常基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                ],
-                theMattersFour: [			//事项名称选项（投资项目），用于循环
-                    {label:"1",screeningBut:8,matterName: '投资项目生活饮用水卫生许可新办',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",screeningBut:8,matterName: '投资项目工伤职工异地就医备案',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"3",screeningBut:9,matterName: '投资项目核定生育津贴',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"4",screeningBut:9,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"5",screeningBut:8,matterName: '投资项目养老保险支付-退休人员减少',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"6",screeningBut:9,matterName: '投资项目养老保险支付-退休人员信息变更',site:'大兴区人力资源和社会保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"7",screeningBut:16,matterName: '投资项目核定一次性伤残补助金/伤残津贴/护理费待遇',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"8",screeningBut:16,matterName: '投资项目生育保险住院费用申报',site:'大兴区医疗保障局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"9",screeningBut:16,matterName: '投资项目基本医疗保险视同缴费年限认定',site:'大兴区卫生健康委',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                ],
+
                 matterNameList:[],//事项名称循环集合
             }
         },
@@ -4335,13 +4303,26 @@ window.onload = function(){
                 // this.xianName = this.shengName+this.chengshiName+iitemName
             },
             //事项名称push到事项名称循环集合
-            matterZhanList:function(matter){
+            matterZhanList:function(num){
                 this.matterNameList=[]
-                for(var i=0;i<matter.length;i++){
-                    this.matterNameList.push(
-                        {label:matter[i].label, screeningBut:matter[i].screeningBut,  matterName:matter[i].matterName, site:matter[i].site, 
-                            fangShiLeft:matter[i].fangShiLeft, fangShiRight:matter[i].fangShiRight}
-                    )
+                if(num==1){
+                    for(var i=0;i<this.theMattersOne.length;i++){
+                        this.matterNameList.push(
+                            {label:this.theMattersOne[i].label, navigation:this.theMattersOne[i].navigation, screeningBut:this.theMattersOne[i].screeningBut, 
+                                 matterName:this.theMattersOne[i].matterName, site:this.theMattersOne[i].site, 
+                                fangShiLeft:this.theMattersOne[i].fangShiLeft, fangShiRight:this.theMattersOne[i].fangShiRight}
+                        )
+                    }
+                }else{
+                    for(var i=0;i<this.theMattersOne.length;i++){
+                        if(this.theMattersOne[i].navigation==num){
+                             this.matterNameList.push(
+                                {label:this.theMattersOne[i].label, navigation:this.theMattersOne[i].navigation, screeningBut:this.theMattersOne[i].screeningBut, 
+                                    matterName:this.theMattersOne[i].matterName, site:this.theMattersOne[i].site, 
+                                    fangShiLeft:this.theMattersOne[i].fangShiLeft, fangShiRight:this.theMattersOne[i].fangShiRight}
+                            )
+                        }
+                    }
                 }
             },
             //企业导航点击事件
@@ -4349,42 +4330,35 @@ window.onload = function(){
                 this.beginTiao=0 	//限制循环数量开始
                 this.endTiao=9		//限制循环数量结尾
                 if(this.activeName=="first"){
-                    this.matterZhanList(this.theMattersOne)
+                    this.matterZhanList(1)
                 }else if(this.activeName=="second"){
-                    this.matterZhanList(this.theMattersTwo)
+                    this.matterZhanList(2)
                 }else if(this.activeName=="third"){
-                    this.matterZhanList(this.theMattersThree)
+                    this.matterZhanList(3)
                 }else if(this.activeName=="fourth"){
-                    this.matterZhanList(this.theMattersFour)
+                    this.matterZhanList(4)
                 }
                 this.matterNLLength()
             },
             //点击企业导航下的列表按钮后事项名称push到事项名称循环集合
-            butZhanList:function(matter,num){
+            butZhanList:function(numBut){
                 this.matterNameList=[]
                 // alert(matter[1].screeningBut,)
-                for(var i=0;i<matter.length;i++){
-                    if(matter[i].screeningBut==num){
+                for(var i=0;i<this.theMattersOne.length;i++){
+                    if(this.theMattersOne[i].screeningBut==numBut){
                         this.matterNameList.push(
-                            {label:matter[i].label, screeningBut:matter[i].screeningBut,  matterName:matter[i].matterName, site:matter[i].site, 
-                                fangShiLeft:matter[i].fangShiLeft, fangShiRight:matter[i].fangShiRight}
+                            {label:this.theMattersOne[i].label, navigation:this.theMattersOne[i].navigation, screeningBut:this.theMattersOne[i].screeningBut, 
+                                matterName:this.theMattersOne[i].matterName, site:this.theMattersOne[i].site, 
+                                fangShiLeft:this.theMattersOne[i].fangShiLeft, fangShiRight:this.theMattersOne[i].fangShiRight}
                         )
                     }
                 }
             },
             //导航下的按钮点击筛选
-            butZhanClick:function(matter,num){
+            butZhanClick:function(numBut){
                 this.beginTiao=0 	//限制循环数量开始
                 this.endTiao=9		//限制循环数量结尾
-                if(matter=="first"){
-                    this.butZhanList(this.theMattersOne,num)
-                }else if(matter=="second"){
-                    this.butZhanList(this.theMattersTwo,num)
-                }else if(matter=="third"){
-                    this.butZhanList(this.theMattersThree,num)
-                }else if(matter=="fourth"){
-                    this.butZhanList(this.theMattersFour,num)
-                }
+                this.butZhanList(numBut)
                 this.matterNLLength()
             },
             //控制分页起始条和结束条
