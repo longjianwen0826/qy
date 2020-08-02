@@ -1,0 +1,45 @@
+/*20151013 lyd*/
+/*================================================================*/
+.table_warp tbody td{
+    text-align: center;
+}
+.pbd_table_input{
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    padding: 0px 4px;
+    border: 1px #c5c5c5 solid;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+}
+.pbd_table_bottom {
+    background-color: #F7FAF5;
+    border: 1px solid #CDCDCD;
+    padding: 0px 10px;
+    height: 35px;
+    line-height: 35px;
+}
+.td_inp{
+    margin-left: 7px;
+}
+.pbd_table_title{ position: relative;}
+.ico_danju{
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:13px;
+}
+.add_ico{
+    background: url(../images/table/ico_add.png) no-repeat;
+}
+.reduce_ico{
+    background: url(../images/table/ico_reduce.png) no-repeat;
+}
+.gs_span{
+    width:140px;
+    text-align: left;
+    display: inline-block;
+}

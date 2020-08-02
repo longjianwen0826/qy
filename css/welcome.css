@@ -1,0 +1,571 @@
+/*======welcome 公用=====*/
+.btn {
+	border-radius: 5px;
+}
+.btn-blue {
+	background-color: #109CD9;
+	color: #ffffff;
+}
+.f_blue {
+	color: #1f93d5;
+}
+.f_red {
+	color: #ff4b32;	
+}
+a {
+	cursor: pointer;
+}
+
+.wrap {
+	width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*======头部信息=====*/
+#head {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 10px;
+	background:#d6ebfa url(../images/welcome/欢迎页.png) repeat-x scroll top left;
+	margin-bottom: 16px;
+}
+#head .head-con {
+	width: 1140px;
+	margin: 0 auto
+}
+#head .head-logo-ccb {
+	height: 69px;
+	background: url(../images/welcome/head-logo.png) no-repeat top left;
+}
+#head .head-msg {
+	float: left;
+	width: 360px;
+	padding-top: 9px;
+}
+#head .head-user-logo {
+	width: 60px;
+	height: 60px;
+	margin: 0 19px 0 12px;
+	float: left;
+	background: url(../images/welcome/head-user-logo.png) no-repeat scroll top left;
+}
+#headUpload {
+    background: url(../images/welcome/wel-upload.jpeg) no-repeat;
+    height: 22px;
+    width: 23px;
+    position: absolute;
+    left: -22px;
+    top: 10px;
+    display: none;
+    cursor: pointer;
+}
+#head .head-msg i {
+	margin-right: 6px;
+}
+#head .head-operation {
+    position: relative;
+}
+#head .head-msg dl {
+	float: left;
+	margin-left: 12px;
+}
+#head .head-msg dt {
+	margin-bottom: 6px;
+}
+#head .head-msg dt span {
+	font-size: 18px;
+	margin-right: 18px;	
+	display: inline-block;
+}
+
+#head .head-msg dd {
+	margin-bottom: 10px;
+}
+#head .head-msg dd i {
+	margin-bottom: -5px;
+}
+#head .head-msg dd a {
+	color: #1f93d5;
+	text-decoration: underline;
+}
+#head .head-fn-menu{
+	border-left: 1px solid #CCC;
+	/*position: absolute;
+	left: 45%;*/
+	float: left;
+	padding-left: 60px;
+	line-height: 116px;
+}
+#head .head-fn-menu-2{
+	float: left;
+	padding-left: 10px;
+	width: 550px;
+}
+
+/*按钮*/
+.head-btn {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.head-btn button {
+	width: 140px;
+	height: 40px;
+	margin-bottom: 14px;
+	font-size: 16px;
+}
+.head-fn-menu button.go_opt_page {
+    width: 140px;
+    height: 40px;
+    margin-bottom: 14px;
+    font-size: 16px;
+}
+.head-btn-input {
+	font-size: 12px;
+}
+#head-btn-input {
+	margin-right: 4px;
+	margin-left: 3px;
+}
+
+/*三角形*/
+#head .head-triangle{
+	position: absolute;
+	left: 140px;
+	top: 34px;
+	border-width: 10px 10px 10px 10px;
+	border-color: transparent transparent white transparent;/*transparent 为透明*/
+	border-style: solid;
+}
+/*上传小图标*/
+#uploadImg {
+    position: absolute;
+}
+
+
+
+/*=====主体部分=====*/
+#welcome-con {
+	margin-bottom: 25px;
+}
+#welcome-con .wrap {
+	position: relative;
+}
+#welcome-con .wel-con-div {
+	border: 1px solid #ccc;
+	margin-left: 13px;
+	float: left;
+	height: 313px;
+	padding-left: 23px;
+	padding-right: 23px;
+	padding-top: 25px;
+	overflow: hidden;
+}
+/*主体title部分*/
+#welcome-con .title {
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #1f93d5;
+	margin-bottom: 5px;
+}
+#welcome-con .title i:first-child {
+	margin-right: 15px;
+	position: absolute;
+}
+#welcome-con .title span {
+	margin-left: 39px;
+}
+#welcome-con .title .arrow {
+	float: right;
+	width: 35px;
+	margin-top: 6px;
+}
+#welcome-con .arrow i {
+	cursor: pointer;
+} 
+#welcome-con .icon-welcome-arrow-right{
+	float: right;
+}
+/*主体列表部分*/
+
+#welcome-con .wel-con-div ul {
+	width: 110%;
+}
+#welcome-con .wel-con-div li {
+	float: left;
+	/*height: 40px;*/
+	padding-top:16px;
+	padding-bottom: 12px;
+	line-height: 20px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+/*big*/
+#welcome-con .big{
+	width: 505px;
+}
+#welcome-con .big li {
+	width: 225px;
+}
+#welcome-con .big li:nth-child(2n-1){
+	margin-right: 40px;
+}
+
+
+/*small*/
+#welcome-con .small{
+	width: 222px;
+}
+
+
+#welcome-con .wel-con-div a {
+	color: #1f93d5;
+}
+/*日历*/
+#welcome-con .wel-date {
+	position: relative;
+}
+#welcome-con .welcome-date {
+	background: url(../images/welcome/welcome-date.png) no-repeat scroll top left;
+	width: 268px;
+	height: 243px;
+	position: absolute;
+    top: 70px;
+	left: 0;
+}
+.wei-date-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: url(../images/icon/icon-wel-date-close.png) no-repeat;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+} 
+#welcome-con .wel-date .wel-data-ul {
+    position: absolute;
+    margin-left: 310px;
+    width: 100%;
+}
+#welcome-con .wel-data-span {
+    position: absolute;
+    left: 310px;
+    top: 22px;
+}
+#welcome-con .wel-date .wel-data-ul li {
+    width: 200px;
+    text-align: center;
+}
+/*=====功能模块定制=====*/
+.wel-gnmk {
+	float: left;
+	width: 100%;
+}
+.wel-gnmk .wel-gnmk-title {
+	margin-top: 27px;
+	height: 27px;
+	line-height: 27px;
+	background:url(../images/welcome/wel-gnmk-menu.png) no-repeat;
+}
+/*=====小图标功能定制 START=====*/
+.wel-fn-diy {
+	margin: 10px 7px 0 13px;
+	height: 130px;
+	border: 1px solid #CCCCCC;
+	padding: 30px 30px 40px;
+}
+.wel-fn-menu i {
+	vertical-align: top;
+}
+.wel-fn-ul {
+	margin-top: 10px;
+	margin-right: -50px;
+	margin-left: -10px;
+}
+.wel-fn-ul li {
+	margin-right: -10px;
+	width: 125px;
+	text-align: center;
+	float: left;
+	height: 90px;
+}
+.wel-fn-ul img {
+	cursor: pointer;
+}
+.wel-fn-ul p {
+	margin-top: 10px;
+}
+
+[class^=wel-gndz] {
+	display: block;
+	width: 65px;
+	height: 65px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.wel-gndz-dfzd {
+	background: url(../images/welcome/wel-dfzd.png) no-repeat;
+}
+.wel-gndz-dfzd:hover{
+	background: url(../images/welcome/wel-dfzd-hover.png) no-repeat;
+}
+.wel-gndz-khsszz {
+	background: url(../images/welcome/wel-khsszz.png) no-repeat;
+}
+.wel-gndz-khsszz:hover {
+	background: url(../images/welcome/wel-khsszz-hover.png) no-repeat;
+}
+.wel-gndz-plzz {
+	background: url(../images/welcome/wel-plzz.png) no-repeat;
+}
+.wel-gndz-plzz:hover {
+	background: url(../images/welcome/wel-plzz-hover.png) no-repeat;
+}
+.wel-gndz-jhhqzh {
+	background: url(../images/welcome/wel-jhhqzh.png) no-repeat;
+}
+.wel-gndz-dzhdcx {
+	background: url(../images/welcome/wel-dzhdcx.png) no-repeat;
+}
+.wel-gndz-dzhdcx:hover {
+	background: url(../images/welcome/wel-dzhdcx-hover.png) no-repeat;
+}
+.wel-gndz-dkfh {
+	background: url(../images/welcome/wel-dkfh.png) no-repeat;
+}
+.wel-gndz-dkfh:hover {
+	background: url(../images/welcome/wel-dkfh-hover.png) no-repeat;
+}
+.wel-gndz-pjyw {
+	background: url(../images/welcome/wel-pjyw.png) no-repeat;
+}
+.wel-gndz-bqxx {
+    background: url(../images/welcome/wel-gnmk-bqxx.png) no-repeat;
+    background-size: 62px 62px;
+}
+.wel-gndz-dblm {
+    background: url(../images/welcome/wel-gnmk-dblm.png) no-repeat;
+    background-size: 62px 62px;
+}
+.wel-gndz-grrc {
+    background: url(../images/welcome/wel-grrc.png) no-repeat;
+}
+/*=====小图标功能定制 END=====*/
+/*=====侧边菜单栏 START=====*/
+#welMenuEnt {
+	position: absolute;
+	top: 0;
+	left: -22px;
+	height: 116px;
+	width: 22px;
+	cursor: pointer;
+	background: url(../images/welcome/set-welcome-menu.png) no-repeat top left;
+}
+#welMenu {
+	display: none;
+	width: 720px;
+	height: 400px;
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	margin-left: -360px;
+	background: #FFFFFF;
+	font-size: 14px;
+	z-index: 11;
+}
+/*切换tab头*/
+#welMenu .wel_menu_tab {
+	border-bottom: 2px solid #1889D0;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+}
+#welMenu .wel_menu_tab a {
+	display: inline-block;
+    height: 36px;
+    padding: 0 14px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #2C2C2C;
+    line-height: 36px;
+    margin-right: 5px;
+    position: relative;
+    bottom: -2px;
+    border: 1px solid #DDDDDD;
+    border-bottom: none;
+    text-decoration: none;
+}
+#welMenu .wel_menu_tab a:hover{
+	border: 1px solid #1f93d5;
+}
+#welMenu .wel_menu_tab a.current {
+	border-width: 2px;
+    border-style: solid;
+    border-color: #1889D0 #1889D0 #FFF;
+    color: #1f93d5;
+    font-weight: bold;
+    bottom: -2px;
+    padding: 0 15px;
+}
+
+/*内容1*/
+.wel_menu_con_child1 {
+	position: relative;
+}
+/*头部*/
+#welMenu .wel_menu_head {
+	height: 48px;
+	line-height: 48px;
+	padding-left: 24px;
+	color: #fff;
+	position: relative;
+	font-size: 18px;
+	background: #0066b3;
+}
+#welMenu .wel_menu_head i {
+	position: absolute;
+	right: 24px;
+	cursor: pointer;
+	line-height: 1em;
+	top: 15px;
+}
+
+/*主体*/
+/*主体头部*/
+#welMenu .wel_menu_title {
+	text-align: right;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 15px;
+	position: absolute;
+	color: #999;
+	top: -50px;
+	right: 8px;
+}
+#welMenu .wel_menu_title span {
+	color: red;
+	margin-left: 5px;
+	margin-right: 3px;
+}
+/*主体选择结果*/
+#welSelectResult{
+	height: 20px;
+	line-height: 20px;
+	background: #DDDDDD;
+	margin: 0 24px;
+	padding: 10px;
+	color: #333;
+}
+#welSelectResult label {
+	margin-left: 7px;
+	font-size: 12px;
+}
+#welSelectResult input {
+	vertical-align: middle;
+}
+/*主体内容*/
+.wel_menu_ul {
+	background-color: #DDDDDD;
+	margin: 2px 24px 16px;
+	width: 672px;
+	overflow: hidden;
+	color: #333333;
+}
+.wel_menu_ul li {
+	float: left;
+	width: 96px;
+	height: 95px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-align: center;
+	font-size: 12px;
+	margin-left: 14px;
+}
+.wel_menu_ul label {
+	cursor: pointer;
+	margin-bottom: 7px;
+}
+#welSelectBox label i {
+    margin: 5px auto;
+}
+/*底部*/
+#welMenu .wel_menu_foot {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	padding-bottom: 10px;
+	bottom: 0;
+}
+#welMenu .wel_menu_foot {
+	
+}
+/*=====侧边菜单栏 END=====*/
+
+
+
+
+/*=====底部删除功能 START=====*/
+#footer .wei-date-close {
+    display: none;
+}
+/*#footer:hover{
+    border: 1px dashed #CCCCCC;
+    margin: -2px;
+}*/
+#footer:hover>.wei-date-close {
+    display: block;
+} 
+
+#footer-copyright,#footer-scan {
+	cursor: pointer;
+	position: relative;
+}
+/*#footer-copyright:hover{
+	border: 1px dashed #ccc;
+	margin-left: -1px;
+	margin-top: -1px;
+	padding-right: 40px;
+}
+#footer-scan:hover {
+	border: 1px dashed #CCCCCC;
+	margin-right: -1px;
+	margin-top: -6px;
+	padding: 5px 0 20px 40px;
+}*/
+#footer-scan .wei-date-close {
+	left: 10px;
+	top: 10px;
+	display: none;
+}
+#footer-scan:hover .wei-date-close {
+	display: block;
+}
+#footer-copyright .wei-date-close{
+	right: 10px;
+	top: 10px;
+	display: none;
+}
+#footer-copyright:hover .wei-date-close {
+	display: block;
+}
+/*=====底部删除功能 END=====*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_dbfk.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_plzz.css" />
+
+        <script src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+        <script src="../../js/public.js"></script>
+    </head>
+
+    <body>
+        <div id="Warp">
+            <!--顶部导航 START-->
+            <div id="phd_common"></div>
+            <!--当前位置 START-->
+			<div class="pbd_tab_current">当前位置：转账业务<span>&gt;</span>转账制单<span>&gt;</span>批量转账<span>&gt;</span><b>文件录入</b></div>
+            <!--当前位置 END-->
+            <!--顶部导航 END-->
+            <!--右边功能栏 START-->
+            <div id="fn_menu"></div>
+            <!--右边功能栏 END-->
+            <!--主内容区 START-->
+            <div id="pbd_content">
+                <!--Tab页签 START-->
+                <div class="tabs-com mb15" style="padding-top: 0px;">
+                    <div class="tabs-com-p28">  
+                        <a href="" class="current">批量文件导入</a>
+                        <a href="">已导入未制单单据</a>
+                    </div>
+                </div>
+                <!--Tab页签 END-->
+                <!-- 相关信息 START -->
+                <div class="table-form-title panel_title mb15"><b>请选择批量转账单据文件及设置相关信息</b></div>
+                <div class="pbd_table_form_body mt15">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>批量转账单据文件<span>：</span></td>
+                            <td>
+                                <input type="text" id="p_file" class="pbd_input_normal" notEmpty="true" nonEmptyMsg="批量转账单据文件不能为空" nonEmptyShowCtrl="no2" style="width:555px;" />
+                                <a href="javascript:void(0);" class="upload ml3"><span class="panel_title_nuember">?</span></a>
+                                <span class="pbd_btn_small pbd_btn_standard pbd_btn_h27 ml3"><a name="btn_load" class="white"> 浏览</a></span>
+                                <input type="file" hidefocus="" onchange="getfile();" id="pt_file" style="display:none; " title="浏览" name="upload" /><a href="../download/批量转账-简单模板.xlsx" style="margin-left:3px;">下载模板</a></td>
+                                <div class="upload_box hide" style="position:absolute; top:270px; left:795px;">
+                                    <div class="upload_tips">
+                                        请先下载模板，对下载的模板编辑后，再点击浏览上传模板。
+                                    </div>
+                                    <div class="upload_arrow"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">批量转账处理模式<span>：</span></td>
+                            <td>
+                                <input type="checkbox" name="items1" /> 按批次复核
+                                <input type="checkbox" name="items1" class="ml10" /> 行内收款账户户名校验
+                                <input type="checkbox" name="items1" class="ml10" /> 优先采用跨行实时转账
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">批量名称<span>：</span></td>
+                            <td><input type="text" class="pbd_input_normal"/></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 相关信息 END -->
+                <!--操作区 ATART-->
+                <div class="mt15 btn_l">
+                    <a class="text_c pbd_btn_standard pbd_btn_w100 next_btn" >下一步</a>
+                </div>
+                <!--操作区 href="ZZZD_plzz_step_1.html"onClick="processerbar(3000)" END-->
+            </div>
+            <!--主内容区 END-->
+            <!--底部信息 START-->
+            <div id="pft_common"></div>
+            <!--底部信息 END-->
+            <!--返回顶部 STRAT-->
+            <div id="back_to_top"></div>
+            <!--返回顶部 END-->
+            <!--通用底部悬浮层 START-->
+            <div id="foot_float"></div>
+            <!--通用底部悬浮层 END-->
+        </div>
+        <div class="hover_bg hide"></div>
+        <div class="jindu_bar hide">
+            <div id="msg_tit" style="">正在上传中...</div>
+            <div class="barline" id="probar"> 
+                <!-- <div id="percent"></div> -->
+                <div id="line" w="100" style="width:0px;"></div>    
+                <!-- <div id="msg" style=""></div>           -->
+            </div><span id="perc">55/120</span>
+            <div id="msg_btm">35.5k/s 00:12:25</div>
+            <div class="mt15 text_c jindu_btn">
+                <a class="text_c pbd_btn_standard pbd_btn_w100" href="###">取消</a>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+
+    $(function () {
+        // 灰色遮罩 start //
+            window.onload=function(){  
+                changeDivHeight(); 
+            } 
+            window.onresize=function(){  
+                changeDivHeight(); 
+            }; 
+            function changeDivHeight(){
+                var scr_height = $(document).height();
+                var scr_width = $(document).width();  
+                $('.hover_bg').css('height',scr_height);
+                $('.hover_bg').css('width',scr_width); 
+            }
+        // 灰色遮罩 end //
+        //   批量上传问号 start   //
+        $(".upload").hover(function () {
+            $(".upload_box").removeClass('hide');
+        }, function () {
+            $(".upload_box").addClass('hide');
+        });
+        //   批量上传问号 end    //
+        //   进度提示 start
+        $(".next_btn").click(function(){
+            $('.hover_bg').removeClass('hide');
+            $('.jindu_bar').removeClass('hide');
+            processerbar(3000);
+            setTimeout(close_fn,3000);
+        });
+        function close_fn(){
+            $('.hover_bg').addClass('hide');
+            $('.jindu_bar').addClass('hide');
+            location.href="ZZZD_plzz_step_1.html";
+        };
+
+        //   进度提示 end
+    })
+
+    //  上传文件类型验证 start //
+    jQuery("a[name='btn_load']").click(function () {
+        jQuery(this).parent().next().click();
+    });
+
+    function getfile(){
+        jQuery("#p_file").val(jQuery("#pt_file").val());
+        $("#p_file").removeClass("pbd_input_normal_error");
+        $("#p_file").parent().parent().find(".error-tip-box").before($("#p_file"));
+        $("#p_file").next(".error-tip-box").remove();
+        $("#p_file").focus(); $(this)[0].focus();
+    }
+    //  上传文件类型验证 end //
+    //  进度条 start
+    function processerbar(time){
+        document.getElementById('probar').style.display="block";
+        $("#line").each(function(i,item){
+            var a=parseInt($(item).attr("w"));
+            $(item).animate({
+                width: a+"%"
+            },time);
+        });
+       var si = window.setInterval(
+        function(){
+            a=$("#line").width();
+            b=(a/200*100).toFixed(0);
+            document.getElementById('percent').innerHTML=b+"%";
+            document.getElementById('percent').style.left=a-12+"px";
+            document.getElementById('msg').innerHTML="上传中";
+            if(document.getElementById('percent').innerHTML=="100%") {
+            clearInterval(si);
+            document.getElementById('msg').innerHTML="&nbsp;&nbsp;成功";
+            }
+        },70);
+    };
+    //  进度条 end
+</script>

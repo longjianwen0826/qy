@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+        <script src="../../js/ccbbank.js"></script>
+	</head>
+    <style>
+        .exit{
+            position: absolute;
+            width: 62px;
+            height: 25px;
+            right: 120px;
+            top: 8px;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+    </style>
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>支用</b></div>
+            
+			<div id="phd_context">
+				<!--表格标题 start-->
+				<div class="pbd_table_h2 ml10">
+					<span>请填写以下信息</span>
+				</div>
+				<!--表格标题 end-->
+				
+				<!--纵向表格型 start-->
+				<div class="table_warp_list">
+					<table border="0" cellspacing="0" cellpadding="0" class="pbd_table_four_list" width="100%">
+						<tr>
+							<th class="w229">贷款种类：</th>
+							<td class="w350">
+								快e贷
+							</td>
+							<th class="w229">贷款账号：</th>
+							<td class="w350">
+								<span>1108 6532 8742 4563 2555</span>
+							</td>
+						</tr>
+						<tr>
+							<!--<th class="w229">支用金额(元)：</th>
+							<td class="w350">
+								<span class="fb">200,000.00</span>
+							</td>-->
+							<th class="w229 lb_no">可支用金额(元)：</th>
+							<td class="w350 lb_no">
+								<span class="fb">800,000.00</span>
+							</td>
+                            <th class="w229 lb_no">贷款发放账号：</th>
+							<td class="w350 lb_no">
+								<span>6217 0033 2001 2831 2892</span>
+							</td>
+						</tr>
+						<!--<tr>
+                            <th class="w229 lb_no">计划用途：</th>
+							<td class="w350 lb_no"  colspan="3">
+								支付货款
+							</td>
+						</tr>-->
+					</table>
+				</div>
+				<!--纵向表格型 end-->
+				
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form mt15">
+                
+                	<tr>
+                        <td class="first_td text_r">
+                            <span class="pbd_font_required">*</span>支用金额(元)<span>：</span>
+                        </td>
+                        <td>
+                             <input type="text" class="pbd_input_normal" name="targetId" onblur="fun_2(this)" onkeyup="fun_1(),$('#money_div').text(add_Qfw(getoff_Qfw(this.value)))" notEmpty="true" nonEmptyMsg="金额(元)不能为空" maxlength="19" needmony="true" validationType="money" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first_td text_r">
+                            计划用途<span>：</span>
+                        </td>
+                        <td>
+                            <select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+                                <option value="1">支付货款</option>
+                                <option value="2">支付员工工资</option>
+                                <option value="3">支付服务费</option>
+                                <option value="4">支付水电费</option>
+                                <option value="5">支付税费</option>
+                                <option value="6">其他经营周转支出</option>
+                            </select>
+                        </td>
+                    </tr>
+		            <tr>
+		                <td class="first_td text_r">
+		                	选择下级复核员<span>：</span>
+		                </td>
+		            	<td>
+		            		<select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+	                            <option value="1">张三</option>
+	                        </select>
+		            	</td>
+		            </tr>
+		            <tr>
+		                <td class="first_td text_r">
+		                	<span class="pbd_font_required">*</span>输入交易密码<span>：</span>
+		                </td>
+		            	<td>
+		            		<input class="pbd_input_normal" type="password" />
+		            	</td>
+		            </tr>
+				</table>
+				
+				<!--操作按钮 START-->
+				<div class="pl225 mt30">
+					<a class="pbd_btn_standard pbd_btn_w100" href="xwqykd_zy_3_tips.html">提交</a>
+					<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_zy_1.html">返回</a>
+				</div>
+				<!--操作按钮 END-->
+				
+			</div>
+		
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zy_1.html" data-text="支用" data-href="../xdrz_xwqykd/xwqykd_zy_1.html">支用</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hk_1.html" data-text="还款" data-href="../xdrz_xwqykd/xwqykd_hk_1.html">还款</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

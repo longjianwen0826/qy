@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+	</head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step2.png) no-repeat center center;
+        }
+        .pbd_table_form1 td{
+            line-height: 34px;
+        }
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="sk_common">
+                <div class="logo">
+                    <img src="../../images/CCB_logo.png">
+                </div>
+			</div>
+
+            <!--content START-->
+            <div class="message" style="margin-top:0px;border-radius:0px;text-indent:12px  ">常用收款人名称</div>
+            <!--content END-->
+
+            <!--table START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top: 20px">
+                <tr>
+                    <td style="width:35px;text-align: left">
+                        <span>姓名:</span>
+                    </td>
+                    <td style="width:200px;text-align: right">
+                        <input type="text" class="input" style="margin-left: 10px"/>
+                    </td>
+                    <td style="width:50px;text-align: right">
+                    <span>账号:</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input" style="margin-left: 10px"/>
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <a class="pbd_btn_standard pbd_btn_w100 ml10">查询</a>
+                    </td>
+                    <td style="width:478px;text-align: left;">
+                    </td>
+                </tr>
+            </table>
+            <!--table END-->
+
+            <table id="cartTable" width="100%" height="100%" cellpadding="0" cellspacing="0" class="pbd_table_form pbd_table_form1" style="border: 1px solid #0066b3;margin-top: 20px" class="">
+                <tr>
+                    <th style="width: 200px;text-align: left">
+                        <span style="margin-left:25px">选择</span>
+                        <b class="lt"></b>
+                    </th>
+                    <th style="width: 200px;">姓名<b></b></th>
+                    <th style="width: 200px">收款账号<b></b></th>
+                    <th style="width: 200px">摘要<b class="rt"></b></th>
+                </tr>
+                <tr>
+                    <td style="width: 200px;text-align:left">
+                        <label style="position: relative;text-align: center" class="rid">
+                            <input type="radio" style="margin-left: 10px" name="select"/>
+                            <a  class="selectA"></a>
+                        </label>
+                    </td>
+                    <td style="text-align: center">李建</td>
+                    <td style="text-align: center">41001501210050237189</td>
+                    <td></td>
+                </tr>
+                <tr class="odd">
+                    <td style="width: 200px;text-align:left">
+                        <label style="position: relative" class="rid">
+                            <input type="radio" style="margin-left: 10px" name="select"/>
+                            <a  class="selectA"></a>
+                        </label>
+                    </td>
+                    <td style="text-align: center"> 赵颕</td>
+                    <td style="text-align: center"> 35001870007052616649 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;text-align:left">
+                        <label style="position: relative" class="rid">
+                            <input type="radio" style="margin-left: 10px" name="select"/>
+                            <a class="selectA"></a>
+                        </label>
+                    </td>
+                    <td style="text-align: center">刘耕宏</td>
+                    <td style="text-align: center">35001880007052613257</td>
+                    <td style="width:1170px"></td>
+                </tr>
+            </table>
+            <div class="selectedName hide"></div>
+            <div class="selectedText hide"></div>
+            <!--选择btn START-->
+            <div class="div_btn">
+                <a class="pbd_btn_standard pbd_btn_w100 ml15">新增</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" style="padding: 0 20px;width: auto">批量导入名册</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" style="padding: 0 20px;width: auto">清空全部记录</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" style="padding: 0 20px;width: auto">删除选择记录</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15">关闭</a>
+            </div>
+            <!--选择btn ENDT-->
+
+            <!--温馨提示START-->
+            <div class="tip-msg">
+                <div class="pbd_tips_title">
+                    温馨提示
+                </div>
+                <ul>
+                    <li>双击鼠标左键选择收款账户</li>
+                    <li>输入查询条件模糊查询需要的历史账户</li>
+                </ul>
+            </div>
+            <!--温馨提示END-->
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+            <input type="hidden" name="lg_name"/>
+            <input type="hidden" name="lg_text"/>
+		</div>	
+<script>
+    //点击关闭 页面传惨 交互 start
+    //获取整个table
+    var _table=$('#cartTable');
+    //获取行
+    var _div_btn=$('.div_btn').find('a').eq(4);
+    var _tr=_table.find('tr');
+    $('.selectA').click(function(){
+        $(this).addClass('select');
+        $(this).siblings('.selectA').removeClass('select');
+    })
+    _tr.on('click',function(){
+        $(this).parent('a').removeClass('select');
+        $(this).find('a').addClass('select');
+        $(this).siblings().find('a').removeClass('select');
+
+    })
+
+    _div_btn.on('click',function(){
+        //获取选中的行
+        // 定义 获取的值
+        var _name="";//获取姓名
+        var _text="";//获取卡号
+
+        for(var i=0;i<_tr.length;i++){
+            if(_tr.eq(i).find('a').hasClass('select')){
+                _name+= _tr.eq(i).find('td').eq(1).text();
+                _text+=_tr.eq(i).find('td').eq(2).text();
+            }
+        };
+        $('.selectedName').html(_name);
+        $('.selectedText').html(_text);
+        //定义页面传参函数
+        _item();
+
+    });
+    function _item(){
+        if($('.selectedName').html()=="李建"){
+            document.all.lg_name.value=1;
+        }else if($('.selectedName').html()=="赵颕"){
+            document.all.lg_name.value=2;
+        }else if($('.selectedName').html()=="刘耕宏"){
+            document.all.lg_name.value=3;
+        }else{
+            document.all.lg_name.value='';
+        }
+        if($('.selectedText').html()=="41001501210050237189"){
+            document.all.lg_text.value=1;
+        }else if($('.selectedText').html()=="35001870007052616649"){
+            document.all.lg_text.value=2;
+        }else if($('.selectedText').html()=="35001880007052613257"){
+            document.all.lg_text.value=3;
+        }else{
+            document.all.lg_text.value="";
+        }
+        url="dfzd_dbdf_2.html?lg_name="+escape(document.all.lg_name.value);
+        url+="&lg_text="+escape(document.all.lg_text.value);
+        location.href=url;
+    }
+</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

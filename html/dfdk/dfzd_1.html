@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+	</head>
+
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：代发代扣<span>&gt;</span>代发业务<span>&gt;</span><b>代发制单</b></div>
+
+            <!--步骤导航 START-->
+            <div class="stepNav">
+                <ul class="clearfix">
+                    <li class="fl stepNav_ul_list1 stepNav_ul_color1">1.代发制单选择</li>
+                    <li class="fl stepNav_ul_list2 stepNav_ul_color2">2.单笔代发制单</li>
+                    <li class="fl stepNav_ul_list3 stepNav_ul_color2">3.单笔代发确认</li>
+                    <li class="fl stepNav_ul_color2">4.单笔代发成功</li>
+                </ul>
+                <span class="hide"></span>
+            </div>
+            <!--步骤导航 END-->
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top: 15px">
+                <tr>
+                    <td style="width:202px;text-align: right">
+                        <label class="_red">*</label>
+                        <span>代发类型:</span>
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <input type="radio" class="radio" name="radio1" checked="true" >
+                        单笔代发
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <input type="radio" class="radio" name="radio1" >
+                        批量代发
+                    </td>
+                    <td style="width:700px;"></td>
+                </tr>
+                <tr>
+                    <td style="width:190px;text-align: right">
+                        <label class="_red">*</label>
+                        <span>项目名称:</span>
+                    </td>
+                    <td style="width: 250px;" colspan="3">
+                        <div  class="" style="margin-left: 10px">
+                            <div class="select">
+                                <span></span>
+                                <input type="hidden" class="define_input" value="">
+                                <a class="hover" href="javascript:;"></a>
+                            </div>
+                            <ul class="option">
+                                <li><a href="javascript:;">行内代发</a></li>
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:190px;text-align: right">
+                        <label class="_red">*</label>
+                        <span>用途:</span>
+                    </td>
+                    <td style="width: 250px;" colspan="3">
+                        <div  class="" style="margin-left: 10px">
+                            <div class="select">
+                                <span></span>
+                                <input type="hidden" class="define_input" value="">
+                                <a class="hover" href="javascript:;"></a>
+                            </div>
+                            <ul class="option">
+                                <li><a href="javascript:;">代发工资</a></li>
+
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="df_tr hide">
+                    <td style="width:190px;text-align: right">
+                        <label class="_red">*</label>
+                        上传代发文件:
+                    </td>
+                    <td style="width: 250px;" colspan="3">
+                       <div style="margin-left: 10px;position: relative">
+                           <label style="float: left">
+                               <input type="text" class="pbd_input" id="textfield"/>
+                           </label>
+
+                           <a class="logon_se">
+                               <span class="panel_title_nuember" >?</span>
+                           </a>
+                           <input id="uoloadFile" class="file" type="file" onchange="preview(this,'#preview',document.getElementById('textfield').value=this.value)" style="cursor: pointer">
+                           <a class="pbd_btn_standard " style="width:48px;height: 22px;line-height: 22px;">
+                               浏览
+                               <div class="upload_item hide">
+                                   <span>请先下载模版,对下载的模版编辑后,再点击浏览上传模版。</span>
+                                   <div class="upload_item_child"></div>
+                               </div>
+                           </a>
+                           <span>
+                               <a style="color:#1f93d5;cursor: pointer" href="../download/批量转账-简单模板.xlsx">下载模版</a>
+                           </span>
+                       </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:190px;text-align: right"></td>
+                    <td style="width: 250px;" colspan="3">
+
+                    </td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <!--btn选择 START-->
+            <div class="btn_select" style="padding-left: 220px;">
+                <a class="pbd_btn_standard pbd_btn_w100 ml10 l-btn_a" href="dfzd_dbdf_2.html" >下一步</a>
+                <span class="pbd_btn_standard pbd_btn_w100 ml10  hide se_lg"  >下一步</span>
+            </div>
+            <!--btn选择 END-->
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+		</div>
+        <div class="hover_bg hide"></div>
+        <div class="jindu_bar hide">
+            <div id="msg_tit" style="">正在上传中...</div>
+            <div class="barline" id="probar">
+                <!-- <div id="percent"></div> -->
+                <div id="line" w="100" style="width:0px;"></div>
+                <!-- <div id="msg" style=""></div>           -->
+            </div><span id="perc">55/120</span>
+            <div id="msg_btm">35.5k/s 00:12:25</div>
+            <div class="mt15 text_c jindu_btn">
+                <a class="text_c pbd_btn_standard pbd_btn_w100" href="###">取消</a>
+            </div>
+        </div>
+		<script>
+
+        var _item={
+            itemTitle1:'1.代发制单选择',
+            itemTitle2:'2.单笔代发制单',
+            itemTitle3:'3.单笔代发确认',
+            itemTitle4:'4.单笔代发成功',
+            itemTitle5:'2.批量代发确认',
+            itemTitle6:'3.批量代发成功'
+        }
+        //radio切换
+        $('.radio').eq(0).on('click',function(){
+             var _li=$('.stepNav').find('li');
+             _li.eq(0).html(_item.itemTitle1);
+             _li.eq(1).html(_item.itemTitle2);
+             _li.eq(2).html(_item.itemTitle3);
+             _li.eq(3).html(_item.itemTitle4);
+             $('.l-btn_a').removeClass('hide');
+             $('.se_lg').addClass('hide');
+             $('.stepNav span,.df_tr').addClass('hide');
+             $('.l-btn_a').attr('href','dfzd_dbdf_2.html');
+        });
+        $('.radio').eq(1).on('click',function(){
+            var _li=$('.stepNav').find('li');
+            _li.eq(0).html(_item.itemTitle1);
+            _li.eq(1).html(_item.itemTitle5);
+            _li.eq(2).html(_item.itemTitle6);
+            _li.eq(3).html('');
+            $('.stepNav span,.df_tr').removeClass('hide');
+            $('.se_lg').removeClass('hide');
+            $('.l-btn_a').addClass('hide');
+
+        });
+        //下一步
+        $('.se_lg').on('click',function(){
+           $('.hover_bg').removeClass('hide');
+           $('.jindu_bar').removeClass('hide');
+           processerbar(3000);
+           setTimeout(close_fn,3000);
+       });
+        function close_fn(){
+            $('.hover_bg').addClass('hide');
+            $('.jindu_bar').addClass('hide');
+            location.href="dfzd_pldf_3.html";
+        };
+
+        //  进度条 start
+        function processerbar(time){
+            document.getElementById('probar').style.display="block";
+            $("#line").each(function(i,item){
+                var a=parseInt($(item).attr("w"));
+                $(item).animate({
+                    width: a+"%"
+                },time);
+            });
+            var si = window.setInterval(
+                    function(){
+                        a=$("#line").width();
+                        b=(a/200*100).toFixed(0);
+                        document.getElementById('percent').innerHTML=b+"%";
+                        document.getElementById('percent').style.left=a-12+"px";
+                        document.getElementById('msg').innerHTML="上传中";
+                        if(document.getElementById('percent').innerHTML=="100%") {
+                            clearInterval(si);
+                            document.getElementById('msg').innerHTML="&nbsp;&nbsp;成功";
+                        }
+                    },70);
+        };
+        //  进度条 end
+        $('.logon_se').hover(function(){$('.upload_item').removeClass('hide');},function(){$('.upload_item').addClass('hide');})
+
+        //上传图片
+        function preview(file,obj){
+            //路径地址
+            var _val = $(file).val();
+            $(file).prev().prev().val(_val);
+            //图片预览的容器
+            var prevDiv =$(obj);
+            if(obj=="#preview6"){
+                $('#preview5').addClass('hide');
+                $('#preview6,._select_bg').removeClass('hide');
+            }
+            if(obj=="#preview5"){
+                $('._select_bg').removeClass('hide');
+            }
+            //判断是否有路径非IE情况下
+            if (file.files && file.files[0]){
+                var reader = new FileReader();
+                reader.onload = function(evt){
+                    prevDiv.html('<img src="' + evt.target.result + '" class="img" width="" height=""/>');};
+                reader.readAsDataURL(file.files[0]);
+                if($('.set_theme_item1').hasClass('_init')){
+                    if($('.btn_set_logo_bg').hasClass('layer_hide')){
+                        $('.uploadImg').removeClass('hide');
+                        $('#setTheme').css('z-index','');
+                        $('.layer_fixed').removeClass('hide');
+                    }else{
+                        $('#setTheme').css('z-index','12');
+                        $('.pbd_login_warp').addClass('_sItem');
+                        $('.layer_fixed').removeClass('hide');
+                    }
+
+                }
+            }else{//IE情况下
+                prevDiv.html('<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>');
+            }
+        }
+
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

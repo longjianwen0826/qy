@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+        <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+    </head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step3.png) no-repeat center center;
+        }
+
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：代发代扣<span>&gt;</span>代发业务<span>&gt;</span><b>代发制单</b></div>
+
+            <!--步骤导航 START-->
+            <div class="stepNav">
+                <ul class="clearfix">
+                    <li class="fl stepNav_ul_list1 stepNav_ul_color2">1.代付制单选择</li>
+                    <li class="fl stepNav_ul_list2 stepNav_ul_color2">2.批量代发确认</li>
+                    <li class="fl stepNav_ul_list3 stepNav_ul_color1">3.批量代发成功</li>
+
+                </ul>
+                <span ></span>
+            </div>
+            <!--步骤导航 END-->
+            <!--success START-->
+            <div class="success_item">
+                <dl class="clearfix">
+                    <dt class="fl">
+                        <span></span>
+                    </dt>
+                    <dd class="fl">
+                        <p>尊敬得用户,您的批量代发制单已成功!</p>
+                        <span>业务流水号：0505050555</span>
+                        <span>等待下一级复核员<label>蔡启</label>复核</span>
+                    </dd>
+                </dl>
+            </div>
+            <div style="margin:20px 0 ">
+                <a class="pbd_btn_standard pbd_btn_w100" style="margin-left: 220px" href="dfzd_1.html">返回</a>
+            </div>
+            <!--success END-->
+
+            <!--其他操作 START-->
+            <div class="handle">
+                <span>其他操作相关链接:</span>
+                <a>代发代扣</a>
+                <a>单据维护</a>
+                <a>继续制单</a>
+            </div>
+            <!--其他操作 END-->
+
+
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+		</div>	
+		<script>
+        $(function(){
+            //获取页面url参数
+            //获取当前url
+            var url=location.search;
+            var Request = new Object();
+            if(url.indexOf("?")!=-1){
+                var str = url.substr(1);
+                strs = str.split("&");
+                for(var i=0;i<strs.length;i++){
+                    Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1],strs[i].split("=")[2]);
+                }
+            }
+            //1左边logo得到得值做相应得处理
+            var _name=$('._nameUrl');
+            var _text=$('._textUrl');
+            if(Request["lg_name"]==1){
+                _name.attr('value','李建');
+            }else if(Request["lg_name"]==2){
+                _name.attr('value','小李');
+            }else if(Request["lg_name"]==3){
+                _name.attr('value','小建');
+            }else{
+                return false
+            }
+
+            if(Request["lg_text"]==1){
+                _text.attr('value','656515616516161');
+            }else if(Request["lg_text"]==2){
+                _text.attr('value','844441641111616516');
+            }else if(Request["lg_text"]==3){
+                _text.attr('value','26821688484848');
+            }else{
+                return false
+            }
+        })
+        var _item={
+            itemTitle1:'1.代付制单选择',
+            itemTitle2:'2.单笔代发制单',
+            itemTitle3:'3.单笔代发确认',
+            itemTitle4:'4.单笔代付成功',
+            itemTitle5:'2.批量代发确认',
+            itemTitle6:'3.批量代发成功'
+        }
+        $('.radio').eq(0).on('click',function(){
+             var _li=$('.stepNav').find('li');
+             _li.eq(0).html(_item.itemTitle1);
+             _li.eq(1).html(_item.itemTitle2);
+             _li.eq(2).html(_item.itemTitle3);
+             _li.eq(3).html(_item.itemTitle4);
+             $('.stepNav span,.df_tr').addClass('hide');
+        });
+        $('.radio').eq(1).on('click',function(){
+            var _li=$('.stepNav').find('li');
+            _li.eq(0).html(_item.itemTitle1);
+            _li.eq(1).html(_item.itemTitle5);
+            _li.eq(2).html(_item.itemTitle6);
+            _li.eq(3).html('');
+            $('.stepNav span,.df_tr').removeClass('hide');
+        });
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

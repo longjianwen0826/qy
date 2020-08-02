@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+        <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout_2.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+    </head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step3.png) no-repeat center center;
+        }
+
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+            <div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>我要快贷</b></div>
+
+            <!--success START-->
+            <div class="success_item">
+                <dl class="clearfix">
+                    <dt class="fl">
+                        <span></span>
+                    </dt>
+                    <dd class="fl">
+                        <!--<span style="margin-top:25px; position:relative; top:12px;"><b>授权成功！</b>请提醒<b>王倩文</b>在<b>一个月</b>内登录个人高级版网银<b>“个人贷款”-“小微企业快贷”</b>进行贷款申请操作！</span>-->
+                        <span style="margin-top:25px; position:relative; top:12px;"><b>操作成功！我行客户经理将尽快与贵司联系人取得联系。</b></span>
+                        
+               
+                    </dd>
+                </dl>
+            </div>
+            <div style="margin:30px 0 100px 214px">
+                <a class="pbd_btn_standard pbd_btn_w100" href="xwqykd_wykd_1.html">返回</a>
+            </div>
+            <!--success END-->
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common" style="padding-top:0px;"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+        $(function(){
+			//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_wykd_1.html" data-text="我要快贷" data-href="../xdrz_xwqykd/xwqykd_wykd_1.html">我要快贷</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zysp_1.html" data-text="支用审批" data-href="../xdrz_xwqykd/xwqykd_zysp_1.html">支用审批</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hksp_1.html" data-text="还款审批" data-href="../xdrz_xwqykd/xwqykd_hksp_1.html">还款审批</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+
+		});
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

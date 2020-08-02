@@ -1,0 +1,185 @@
+.table_warp {
+	position: relative;
+	padding: 1px;
+	border: 1px solid #62a7e3;
+	/*min-width: 1160px;*/
+	/*background: #fff;*/
+	/*overflow: hidden;*/
+}
+.table_warp tr:hover{
+    cursor: pointer;
+    background: #ebf4fb;
+}
+.pbd_input{
+    width: 600px;
+    line-height: 20px;
+    padding: 4px 9px;
+    border: 1px #c5c5c5 solid;
+}
+
+/*表格列表形式 START*/
+.pbd_table_show{
+	
+}
+.pbd_table_show th {
+	height: 35px;
+	line-height: 35px;
+	padding:0 8px 0 7px;
+	font-weight: bold;
+	color: #000;
+	background: #c8e0f5;
+	text-align: center;
+}
+.pbd_table_show td {
+	height: 35px;
+	line-height: 20px;
+	padding: 0px 5px;
+	color: #000;
+	text-align: left;
+	font-family: '宋体';
+}
+.pbd_table_show tr.odd{
+	background: #f7fafd;
+}
+.pbd_table_show tr:hover {
+	background: #ebf4fb;
+}
+.second_table {
+	border: 1px solid #c5d7e8;
+	border-top: none;
+	margin: 0px 30px;
+}
+tr.second_title th{ 
+	background-color: #c1d5e3 !important;
+}
+.table_b_allcheck{
+	height: 37px;
+	line-height: 37px;
+	width: 60px;
+	font-weight: bold;
+	color: #000;
+}/*表格底部全选*/
+.pbd_table_show_title{
+	
+}
+/*表格列表形式 END*/
+.pbd_table_h2{
+	height: 42px;
+	line-height: 42px;
+	font-weight: bold;
+}/*类似标题可公用*/
+
+/*条件过滤 START*/
+.pbd_table_form{
+	border: 0;
+}
+.pbd_table_form td{
+	vertical-align:middle;
+	line-height: 42px;
+}
+.pbd_table_form_filter{
+	background-color: #f7fcfd;
+	margin-bottom: 15px;
+}
+.pbd_font_required{
+	color: #F0102A;
+	display: inline-block;
+	padding: 0 2px;
+}/*红色*号必填项*/
+.first_td{
+	width: 225px !important;
+}
+/*条件过滤 END*/
+
+/*---------------------- 纵向型表格 start --------------------------*/
+.table_warp_list {
+	border: 1px solid #62a7e3;
+}
+.pbd_table_four_list{
+	
+}
+.pbd_table_four_list td,.pbd_table_four_list th{
+	border-bottom: 1px solid #c5d7e8;
+	line-height: 35px;
+}
+.pbd_table_four_list td.lb_no,.pbd_table_four_list th.lb_no{/*定义th td底部无线条*/
+	border-bottom: none;
+	line-height: 35px;
+}
+.pbd_table_four_list th {
+	text-align: right;
+	background-color: #f7fbfe;
+	padding-right: 1px;
+}
+.pbd_table_four_list th.w229{
+	width: 229px !important;
+}
+.pbd_table_four_list td {
+	text-align: left;
+	padding-left: 10px;
+}
+.pbd_table_four_list td.w350{
+	width: 350px !important;
+}
+/*---------------------- 纵向型表格 end --------------------------*/
+
+
+/*** 编辑列弹窗样式 Start ***/
+.window_blue_box {
+	width: 820px;
+	height: 502px;
+	border: 1px solid #1f93d5;
+	background-color: white;
+	/* display: none; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -401px;
+	margin-top: -251px;
+	z-index: 1002;
+	overflow: auto;
+	box-shadow: 0px 0px 7px #ccc;
+}
+#edtTr .window_blue_close {
+    background: url(../images/panel_close_icon.png) no-repeat;
+}
+#edtTr .window_blue_hd{
+	padding-left:53px;
+	padding-bottom:10px;
+}
+#edtTr .window_blue_body label{
+	line-height:20px;
+}
+#edtTr .window_blue_body label input{
+	margin:0px 2px 2px 0;
+	margin:0px 2px 4px 0\9;
+	vertical-align:bottom;
+}
+#edtTr .window_blue_cont{
+	width:755px;
+	height:305px;
+	border:1px solid #c5c5c5;
+	margin-left:23px;
+}
+#edtTr .window_blue_cont .slt_item{
+	width:155px;
+	height: 30px;
+	padding-top:20px;
+	padding-left:29px;
+	float:left;
+}
+#edtTr .ui-sortable{
+	background:#c8e0f5;	
+}
+.sltTable .ui-sortable .ui-sortable-placeholder{
+	background:#ebf4fb !important;
+}
+.st14{
+	font-family:"宋体";
+	font-size:14px !important;
+	}
+.huise{
+	color:#999}
+.center{
+	text-align:center;}
+/*** 编辑列弹窗样式 End ***/

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/p_cddt.css"/>
+		
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+		
+		<script src="../../js/p_cddt.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+			<!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：菜单地图</div>
+			
+			<div id="phd_context">
+				<div class="A" style="width: 290px;  float: left;">
+					<div class="cddt">
+						<div class="cddt_sp"><span>账户信息（5/5）</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>账户信息查询</span>
+							</div>
+							 <div class="cddt_second hide">
+									<div><a class="zhcx" href="#">建行活期账户</a></div>
+									<div>定期账户</div>
+									<div>银行内部账户</div>
+									<div>一户通</div>
+									<div>财资账户</div>
+									<div>透支账户</div>
+									<div>他行活期账户</div>
+								</div>
+						</div>
+						
+						<div class="cddt_div">
+							<span>批量账户查询</span>
+						</div>
+						
+						<div class="cddt_div">
+							<span>电子回单查询</span>
+						</div>
+						
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>集成资讯</span>
+							</div>
+							  <div class="cddt_second hide">
+									<div>综合页</div>
+									<div>基金查询</div>
+									<div>贵金属查询</div>
+									<div>理财产品查询</div>
+									<div>汇率查询</div>
+									<div>理财计算器</div>
+								</div>
+						</div>
+						
+						<div class="cddt_div ">
+							<div class="an cddt_add_icon Bubble_tips"><span>电子对账</span>
+								<div class="upload_box hide" style="top: -59px; right: 0;">
+									<div class="upload_tips ">提供对账单查询与回签、明细查询、对账结果查询等功能。</div>
+									<div class="upload_arrow"></div>
+								</div>
+							</div>
+							<div class="cddt_second hide">
+								<div>对账单查询与回签</div>
+								<div>明细账单查询</div>
+								<div>对账结果查询</div>
+								<div>电子对账签约管理</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="cddt">
+						<div class="cddt_sp"><span>缴费业务（2/5）</span></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>网银费用缴交</span></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">现金产品缴费</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">代缴费</span>
+							</div>
+							<div class="cddt_second hide">
+								<div>定制交易查询</div>
+							</div>
+							<a href="javascript:void(0);" class="kt">开通</a>
+						</div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>银税通</span></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">银关通</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+					</div>
+				
+					<div class="cddt">
+						<div class="cddt_sp"><span>投资理财（3/10）</span></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">债务业务</span>
+								<div class="cddt_second hide">
+									<div>债券查询</div>
+									<div>债券交易</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">基金业务</span>
+								<div class="cddt_second hide">
+									<div>基金查询</div>
+									<div>基金交易</div>
+									<div>基金分析</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>证券管理</span>
+								<div class="cddt_second hide">
+									<div>开户管理</div>
+									<div>交易账户管理</div>
+									<div>证券卡管理</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">理财产品</span>
+								<div class="cddt_second hide">
+									<div>理财产品查询</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>定期存款</span></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">通知存款</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">协定存款</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">期货业务</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>鑫存管</span></div></div>
+						<!--<div class="cddt_div cddt_add_icon"><span class="cddt_gray">鑫存管</span></div>
+						<div class="cddt_div cddt_add_icon"><span class="cddt_gray">代理贵金属</span><a href="javascript:void(0);" class="kt">开通</a></div>-->
+						<div class="hide">
+							<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">代理贵金属</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						</div>
+						
+						<div class="unfold_absolute">
+							<a href="javascript:void(0);" class="unfold">展开</a>
+						</div>
+					</div>
+				
+					<div class="cddt" style="margin-bottom: 0px;">
+						<div class="cddt_sp"><span>服务管理（10/10）</span></div>
+						<div class="cddt_div"><span>待办业务</span></div>
+						<div class="cddt_div"><span>操作员管理</span></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>业务申请</span></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>流程管理</span></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>授权管理</span></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>个性设置</span></div></div>
+						<div class="cddt_div"><span>修改密码</span></div>
+						<div class="cddt_div"><span>外联平台管理</span></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>信息中心</span></div></div>
+						<!--<div class="cddt_div"><span>账户管理</span></div>-->
+						
+						<div class="hide zk">
+							<div class="cddt_div"><span>账户管理</span></div>
+						</div>
+						
+						<div class="unfold_absolute">
+							<a href="javascript:void(0);" class="unfold">展开</a>
+						</div>
+					</div>
+				</div>
+				
+				
+				<div class="B" style="width: 290px;float: left;">
+					<div class="cddt">
+						<div class="cddt_sp"><span>转账业务（4/4）</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>转账制单</span></div>
+							<div class="cddt_second hide">
+								<div>单笔付款</div>
+								<div>付款冻结</div>
+								<div>单笔收款</div>
+								<div>跨行实时转账</div>
+								<div>批量转账</div>
+								<div>请领款</div>
+								<div>证券资金转账</div>
+								<div>新股网下申购</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>单据维护</span></div>
+							<div class="cddt_second hide">
+								<div>单据修改</div>
+								<div>单据删除</div>
+								<div>单据收回</div>
+								<div>复核员变更</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>流水查询</span></div>
+							<div class="cddt_second hide">
+								<div>转账流水查询</div>
+								<div>定制交易查询</div>
+							</div>
+						</div>
+						<div class="cddt_div"><span>常用账户管理</span></div>
+					</div>
+				
+					<div class="cddt">
+						<div class="cddt_sp"><span>票据业务（3/3）</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>电子商业汇票</span>
+								<div class="cddt_second hide">
+									<div>出票</div>
+									<div>背书</div>
+									<div>贴现</div>
+									<div>质押</div>
+									<div>提示付款</div>
+									<div>应答</div>
+									<div>查询</div>
+									<div>验票</div>
+									<div>代办业务</div>
+									<div>集团票据业务</div>
+									<div>签约管理</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>票据池</span>
+								<div class="cddt_second hide">
+									<div>入池</div>
+									<div>集中存放</div>
+									<div>提取</div>
+									<div>提示付款</div>
+									<div>背书</div>
+									<div>贴现</div>
+									<div>质押</div>
+									<div>应答</div>
+									<div>额度管理</div>
+									<div>保证金管理</div>
+									<div>查询</div>
+									<div>提示</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>汇本票</span></div></div>
+					</div>
+				
+					<div class="cddt">
+						<div class="cddt_sp"><span>电子商务（0/5）</span></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">E商贸通</span>
+								<a href="javascript:void(0);" class="kt">开通</a>
+								<div class="cddt_second hide">
+									<div>查询（主管/操作员）</div>
+									<div>现货交易（主管/操作员）</div>
+									<div>e单通（主管/操作员）</div>
+									<div>出入金（操作员）</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">网上支付</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">百易安</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">商户管理</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">商城账户充值</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+					</div>
+				
+					<div class="cddt" style="margin-bottom: 0px;">
+						<div class="cddt_sp"><span>特色服务（2/4）</span></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">分行银企通</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>特色查询</span></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">税单打印</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>CASS清算</span>
+								<div class="cddt_second hide">
+									<div>综合查询</div>
+									<div>CASS业务</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<div class="C" style="width: 290px;float: left;">
+					<div class="cddt">
+						<div class="cddt_sp"><span>代发代扣（5/5）</span></div>
+						
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>代发业务</span></div>
+							<div class="cddt_second hide">
+								<div>代发制单</div>
+								<div>代发复核</div>
+								<div>单据收回</div>
+								<div>单据修改删除</div>
+								<div>单据复核员变更</div>
+								<div>定制交易查询</div>
+								<div>代发工资额度查询</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>代扣业务</span></div>
+							<div class="cddt_second hide">
+								<div>代扣制单</div>
+								<div>代扣复核</div>
+								<div>单据收回</div>
+								<div>单据修改删除</div>
+								<div>单据复核员变更</div>
+								<div>授权账户查询</div>
+								<div>定制交易查询</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>E付通</span></div>
+							<div class="cddt_second hide">
+								<div>收款企业</div>
+								<div>付款企业</div>
+							</div>
+						</div>
+						<div class="cddt_div"><span>单据撤销</span></div>
+						<div class="cddt_div"><span>客户信息查询</span></div>
+						
+						<!--<div class="cddt_div"><div class="an cddt_add_icon"><span>e付通</span></div></div>
+						<div class="cddt_div"><span>单笔业务单笔审批</span></div>
+						<div class="cddt_div"><span>单笔业务批量审批</span></div>
+						<div class="cddt_div"><span>批量业务单批审批</span></div>
+						<div class="hide">
+							<div class="cddt_div"><span>批量业务批量审批</span></div>
+							<div class="cddt_div"><span>代发工资额度查询</span></div>
+							<div class="cddt_div"><span>批量单据撤销</span></div>
+							<div class="cddt_div"><span>定制交易查询</span></div>
+							<div class="cddt_div"><span>电子工资单</span></div>
+						</div>
+						
+						<div class="unfold_absolute">
+							<a href="javascript:void(0);" class="unfold">展开</a>
+						</div>-->
+					</div>
+					
+					<div class="cddt">
+						<div class="cddt_sp"><span>国际业务（8/8）</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>购汇</span>
+								<div class="cddt_second hide">
+									<div>购汇申请</div>
+									<div>购汇</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>结汇</span>
+								<div class="cddt_second hide">
+									<div>收汇划转申请</div>
+									<div>自主结汇交易</div>
+									<div>资本金结汇申请</div>
+									<div>结售汇牌价查询</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>外汇汇款</span>
+								<div class="cddt_second hide">
+									<div>查询</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cddt_div"><span>进口信用证</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>代理行业务</span>
+								<div class="cddt_second hide">
+									<div>贷记通知</div>
+									<div>委托付款</div>
+									<div>汇票见票提示付款通知</div>
+									<div>查复书</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div"><span>收件箱</span></div>
+						<div class="cddt_div"><span>信息维护</span></div>
+					</div>
+				
+					<div class="cddt" style="margin-bottom: 0px;">
+						<div class="cddt_sp"><span>财政社保（0/6）</span></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">中央财政授权支付</span>
+								<div class="cddt_second hide">
+									<div>制单</div>
+									<div>复核</div>
+									<div>查询</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">财政授权支付</span>
+								<div class="cddt_second hide">
+									<div>制单</div>
+									<div>复核</div>
+									<div>查询</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">财政支付</span>
+								<div class="cddt_second hide">
+									<div>制单</div>
+									<div>复核</div>
+									<div>查询</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">公积金</span>
+								<div class="cddt_second hide">
+									<div>信息查询</div>
+									<div>个人账户转移</div>
+									<div>个人账户转移（复核）</div>
+									<div>个缴转封存</div>
+									<div>个缴转封存（复核）</div>
+									<div>基数调整</div>
+									<div>基数调整（复核）</div>
+								</div>
+								<a href="javascript:void(0);" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">企业年金</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">社保基金</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+					</div>
+				</div>
+				
+				<div class="D" style="width: 290px; float: left;">
+					<div class="cddt">
+						<div class="cddt_sp"><span>现金管理（2/9）</span></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon">
+								<span class="cddt_gray">信息报告</span>
+								<a href="kt.html" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">集团收付款</span><a href="kt.html" class="kt">开通</a></div></div>
+						<div class="cddt_div">
+							<div class="cddt_add_icon Bubble_tips" style="width:277px;">
+								<span class="cddt_gray" style="position: relative;">集团账户
+									<img src="../../images/cddt/new.png" style="position: absolute; top: 2px;"/>
+								</span>
+								<div class="upload_box hide" style="top: -59px; right: 0;">
+									<div class="upload_tips ">提供对账单查询与回签、明细查询、对账结果查询等功能。</div>
+									<div class="upload_arrow"></div>
+								</div>
+								<a href="kt.html" class="kt">开通</a>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>集团理财</span></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">内部账户管理</span><a href="kt.html" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">集团式账户管理</span><a href="kt.html" class="kt">开通</a></div></div>
+						<div class="cddt_div"><span class="cddt_gray">现金池管理</span><a href="kt.html" class="kt">开通</a></div>
+						<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">预算管理</span><a href="kt.html" class="kt">开通</a></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>应收应付</span></div></div>
+						<!--<div class="hide">
+							<div class="cddt_div"><div class="cddt_add_icon"><span>应收应付</span></div></div>
+						</div>-->
+						
+						<!--<div class="unfold_absolute">
+							<a href="javascript:void(0);" class="unfold">展开</a>
+						</div>-->
+					</div>
+				
+					<div class="cddt">
+						<div class="cddt_sp"><span>信贷融资（6/6）</span></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon"><span>e贷款（贷款客户）</span></div>
+							<div class="cddt_second hide">
+								<div>贷款合同</div>
+								<div>交易信息管理</div>
+								<div>支用</div>
+								<div>还款</div>
+								<div>缴费</div>
+								<div>查询</div>
+							</div>
+							<a href="javascript:void(0);" class="kt">开通</a>
+						</div>
+						<div class="cddt_div"><span>e联通</span></div>
+						<div class="cddt_div"><span>e速通</span></div>
+						<div class="cddt_div"><span>e贷通</span></div>
+						<div class="cddt_div"><span>网银循环贷</span></div>
+						<div class="cddt_div"><span>定向保理</span></div>
+						<!--<div class="cddt_div"><div class="cddt_add_icon"><span class="cddt_gray">e商通</span><a href="javascript:void(0);" class="kt">开通</a></div></div>
+						<div class="cddt_div"><span class="cddt_gray">e棉通</span><a href="javascript:void(0);" class="kt">开通</a></div>-->
+						
+						<!--<div class="cddt_div"><span>e速通</span></div>
+						<div class="hide">
+							<div class="cddt_div cddt_add_icon" style="width:277px;"><span class="cddt_gray">物流平台</span><a href="javascript:void(0);" class="kt">开通</a></div>
+							<div class="cddt_div"><span class="cddt_gray">网银循环贷</span><a href="javascript:void(0);" class="kt">开通</a></div>
+							<div class="cddt_div"><span class="cddt_gray">定向保理</span><a href="javascript:void(0);" class="kt">开通</a></div>
+							<div class="cddt_div"><span>贷款账户查询</span></div>
+							<div class="cddt_div"><span>e贷款业务开通</span></div>
+						</div>
+						
+						<div class="unfold_absolute">
+							<a href="javascript:void(0);" class="unfold">展开</a>
+						</div>-->
+					</div>	
+				
+					<div class="cddt" style="margin-bottom: 0px;">
+						<div class="cddt_sp"><span>卡类业务（4/4）</span></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>军队武警公务卡</span></div></div>
+						<div class="cddt_div">
+							<div class="an cddt_add_icon">
+								<span>单位商务卡</span>
+								<div class="cddt_second hide">
+									<div>商务卡管理</div>
+								</div>
+							</div>
+						</div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>中央财政公务卡</span></div></div>
+						<div class="cddt_div"><div class="an cddt_add_icon"><span>公务卡报销</span></div></div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+			
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+		</div>
+	
+		
+		
+		<script type="text/javascript">
+		$(function(){
+			window.parent.nav.refreshHtml(null, 0);/*设置选中的一级菜单*/
+		})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>菜单调整</title>
+	<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+	<link rel="stylesheet" href="../../css/jquery.ui.css">
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+	<style>
+	ul{ list-style-type: none; }
+	.main{
+		border:1px solid #96c2f1;
+	}
+	.main .main_title{
+		border-bottom:1px solid #dfe0f2;
+		background:#eff8ff;
+		height:39px;
+		line-height:39px;
+		padding-left:12px;
+		font-size:14px;
+		font-weight:bold;
+	}
+	.main .main_box{
+		padding:10px 10px;
+	}
+	.menu_box .menu_list{
+		background:#FFF;
+		border:1px solid #62a7e3;
+		width:144px;
+		padding:2px;
+		margin-top:10px;
+		margin-right:10px;
+		float:left;
+	}
+	.menu_box .mTitle{
+		background:url(../../images/menu_dt.png);
+		padding-left:12px;
+		font-weight:bold;
+		height:33px;
+		line-height:33px;
+	}
+	.menu_box .mEdt, .menu_box .mAdd, .menu_box .mChecked{
+		background-image:url(../../images/icon_revise.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		display:block;
+		float:right;
+		width:20px;
+		text-indent:-1000px;
+		overflow:hidden;
+	}
+	.menu_box .mAdd{
+		background-image:url(../../images/icon_increased.png);
+	}
+	.menu_box .mChecked{
+		background-image:url(../../images/icon_confirm.png);
+	}
+	.menu_box .mText{
+		width:100px;
+		height:22px;
+	}
+	.menu_box .mBody{
+	}
+	.menu_box .mItem{
+		padding-left:12px;
+		height:22px;
+		line-height:22px;
+	}
+
+	.menu_box .state_high{
+		border:1px solid red;
+	}
+	</style>
+	<script>
+	$(function() {
+		
+		$(".mBody ul, .menu_box").sortable({
+			connectWith: ".mBody ul, .menu_box",
+			stop: function( event, ui ) {
+				var mClear = '<li class="clear"></li>';
+				$('.menu_box .clear').remove();
+				$('.menu_box > li').eq(6).after(mClear);
+			}
+		}).disableSelection();
+
+		$( "#droppable" ).droppable({
+			drop: function( event, ui ) {
+				$( this )
+					.addClass( "ui-state-highlight" )
+					.find( "p" )
+						.html( "Dropped!" );
+			}
+		});
+
+
+		var mEdt = $('<span class="mEdt">编辑</span>');
+		function fnEdt(mEdt){
+			mEdt.on('click', function(){
+				var text = $(this).parent()[0].childNodes[0].nodeValue;
+				$(this).parent()[0].childNodes[0].nodeValue = null;
+				$(this).parent().prepend('<input type="text" class="mText" value="'+ text +'">');
+				$(this).parent().append(mChcd);
+				fnChcd(mChcd);
+				$(this).remove();
+			});
+		}
+
+		var mChcd = $('<span class="mChecked">确定1</span>');
+		function fnChcd(mChcd){
+			mChcd.on('click', function(){
+				$(this).parent().html($(this).siblings('input').val()).append(mEdt);
+				fnEdt(mEdt);
+			});
+		}
+		
+
+		
+		$('.mEdt').on('click', function(){
+			var text = $(this).parent()[0].childNodes[0].nodeValue;
+			$(this).parent()[0].childNodes[0].nodeValue = null;
+			$(this).parent().prepend('<input type="text" class="mText" value="'+ text +'">');
+			$(this).parent().append(mChcd);
+			$(this).remove();
+		});
+
+
+		$('.mAdd').on('click', function(){
+			var text = $(this).parent()[0].childNodes[0].nodeValue;
+			$(this).parent().siblings('.mBody').find('ul').append('<li class="mItem">'+ text +'</li>');
+			$(this).parent().html('<input type="text" class="mText" value="分组2">').append(mChcd);
+		});
+
+		$trash = $( "#trash" );
+		// let the trash be droppable, accepting the gallery items
+		$trash.droppable({
+			accept: ".menu_box > li",
+			activeClass: "state_high",
+			drop: function( event, ui ) {
+				deleteImage( ui.draggable );
+				var mClear = $('.menu_box .clear');
+				$('.menu_box .clear').remove();
+				$('.menu_box > li').eq(7).after(mClear);
+			}
+		});
+
+		$trash2 = $( "#trash2" );
+		// let the trash be droppable, accepting the gallery items
+		$trash2.droppable({
+			accept: ".menu_box > li",
+			activeClass: "state_high",
+			drop: function( event, ui ) {
+				deleteImage2( ui.draggable );
+				var mClear = '<li class="clear"></li>';
+				$('.menu_box .clear').remove();
+				$('.menu_box > li').eq(7).after(mClear);
+			}
+		});
+
+		var num = 1;
+		function deleteImage( $item ) {
+			var text = $item.find('.mTitle').text();
+			$item.remove();
+			if($trash.find(".mEdt").length || $trash.find(".mChecked").length){
+				$("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+			}else{
+				$("<li class='mItem'>"+ $trash.find('.mTitle').text() +"</li>").appendTo($trash.find('ul'));
+				var mEdt_01 = $('<span class="mEdt">编辑</span>');
+				$trash.find('.mTitle').text('分组1').append(mEdt_01);
+				fnEdt(mEdt_01);
+				num++;
+				$("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+			}
+			$trash.removeClass('state_high');
+			$trash2.removeClass('state_high');
+
+			$trash.find('ul').sortable({
+				connectWith: ".mBody ul, .menu_box",
+				stop: function( event, ui ){
+					if(ui.item.parent().hasClass('menu_box')){
+						var text = ui.item.text();
+						ui.item.text('');
+						ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+					}
+					var mClear = '<li class="clear"></li>';
+				$('.menu_box .clear').remove();
+				$('.menu_box > li').eq(6).after(mClear);
+				}
+			}).disableSelection();
+
+		}
+		function deleteImage2( $item ) {
+			var text = $item.find('.mTitle').text();
+			$item.remove();
+			if($trash2.find(".mEdt").length || $trash2.find(".mChecked").length){
+				$("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+			}else{
+				$("<li class='mItem'>"+ $trash2.find('.mTitle').text() +"</li>").appendTo($trash2.find('ul'));
+				var mEdt_01 = $('<span class="mEdt">编辑</span>');
+				$trash2.find('.mTitle').text('分组2').append(mEdt_01);
+				fnEdt(mEdt_01);
+				num++;
+				$("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+				
+			}
+			$trash.removeClass('state_high');
+			$trash2.removeClass('state_high');
+
+			$trash2.find('ul').sortable({
+				connectWith: ".mBody ul, .menu_box",
+				stop: function( event, ui ){
+					if(ui.item.parent().hasClass('menu_box')){
+						var text = ui.item.text();
+						ui.item.text('');
+						ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+					}
+					var mClear = '<li class="clear"></li>';
+				$('.menu_box .clear').remove();
+				$('.menu_box > li').eq(6).after(mClear);
+				}
+			}).disableSelection();
+
+		}
+
+
+	});
+	</script>
+</head>
+<body>
+<!--Tab页签 START-->
+<div class="tabs-com">
+	<div class="tabs-com-p28">	
+		<a href="#">菜单配置</a>
+		<a href="#" class="current">菜单分组</a>
+	</div>
+</div>
+<!--Tab页签 END-->
+
+<div class="main mt10">
+	<div class="main_title">菜单调整</div>
+	<div class="main_box">
+
+		<ul class="menu_box clearfix">
+			<li id="trash" class="menu_list">
+				<div class="mTitle">账户查询</div>
+				<div class="mBody">
+					<ul>
+
+					</ul>
+				</div>
+			</li>
+			<li id="trash2" class="menu_list">
+				<div class="mTitle">转账业务</div>
+				<div class="mBody">
+					<ul>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">代发代扣</div>
+				<div class="mBody">
+					<ul>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">现金管理</div>
+				<div class="mBody">
+					<ul>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">缴费业务</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">票据业务</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">国际业务</div>
+			</li>
+			<li class="clear"></li>
+			<li class="menu_list">
+				<div class="mTitle">信贷融资</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">投资理财</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">电子商务</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">财政社保</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">卡类业务</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">服务管理</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">特色服务</div>
+				<div class="mBody">
+					<ul>
+					</ul>
+				</div>
+			</li>
+			<li class="menu_list">
+				<div class="mTitle">信息维护</div>
+				<div class="mBody">
+					<ul>
+					</ul>
+				</div>
+			</li>
+		</ul>
+
+
+	</div>
+</div>
+ 
+<!-- 
+<div class="menu">
+	<div class="mItem">
+		<ul class="droptrue">
+			<li class="ui-state-default">Can be dropped..</li>
+			<li class="ui-state-default">..on an empty list</li>
+			<li class="ui-state-default">Item 3</li>
+			<li class="ui-state-default">Item 4</li>
+			<li class="ui-state-default">Item 5</li>
+		</ul>
+	</div>
+	<div class="mItem">
+		<ul class="droptrue">
+			<li class="ui-state-highlight">Cannot be dropped..</li>
+			<li class="ui-state-highlight">..on an empty list</li>
+			<li class="ui-state-highlight">Item 3</li>
+			<li class="ui-state-highlight">Item 4</li>
+			<li class="ui-state-highlight">Item 5</li>
+		</ul>
+	</div>
+</div> -->
+
+ 
+<br style="clear:both">
+ 
+ 
+</body>
+</html>

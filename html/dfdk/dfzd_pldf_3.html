@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+        <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+    </head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step2.png) no-repeat center center;
+        }
+        .pbd_table_form td{line-height: 42px}
+        .pbd_table_form1 td{line-height: 34px}
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：代发代扣<span>&gt;</span>代发业务<span>&gt;</span><b>代付制单</b></div>
+
+            <!--步骤导航 START-->
+            <div class="stepNav">
+                <ul class="clearfix">
+                    <li class="fl stepNav_ul_list1 stepNav_ul_color2">1.代发制单选择</li>
+                    <li class="fl stepNav_ul_list2 stepNav_ul_color1">2.批量代发确认</li>
+                    <li class="fl stepNav_ul_list3 stepNav_ul_color2">3.批量代发成功</li>
+                    <li class="fl stepNav_ul_color2"></li>
+                </ul>
+                <span class=""></span>
+            </div>
+            <!--步骤导航 END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form1" style="margin-top:15px;border:1px solid #62A7E3">
+                <tr>
+                    <td style="width:228px;text-align: right" class=" _tbBg tbBorder-bottom" >
+                        <span style="margin-right: 10px">付款人:</span>
+                    </td>
+                    <td style="width:350px;text-align: left;" class=" tbBorder-bottom" colspan="4">
+                       <span style="margin-left: 10px">一汽大众汽车有限公司</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right" class=" _tbBg tbBorder-bottom" >
+                        <span style="margin-right: 10px">账号:</span>
+                    </td>
+                    <td style="width:350px;text-align: left;" class=" tbBorder-bottom" colspan="4">
+                        <span style="margin-left: 10px;font-weight: bold">3829 2648 3772 6472 5431</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right" class=" _tbBg tbBorder-bottom" >
+                        <span style="margin-right: 10px">开户行:</span>
+                    </td>
+                    <td style="width:80px;text-align: left;" class=" tbBorder-bottom" colspan="4">
+                        <span style="margin-left: 10px">中国建设银行长沙分行</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right" class=" _tbBg tbBorder-bottom" >
+                        <span style="margin-right: 10px">金额大写:</span>
+                    </td>
+                    <td style="width:350px;text-align: left;" class=" tbBorder-bottom" colspan="2">
+                        <span style="margin-left: 10px">壹万伍仟元整</span>
+                    </td>
+                    <td style="width:229px;text-align: right" class=" _tbBg tbBorder-bottom" >
+                        <span style="margin-right: 10px">小写(元):</span>
+                    </td>
+                    <td style="width:350px;text-align: left;" class=" tbBorder-bottom" >
+                        <span style="margin-left: 10px;font-weight: bold">15,000.00</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right" class=" _tbBg" >
+                        <span style="margin-right: 10px">用途:</span>
+                    </td>
+                    <td style="width:350px;text-align: left;" class=" " colspan="2">
+                        <span style="margin-left: 10px">代发工资</span>
+                    </td>
+                    <td style="width:229px;text-align: right" class="_tbBg">
+                        <span style="margin-right: 10px">制单:</span>
+                    </td>
+                    <td style="width:350px;text-align: left;">
+                        <span style="margin-left: 10px;">宋河</span>
+                    </td>
+                </tr>
+
+
+            </table>
+            <!--table选择 END-->
+
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form1" style="margin-top:15px;border:1px solid #62A7E3">
+                <tr>
+                    <th style="width: 200px;text-align: center;font-weight: bold">代发记录</th>
+                    <th>代付总金额(元)</th>
+                    <th>代付文件名</th>
+                    <th>上传时间</th>
+                </tr>
+                <tr>
+                    <td style="text-align: center">3</td>
+                    <td style="text-align: center">15,000.00</td>
+                    <td style="text-align: center">20140624</td>
+                    <td style="text-align: center">2014-06-24</td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <div class="pbd_table_form_body" style="margin-top: 15px">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                    <tr >
+                        <td class="first_td text_r" style="width: 220px"><span style="margin-right: 10px">定时处理:</span></td>
+                        <td>
+                            <input type="checkbox" id="dingshi" class="l_table" value="" style="margin-left: 10px"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pbd_table_form_filter hide l_table_con hide">
+                <div class="pbd_table_form_body">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r"><input type="radio" name="items3" /> 定时<span>：</span></td>
+                            <td><input type="text" class="pbd_form_txt"  style="margin-left:5px;" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r" rowspan="3"><input type="radio" name="items3" /> 定频率<span>：</span></td>
+                            <td><input type="radio" name="items4" class="ml5" /> 每天</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="items4" class="ml5" /> 每周 <input type="text" class="pbd_form_txt"/> <span class="pl5">（各执行日期之间用“，”隔开 如“1,3”则表示每周一、周三执行交易）</span></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="items4" class="ml5" /> 每月 <input type="text" class="pbd_form_txt"/><span class="pl5">（各执行日期之间用“，”隔开 如“1,15”则表示每月1号、15号执行交易）</span></td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r"><input type="checkbox" name="" /> 执行时间<span>：</span></td>
+                            <td class="pl5">
+                                <select class="easyui-combobox" style="width:230px;height:27px;">
+                                    <option value="1">8点</option>
+                                    <option value="2">9点</option>
+                                    <option value="3">10点</option>
+                                    <option value="3">11点</option>
+                                    <option value="4">12点</option>
+                                    <option value="5">13点</option>
+                                    <option value="6">14点</option>
+                                    <option value="7">15点</option>
+                                    <option value="8">16点</option>
+                                    <option value="9">17点</option>
+                                    <option value="10">18点</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form ">
+                <tr>
+                    <td style="width: 220px;text-align: right">
+
+                        <span style="margin-right: 10px">选择下级复核员:</span>
+                    </td>
+                    <td style="width: 200px; text-align: left" >
+                        <div class="" style="margin-left: 10px">
+                            <div class="select">
+                                <span>请选择</span>
+                                <input type="hidden" class="define_input" value="">
+                                <a class="hover" href="javascript:;"></a>
+                            </div>
+                            <ul class="option">
+                                <li><a href="javascript:;">蔡启</a></li>
+                                <li><a href="javascript:;">李建</a></li>
+                                <li><a href="javascript:;">东方</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <input type="checkbox" style="vertical-align: inherit;margin-left: 10px" />
+                        <span>提交时通知对方</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;text-align: right">
+                        <span style="margin-right: 10px">摘要:</span>
+                    </td>
+                    <td style="width: 200px; text-align: left" colspan="3">
+                        <div style="margin-left: 10px">
+                            <label>
+                                <input type="text" class="pbd_input" style="width: 211px">
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 200px;text-align: right">
+                        <label class="_red">*</label>
+                        <span style="margin-right: 10px">请输入交易密码:</span>
+                    </td>
+                    <td style="width: 200px; text-align: left" colspan="3">
+                        <div style="margin-left: 10px">
+                            <label>
+                                <input type="text" class="pbd_input" style="width: 211px">
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <div class="btn_select" style="padding-left: 214px">
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="dfzd_1.html">上一步</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml10" href="dfzd_pldf_4_tips.html" >确认</a>
+            </div>
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+		</div>	
+		<script>
+        $(function(){
+            //获取页面url参数
+            //获取当前url
+            var url=location.search;
+            var Request = new Object();
+            if(url.indexOf("?")!=-1){
+                var str = url.substr(1);
+                strs = str.split("&");
+                for(var i=0;i<strs.length;i++){
+                    Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1],strs[i].split("=")[2]);
+                }
+            }
+            //1左边logo得到得值做相应得处理
+            var _name=$('._nameUrl');
+            var _text=$('._textUrl');
+            if(Request["lg_name"]==1){
+                _name.attr('value','李建');
+            }else if(Request["lg_name"]==2){
+                _name.attr('value','小李');
+            }else if(Request["lg_name"]==3){
+                _name.attr('value','小建');
+            }else{
+                return false
+            }
+
+            if(Request["lg_text"]==1){
+                _text.attr('value','656515616516161');
+            }else if(Request["lg_text"]==2){
+                _text.attr('value','844441641111616516');
+            }else if(Request["lg_text"]==3){
+                _text.attr('value','26821688484848');
+            }else{
+                return false
+            }
+        })
+        var _item={
+            itemTitle1:'1.代付制单选择',
+            itemTitle2:'2.单笔代发制单',
+            itemTitle3:'3.单笔代发确认',
+            itemTitle4:'4.单笔代付成功',
+            itemTitle5:'2.批量代发确认',
+            itemTitle6:'3.批量代发成功'
+        }
+        $('.radio').eq(0).on('click',function(){
+             var _li=$('.stepNav').find('li');
+             _li.eq(0).html(_item.itemTitle1);
+             _li.eq(1).html(_item.itemTitle2);
+             _li.eq(2).html(_item.itemTitle3);
+             _li.eq(3).html(_item.itemTitle4);
+             $('.stepNav span,.df_tr').addClass('hide');
+        });
+        $('.radio').eq(1).on('click',function(){
+            var _li=$('.stepNav').find('li');
+            _li.eq(0).html(_item.itemTitle1);
+            _li.eq(1).html(_item.itemTitle5);
+            _li.eq(2).html(_item.itemTitle6);
+            _li.eq(3).html('');
+            $('.stepNav span,.df_tr').removeClass('hide');
+        });
+
+        //显示定时处理内容
+        $('.l_table').on('click',function(){
+            $('.l_table_con').toggleClass('hide');
+        })
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

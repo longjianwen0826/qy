@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_dbfk.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_plzz.css" />
+
+        <script src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+        <script src="../../js/public.js"></script>
+    </head>
+
+    <body>
+        <div id="Warp">
+            <!--顶部导航 START-->
+            <div id="phd_common"></div>
+            <!--当前位置 START-->
+			<div class="pbd_tab_current">当前位置：转账业务<span>&gt;</span>转账制单<span>&gt;</span>批量转账<span>&gt;</span><b>文件录入</b></div>
+            <!--当前位置 END-->
+            <!--顶部导航 END-->
+            <!--右边功能栏 START-->
+            <div id="fn_menu"></div>
+            <!--右边功能栏 END-->
+            <!--主内容区 START-->
+            <div id="pbd_content">
+                <!--成功反馈信息 start-->
+                <div class="success-feedback" style="padding:30px 0 0 199px;">
+                    <span class="success-icon"></span>
+                    <div class="back-infor" style="padding-top:23px;">
+                        <p><strong>尊敬的用户,您的批量转账单据录入成功！</strong></p>
+                    </div>
+                </div>
+                <!--成功反馈信息 end-->
+                <!-- 单据结果 START -->
+                <div class="pbd_table_title">
+                    <span class="ico_danju add_ico"></span><span class="pl20">提交下级复核员单据结果</span>
+                </div>
+                <div class="danju_div hide">
+                    <div class="table_warp">
+                        <table border="0" cellspacing="0" cellpadding="0" class="set_font_table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>凭证号</th>
+                                    <th>处理结果</th>
+                                    <th>提示信息</th>
+                                    <th>下级复核员</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td>1</td>
+                                    <td>000000459842</td>
+                                    <td>录入成功</td>
+                                    <td></td>
+                                    <td>蔡启</td> 
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>000000459840</td>
+                                    <td>录入成功</td>
+                                    <td></td>
+                                    <td>蔡启</td> 
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>000000459845</td>
+                                    <td>录入成功</td>
+                                    <td></td>
+                                    <td>蔡启</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pbd_table_bottom">
+                        <span>成功笔数：3笔</span> <span class="pl10">成功金额（元）：450,000.00</span>
+                    </div>
+                </div>
+                <!-- 单据结果 END -->
+                <!--操作区 ATART-->
+                <div class="mt15 btn_l">
+                    <a class="text_c pbd_btn_standard pbd_btn_w100" href="ZZZD_plzz_index.html">返回</a>
+                </div>
+                <!--操作区 END-->
+            </div>
+            <!--主内容区 END-->
+            <!--底部信息 START-->
+            <div id="pft_common"></div>
+            <!--底部信息 END-->
+            <!--返回顶部 STRAT-->
+            <div id="back_to_top"></div>
+            <!--返回顶部 END-->
+            <!--通用底部悬浮层 START-->
+            <div id="foot_float"></div>
+            <!--通用底部悬浮层 END-->
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function(){
+        // 单据显示与隐藏 start
+        $('.ico_danju').toggle(function(){
+            $(this).removeClass('add_ico').addClass('reduce_ico');
+            $('.danju_div').removeClass('hide');
+        },function(){
+            $(this).removeClass('reduce_ico').addClass('add_ico');
+            $('.danju_div').addClass('hide');
+        });
+        // 单据显示与隐藏 end
+    });
+</script>

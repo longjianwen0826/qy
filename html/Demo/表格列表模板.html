@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/jquery.easyui.min.js" ></script>
+	</head>
+	
+	<body>
+		<div>
+			<!--选择条件 START-->
+			<div class="pbd_table_h2">
+				<input type="checkbox" name="checkbox" class="ml10 mr5" />筛选
+			</div>
+			<div class="pbd_table_form_filter">
+		        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+		            <tr>
+		                <td class="first_td text_r">组合名称<span>：</span></td>
+		            	<td>
+		            		<select class="easyui-combobox" style="width:230px;height:27px">
+                                <option value="1">国外采购合同</option>
+                                <option value="3">国外销售合同</option>
+                                <option value="2">国内采购合同</option>
+                                <option value="4">国内销售合同</option>
+                                <option value="5">其他</option>
+                            </select>
+		            	</td>
+		            </tr>
+		            <tr>
+		            	<td class="first_td text_r">报告名称<span>：</span></td>
+		            	<td>
+		            		<select class="easyui-combobox" style="width:230px;height:27px">
+                                <option value="1">国外采购合同</option>
+                                <option value="3">国外销售合同</option>
+                                <option value="2">国内采购合同</option>
+                                <option value="4">国内销售合同</option>
+                                <option value="5">其他</option>
+                            </select>
+		            	</td>
+		           	</tr>
+		            <tr>
+		            	<td class="first_td text_r">资产类型<span>：</span></td>
+		                <td>
+		                	<select class="easyui-combobox" style="width:230px;height:27px">
+                                <option value="1">国外采购合同</option>
+                                <option value="3">国外销售合同</option>
+                                <option value="2">国内采购合同</option>
+                                <option value="4">国内销售合同</option>
+                                <option value="5">其他</option>
+                            </select>
+		                </td>
+		            </tr>
+		        </table>
+		        <!--操作按钮 start-->
+		        <div class="pl215">
+		        	<a class="icon_filter blue lh42 ml10" href="#">过滤筛选</a>
+		        </div>
+		        <!--操作按钮 end-->
+			</div>
+			<!--选择条件 END-->
+			
+			<!--表格标题 START-->
+            <div class="pbd_table_show_title">
+        		<div class="fl pbd_table_h2 ml10">表格标题</div>
+        		<!--图标操作类 START-->
+				<ul class="download_second fr">
+					<li class="b">
+						<a class="download_second_current icon_download" href="#d">下载</a>
+						<ul class="download_third">
+							<li>
+								<a href='javascript:void(0);'>Word格式</a>
+							</li>
+							<li>
+								<a href='javascript:void(0);'>Excel格式</a>
+							</li>
+							<li>
+								<a href='javascript:void(0);'>纯文本格式</a>
+							</li>
+						</ul>
+					</li>
+					<li class="b">
+						<a class="download_second_current icon_download" href="#d">下载全部</a>
+						<ul class="download_third">
+							<li>
+								<a href='javascript:void(0);'>Word格式</a>
+							</li>
+							<li>
+								<a href='javascript:void(0);'>Excel格式</a>
+							</li>
+							<li>
+								<a href='javascript:void(0);'>纯文本格式</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml5 mt5">
+						<a class="download_second_current icon_printer" href="javascript:print();">打印</a>
+					</li>
+				</ul>
+				<!--图标操作类 END-->
+            </div>
+			<!--表格标题 END-->
+			<div class="clear"></div>
+			
+			<!--列表表格 START-->
+			<div class="table_warp">
+                <table border="0" cellspacing="0" cellpadding="0" class="pbd_table_show" width="100%">
+                    <tr>
+                    	<th width="60" class="text_l"><input type="checkbox" name="allcheck" class="mh5" />全选</th>
+                        <th>账号</th>
+                        <th>账户名称</th>
+                        <th>币种</th>
+                        <th>开户机构</th>
+                        <th>签约类型</th>
+                        <th>账户别名</th>
+                        <th>上次查询余额(元)</th>
+                        <th>上次查询时间</th>
+                    </tr>
+                    <tr>
+                    	<td><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1525 8000 5000
+                        </td>
+                        <td>
+                        	一汽大众发动机公司
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	发动机公司
+                        </td>
+                        <td class="text_r">
+                        	7,190,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 09:21:00
+                        </td>
+                    </tr>
+                    
+                    <tr class="odd">
+                    	<td><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1235 1230 4683
+                        </td>
+                        <td>
+                        	一汽大众工资账户
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	工资账户
+                        </td>
+                        <td class="text_r">
+                        	500,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 10:21
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                    	<td><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1525 2342 1231
+                        </td>
+                        <td>
+                        	一汽大众采购部
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	采购部
+                        </td>
+                        <td class="text_r">
+                        	240,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 11:21
+                        </td>
+                    </tr>
+                    
+                    <tr class="odd">
+                    	<td class="text_left_td"><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1235 1529 5561
+                        </td>
+                        <td>
+                        	一汽大众工资账户
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	发动机公司
+                        </td>
+                        <td class="text_r">
+                        	490,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 14:21
+                        </td>
+                    </tr>
+                
+                	<tr>
+                    	<td class="text_left_td"><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1525 208 5176
+                        </td>
+                        <td>
+                        	一汽大众发动机公司
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	发动机公司
+                        </td>
+                        <td class="text_r">
+                        	8,010,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 15:21
+                        </td>
+                    </tr>
+                    
+                    <tr class="odd">
+                    	<td class="text_left_td"><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1235 9186 4901
+                        </td>
+                        <td>
+                        	一汽大众工资账户
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	工资账户
+                        </td>
+                        <td class="text_r">
+                        	90,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 16:21
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                    	<td class="text_left_td"><input type="checkbox" name="items" class="ml5" /></td>
+                        <td>
+                        	3100 1525 9643 7649
+                        </td>
+                        <td>
+                        	一汽大众采购部
+                        </td>
+                        <td>
+                        	人民币
+                        </td>
+                        <td>
+                        	中国建设银行上海分行虹桥分行
+                        </td>
+                        <td>
+                        	签约账户
+                        </td>
+                        <td>
+                        	采购部
+                        </td>
+                        <td class="text_r">
+                        	120,000,000.00
+                        </td>
+                        <td>
+                        	2015-03-10 17:21
+                        </td>
+                    </tr>
+                </table>
+            </div>
+			<!--列表表格 END-->
+			<div class="fl text_r table_b_allcheck"><input type="checkbox" name="allcheck" class="mr5"/>全选</div>
+			
+			<!--图标操作类 START-->
+			<ul class="download_second fr">
+				<li class="b">
+					<a class="download_second_current icon_download" href="#d">下载</a>
+					<ul class="download_third">
+						<li>
+							<a href='javascript:void(0);'>Word格式</a>
+						</li>
+						<li>
+							<a href='javascript:void(0);'>Excel格式</a>
+						</li>
+						<li>
+							<a href='javascript:void(0);'>纯文本格式</a>
+						</li>
+					</ul>
+				</li>
+				<li class="b">
+					<a class="download_second_current icon_download" href="#d">下载全部</a>
+					<ul class="download_third">
+						<li>
+							<a href='javascript:void(0);'>Word格式</a>
+						</li>
+						<li>
+							<a href='javascript:void(0);'>Excel格式</a>
+						</li>
+						<li>
+							<a href='javascript:void(0);'>纯文本格式</a>
+						</li>
+					</ul>
+				</li>
+				<li class="ml5 mt5">
+					<a class="download_second_current icon_printer" href="javascript:print();">打印</a>
+				</li>
+			</ul>
+			<!--图标操作类 END-->
+			
+			<!--操作按钮 START-->
+			<div class="text_c mt15 clear">
+				<a class="pbd_btn_standard pbd_btn_w100 ml10" href="javascript:void(0);"><b>账户信息</b></a>
+				<a class="pbd_btn_standard pbd_btn_w100 ml10" href="javascript:void(0);"><b>实时余额</b></a>
+				<a class="pbd_btn_standard pbd_btn_w100 ml10" href="javascript:void(0);"><b>历史余额</b></a>
+				<a class="pbd_btn_standard pbd_btn_w100 ml10" href="javascript:void(0);"><b>明细查询</b></a>
+			</div>
+			<!--操作按钮 END-->
+			
+			<!--温馨提示 START-->
+			<div class="tip-msg">
+	            <div class="pbd_tips_title">温馨提示：</div>
+	            <ul>
+	                <li>1.账户信息查询最多支持5个账户。</li>
+	            	<li>2.实时余额查询支持同时50个账户。</li>
+	            	<li>3.历史余额、明细查询支持5个以内账户同时查询并实时返回查询结果，5个以上将通过批量方式查询下载。</li>
+	            </ul>
+	        </div>
+			<!--温馨提示 END-->
+		</div>
+<script>
+
+    //存储页面高度
+    var isIE = navigator.userAgent.indexOf('MSIE') !== -1;
+    !isIE && setTimeout(function(){window.localStorage.setItem('web_height', document.getElementsByTagName('body')[0].clientHeight);},20);
+</script>
+	</body>
+</html>

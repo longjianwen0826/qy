@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_dbfk.css" />
+
+        <script src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+        <script src="../../js/public.js"></script>
+    </head>
+
+    <body>
+        <div id="Warp">
+            <!--顶部导航 START-->
+            <div id="phd_common"></div>
+            <!--当前位置 START-->
+			<div class="pbd_tab_current">当前位置：转账业务<span>&gt;</span>转账制单<span>&gt;</span><b>单笔付款</b></div>
+            <!--当前位置 END-->
+            <!--顶部导航 END-->
+            <!--右边功能栏 START-->
+            <div id="fn_menu"></div>
+            <!--右边功能栏 END-->
+            <!--主内容区 START-->
+            <div id="pbd_content">
+                <!-- 单笔信息返显 start -->
+                <div class="xxfx">
+                    <div class="pbd_table_title">确认单笔付款信息</div>
+                    <div class="pbd_table_box">
+                        <table cellpadding="0" cellspacing="0" class="pbd_table" width="1158" >
+                            <tr>
+                                <th width="82" rowspan="4" class="formTit" style="text-align:center; border-left:none;"><b>付<br />款<br />方</b></th>
+                                <th width="145" class=" pbd_right_text">户名<span>：</span></th>
+                                <td width="340"><span>一汽大众集团</span></td>
+                                <th width="82" rowspan="4" class="formTit" style="text-align:center;"><b>收<br />款<br />方</b></th>
+                                <th width="144" class=" pbd_right_text">户名<span>：</span></th>
+                                <td width="340"><span>大连亚明公司</span></td>
+                            </tr>
+                            <tr>
+                                <th class=" pbd_right_text">账号<span>：</span></th>
+                                <td><b>3500 1870 0070 5251 6810</b></td>
+                                <th class=" pbd_right_text">账号<span>：</span></th>
+                                <td><b>2837 1231 3564 2416 23</b></td>
+                            </tr>
+                            <tr>
+                                <th class=" pbd_right_text">开户行<span>：</span></th>
+                                <td><span>中国建设银行上海分行虹桥支行</span></td>
+                                <th class=" pbd_right_text">开户行<span>：</span></th>
+                                <td><span>中国建设银行大连分行</span></td>
+                            </tr>
+                            <tr>
+                                <th class=" pbd_right_text">账户别名<span>：</span></th>
+                                <td><span>一汽大众</span></td>
+                                <th class=" pbd_right_text"></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class=" pbd_right_text">金额（大写）<span>：</span></th>
+                                <td><b>伍千万圆整</b></td>
+                                <th colspan="2" class=" pbd_right_text">用途<span>：</span></th>
+                                <td>货款</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class=" pbd_right_text">金额（小写）<span>：</span></th>
+                                <td><b>50,000,000.00</b></td>
+                                <th colspan="2" class=" pbd_right_text">定条件<span>：</span></th>
+                                <td><span>定金额</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class=" pbd_right_text" id="zx_h">执行日期<span>：</span></th>
+                                <td><span id="zx_txt">20151001</span></td>
+                                <th colspan="2" class=" pbd_right_text">用途<span>：</span></th>
+                                <td><span>报销款</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- 单笔信息返显 end -->
+                <div class="pbd_table_form_body mt15">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r">上传跟单信息<span>：</span></td>
+                            <td>
+                                <input type="text" id="p_file" class="pbd_input_normal" notEmpty="true" nonEmptyMsg="批量转账单据文件不能为空" nonEmptyShowCtrl="no2" style="width:555px;" />
+                                <a href="javascript:void(0);" class="upload ml3"><span class="panel_title_nuember">?</span></a>
+                                <span class="pbd_btn_small pbd_btn_standard pbd_btn_h27 ml3"><a name="btn_load" class="white"> 浏览</a></span>
+                                <input type="file" hidefocus="" onchange="getfile();" id="pt_file" style="display:none; " title="浏览" name="upload" /><a href="../download/批量转账-简单模板.xlsx" style="margin-left:3px;">下载模板</a></td>
+                                <div class="upload_box hide" style="position:absolute; top:453px; left:795px;">
+                                    <div class="upload_tips">
+                                        请先下载模板，对下载的模板编辑后，再点击浏览上传模板。
+                                    </div>
+                                    <div class="upload_arrow"></div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">跟单信息<span>：</span></td>
+                            <td><input type="text" class="pbd_input_normal"/></td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">选择下级复核员<span>：</span></td>
+                            <td>
+                                <select class="easyui-combobox" style="width:230px;height:27px;">
+                                    <option value="1">蔡启</option>
+                                    <option value="2">卓海</option>
+                                    <option value="3">洪博</option>
+                                    <option value="3">李建</option>
+                                    <option value="4">罗丹</option>
+                                </select>
+                                <input type="checkbox" value="" class="pbd_inp_span checkedHide" />
+                                	提交时通知对方
+                            </td>
+                        </tr>
+                        
+                        <tr class="checkedTr hide">
+                        	<td colspan="2" style="background-color: #F7FAFD;">
+                        		<table>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					<span class="fb">短信通知</span><span>：</span>
+                        				</td>
+                        				<td>
+                        					<input type="checkbox" value="" class="editor" />
+                        				</td>
+                        			</tr>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					手机号码<span>：</span>
+                        				</td>
+                        				<td>
+                        					<div class="grey">
+                        						<span>15221582598</span>
+                        						<span class="ml15">修改</span>
+                        					</div>
+                        					<div class="editorInput hide">
+                        						<span class="email_ok">15221582598</span>
+                        						<span class="email hide"><input type="text" class="pbd_input_normal" value="15221582598"></span>
+                        						<a href="javascript:;" class="query_money money_email ml15">修改</a>
+                        					</div>
+                        				</td>
+                        			</tr>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					附加信息<span>：</span>
+                        				</td>
+                        				<td>
+                        					<div class="grey">
+                        						<span>尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</span>
+                        						<span class="ml15">修改</span>
+                        					</div>
+                        					<div class="editorInput hide">
+                        						<span class="email_ok">尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</span>
+                        						<span class="email hide">
+                        							<textarea class="pbd_input_normal textarea_text">尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</textarea>
+                        						</span>
+                        						<a href="" class="query_money money_email ml15">修改</a>
+                        					</div>
+                        				</td>
+                        			</tr>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					<span class="fb">邮件通知</span><span>：</span>
+                        				</td>
+                        				<td>
+                        					<input type="checkbox" value="" class="editor" />
+                        				</td>
+                        			</tr>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					邮件地址<span>：</span>
+                        				</td>
+                        				<td>
+                        					<div class="grey">
+                        						<span>15221582598@163.com</span>
+                        						<span class="ml15">修改</span>
+                        					</div>
+                        					<div class="editorInput hide">
+                        						<span class="email_ok">15221582598@163.com</span>
+                        						<span class="email hide"><input type="text" class="pbd_input_normal" value="15221582598@163.com"></span>
+                        						<a href="javascript:;" class="query_money money_email ml15">修改</a>
+                        					</div>
+                        				</td>
+                        			</tr>
+                        			<tr>
+                        				<td class="first_td text_r">
+                        					附加信息<span>：</span>
+                        				</td>
+                        				<td>
+                        					<div class="grey">
+                        						<span>尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</span>
+                        						<span class="ml15">修改</span>
+                        					</div>
+                        					<div class="editorInput hide">
+                        						<span class="email_ok">尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</span>
+                        						<span class="email hide">
+                        							<textarea class="pbd_input_normal textarea_text">尊敬的陈诗诗女士，已有一笔待复核业务发送给您。请您尽快复核。</textarea>
+                        						</span>
+                        						<a href="" class="query_money money_email ml15">修改</a>
+                        					</div>
+                        				</td>
+                        			</tr>
+                        		</table>
+                        	</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>请输入交易密码<span>：</span></td>
+                            <td><input type="text" class="pbd_input_normal"/></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--操作区 ATART-->
+                <div class="mt15 btn_l">
+                    <a class="text_c pbd_btn_standard pbd_btn_w100" href="ZZZD_dbfk_index.html">上一步</a>
+                    <a class="text_c pbd_btn_standard pbd_btn_w100 ml8" href="ZZZD_dbfk_step_2_tips.html">确定</a>
+                </div>
+                <!--操作区 END--> 
+            </div>
+            <!--主内容区 END-->
+            <!--底部信息 START-->
+            <div id="pft_common"></div>
+            <!--底部信息 END-->
+            <!--返回顶部 STRAT-->
+            <div id="back_to_top"></div>
+            <!--返回顶部 END-->
+            <!--通用底部悬浮层 START-->
+            <div id="foot_float"></div>
+            <!--通用底部悬浮层 END-->
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+
+	// 下级复核员通知对方 start
+    $('.checkedHide').click(function(){
+        if($(this).attr('checked') == 'checked'){
+            $('.checkedTr').removeClass('hide');
+            
+            //子input选择
+            $('.editor').click(function(){
+            	if($(this).attr('checked') == 'checked'){
+            		/*for (var i=0,i>3, i++) {
+            			
+            		}*/
+		           	$('.grey:eq(0)').addClass('hide');
+		            $('.editorInput:eq(0)').removeClass('hide');
+		            $('.grey:eq(1)').addClass('hide');
+		            $('.editorInput:eq(1)').removeClass('hide');
+		        }else{
+		          	$('.grey:eq(0)').removeClass('hide');
+		            $('.editorInput:eq(0)').addClass('hide');
+		            $('.grey:eq(1)').removeClass('hide');
+		            $('.editorInput:eq(1)').addClass('hide');
+		        }
+            });
+        }else{
+            $('.checkedTr').addClass('hide');
+        }
+    });
+    
+    //修改Email
+	$(".query_money").click(function(){
+		if ($(this).hasClass("money_email")) {
+			$(this).text("保存");
+			$(this).find(".email_ok").addClass("hide");
+			$(this).prev().find(".email").removeClass("hide");
+			$(this).removeClass("money_email");
+		}else{
+			$(this).text("修改");
+			$(this).find(".email_ok").removeClass("hide");
+			$(this).find(".email").addClass("hide");
+			$(this).addClass("money_email");
+			$(this).find(".email_ok").text($(".email .pbd_form_txt").val());
+			$('.grey:eq(0)').text($(".email .pbd_form_txt").val());
+		}
+	});
+	
+	// 下级复核员通知对方 end
+    
+    //   批量上传问号 start   //
+    $(function () {
+        $(".upload").hover(function () {
+            $(".upload_box").removeClass('hide');
+        }, function () {
+            $(".upload_box").addClass('hide');
+        });
+    })
+    //   批量上传问号 end    //
+    //  上传文件类型验证 start //
+    jQuery("a[name='btn_load']").click(function () {
+        jQuery(this).parent().next().click();
+    });
+
+    function getfile(){
+        jQuery("#p_file").val(jQuery("#pt_file").val());
+        $("#p_file").removeClass("pbd_input_normal_error");
+        $("#p_file").parent().parent().find(".error-tip-box").before($("#p_file"));
+        $("#p_file").next(".error-tip-box").remove();
+        $("#p_file").focus(); $(this)[0].focus();
+    }
+    //  上传文件类型验证 end //
+</script>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_xdrz.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+		<script src="../../js/p_jxhqzh.js"></script>
+        <style>
+        	.font-r{ position:absolute; top: 21.2%; left: 53px; }
+			.font_l1{ position:absolute; top: 18.8%; right: 52px; width:200px;line-height: 25px; height:25px;}
+			.font_l2{ position:absolute; top: 40.8%; right: 52px; width:200px;line-height: 25px; height:25px;}
+			.font_l3{ position:absolute; top: 63.8%; right: 52px; width:200px;line-height: 25px; height:25px;}
+        </style>
+	</head>
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>我要快贷</b></div>
+            
+            <!--列表表格 START-->
+			<div class="bg_wykd mt30" style="position:relative;">
+            	<a class="font-r blue" href="xwqykd_wykd_4.html" target="_blank">包括快e贷和融e贷。</a>
+                <a class="font_l1 blue" href="xwqykd_wykd_2.html">通过企业网银授权企业主办理贷款</a>
+                <span  class="font_l2">企业主通过个人网银接受授权并申请贷款</span>
+                <a class="font_l3 blue" href="#" >在企业网银或个人网银中进行支用、还款</a>
+            	<div class="posi_img" onClick="location.href='xwqykd_wykd_2.html'"></div>
+			</div>
+			<!--列表表格 END-->
+            
+           <!-- <div class="text_c mt55">
+                <a class="pbd_btn_standard pbd_btn_w100" href="xwqykd_wykd_2.html"><b>马上授权</b></a>
+            </div>-->
+				
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common" ></div>
+			<!--<div id="pft_common" style="padding-top: 35px;padding-bottom: 8px;"></div>-->
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				allowDownload();
+				
+				//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_wykd_1.html" data-text="我要快贷" data-href="../xdrz_xwqykd/xwqykd_wykd_1.html">我要快贷</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zysp_1.html" data-text="支用审批" data-href="../xdrz_xwqykd/xwqykd_zysp_1.html">支用审批</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hksp_1.html" data-text="还款审批" data-href="../xdrz_xwqykd/xwqykd_hksp_1.html">还款审批</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+				
+			});
+			
+		</script>
+	</body>
+</html>

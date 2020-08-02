@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+        <script src="../../js/laydate/laydate.js"></script>
+		
+	</head>
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>查询</b></div>
+            
+            <div id="phd_context">
+            	<!--表格标题 start-->
+            	<div class="pbd_table_h2 ml10">
+	                <span>明细信息</span>
+	            </div>
+            	<!--表格标题 end-->
+            	
+            	<!--查询条件 start-->
+				<!--<table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+		            <tr>
+		                <td class="first_td text_r">
+		                	起始日期<span>：</span>
+		                </td>
+		            	<td>
+		            		<input class="Mdate pbd_input_normal laydate-icon" type="text" value="2015-04-01" style="width:98px;"  onclick="laydate()">
+		            		<span class="dashes">-</span>
+		            		<input class="Mdate pbd_input_normal  laydate-icon" type="text" value="2015-04-07" style="width:98px;" id="demo" >
+		            		<input type="radio" checked="checked" name="radio1" class="mr5 ml10">
+		            		最近一个月
+		            		<input type="radio" name="radio1" class="mr5">
+		            		三个月
+		            		<input type="radio" name="radio1" class="mr5">
+		            		六个月
+	                        <input type="radio" name="radio1" class="mr5">
+		            		一年
+	                        <input type="radio" name="radio1" class="mr5">
+		            		全部
+	                        <a class="pbd_btn_standard pbd_btn_w100 btn_link"><b>确定</b></a>
+		            	</td>
+		            </tr>
+				</table>-->
+				<!--查询条件 end-->
+				
+				<!--下载、打印 START-->
+				<div class="pbd_table_show_title">
+					<ul class="download_second fr">
+						<li class="b">
+							<a class="download_second_current icon_download" href="#d">下载</a>
+							<ul class="download_third">
+								<li>
+									<a href='javascript:void(0);'>Word格式</a>
+								</li>
+								<li>
+									<a href='javascript:void(0);'>Excel格式</a>
+								</li>
+								<li>
+									<a href='javascript:void(0);'>纯文本格式</a>
+								</li>
+							</ul>
+						</li>
+						<li class="ml15 mt5 mr10">
+							<a class="download_second_current icon_printer" href="javascript:print();">打印</a>
+						</li>
+					</ul>
+				</div>
+				<!--下载、打印 END-->
+				
+				<!--列表表格 START-->
+				<div class="table_warp">
+					<table border="0" cellspacing="0" cellpadding="0" class="set_font_table" width="100%">
+						<tr>
+							<th>交易日期</th>
+							<th>支用</th>
+							<th>还款</th>
+							<th>本金(元)</th>
+							<th>利息(元)</th>
+						</tr>
+						<tr>
+							<td class="text_c">2015-03-16</td>
+							<td class="text_c">50,000.00</td>
+	                        <td class="text_c">-</td>
+	                        <td class="text_c">-</td>
+	                        <td class="text_c">-</td>
+							<!--<td class="text_r relative">
+								<div style="position: absolute; right: 36%; top: 9px;">-</div>
+							</td>
+							<td class="text_r relative">
+								<div style="position: absolute; right: 36%; top: 9px;">-</div>
+							</td>
+							<td class="text_c relative">
+								<div style="position: absolute; right: 36%; top: 9px;">-</div>
+							</td>-->
+						</tr>
+						<tr class="odd">
+							<td class="text_c">2015-02-16</td>
+							<td class="text_c">-</td>
+	                        <td class="text_c">52,000.00</td>
+	                        <td class="text_c">50,000.00</td>
+							<td class="text_c">2,000.00</td>
+							<!--<td class="text_r relative">
+								<div style="position: absolute; right: 36%; top: 9px;">52,000.00</div>
+							</td>
+							<td class="text_r relative">
+								<div style="position: absolute; right: 36%; top: 9px;">50,000.00</div>
+							</td>
+							<td class="text_r relative">
+								<div style="position: absolute; right: 36%; top: 9px;">2,000.00</div>
+							</td>-->
+						</tr>
+	                    <tr>
+							<td class="text_c"><b>合计：</b></td>
+							<td class="text_c">50,000.00</td>
+	                        <td class="text_c">52,000.00</td>
+	                        <td class="text_c">50,000.00</td>
+							<td class="text_c">2,000.00</td>
+						</tr>
+					</table>
+				</div>
+				<!--列表表格 END-->
+            </div>
+
+
+			<ul class="download_second fr">
+					<li class="b">
+						<a class="download_second_current icon_download" href="#d">下载</a>
+						<ul class="download_third">
+							<li>
+								<a href="javascript:void(0);">Word格式</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">Excel格式</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">纯文本格式</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml15 mt5 mr10">
+						<a class="download_second_current icon_printer" href="javascript:print();">打印</a>
+					</li>
+				</ul>
+
+
+			<!--分页器 start-->
+            <!--<div class="pbd_table_hidden">
+	            <div class="h35">
+		    		<span>当前页交易金额合计：人民币：102,000.00元，其中还款合计：52,000.00元，支用合计：50,000.00元 </span>
+		    	</div>
+		    	<div class="h35">
+		    		<span>当前时间段交易金额合计：人民币：102,000.00元，其中还款合计：52,000.00元，支用合计：50,000.00元 </span>
+		    	</div>
+            </div>-->
+            <!--分页器 end-->
+            
+            <!--操作按钮 START-->
+			<div class="text_c mt30">
+				<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_cx_1.html">返回</a>
+			</div>
+			<!--操作按钮 END-->
+				
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zy_1.html" data-text="支用" data-href="../xdrz_xwqykd/xwqykd_zy_1.html">支用</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hk_1.html" data-text="还款" data-href="../xdrz_xwqykd/xwqykd_hk_1.html">还款</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+				
+			});
+			;!function(){
+				laydate({
+				   elem: '#demo'
+				})
+			}();	
+		</script>
+	</body>
+</html>

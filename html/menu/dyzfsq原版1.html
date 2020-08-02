@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/jquery.ui.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../../css/p_cddtTest.css"/>
+		
+		<!--<script src="../../js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"  type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/p_Layout.js"  type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/widget.js"    type="text/javascript" charset="utf-8"></script>
+		
+		<script src="../../js/p_cddt.js" 	type="text/javascript" charset="utf-8"></script>
+		
+		<script src="../../js/plugin.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+		    .bnt-con {
+				background: #F7FAFD;
+				text-align: center;
+			}
+			
+			.slimScrollBar{ 
+				height:80px !important;
+				cursor:pointer ;
+				right: 2px !important;
+			}
+			
+			.pbd_ul{
+				width: 8px;
+				height: 8px;
+				display: inline-block;
+			}
+			
+			.pbd_ul_add{
+				background: url(../../images/cddt/icon_ul_add.png) no-repeat;
+			}
+			
+			.pbd_ul_cut{
+				background: url(../../images/cddt/icon_ul_cut.png) no-repeat;
+			}
+			.window-mask{
+				display: none !important; 
+			}
+			
+			.ts_p{
+				line-height: 25px;
+				color: #a2a2a2;
+				font-size: 12px;
+				margin-bottom: 15px;
+				margin-top: 5px;
+			}
+			
+		</style>
+	</head>
+   
+<body>
+	<div id="Warp">
+		<!--顶部导航 START-->
+		<div id="phd_common"></div>
+		
+		<!--当前位置 start-->
+		<div class="pbd_tab_current">当前位置：设置一级菜单</div>
+		
+		<div id="phd_context">
+		<!--主内容区 start-->
+			<!--Tab页签 START-->
+			<div class="tabs-com" style="padding-top: 0px;">
+				<div class="tabs-com-p28">	
+					<a href="dyzfsq_1.html" class="current">菜单配置</a>
+					<a href="dyzfsq_2.html">菜单分组</a>
+				</div>
+			</div>
+			<!--Tab页签 END-->
+			<div class="wdmb" onmouseover="wdmb_k()" onmouseout="wdmb_close()">
+				<div class="wdmb_close"></div>
+				<div class="wdmb_k hide">
+					<p><a href="javascript:void(0);" title="">菜单1模板...</a></p>
+					<p><a href="javascript:void(0);" title="">菜单2模板...</a></p>
+					<p><a href="javascript:void(0);" title="">菜单3模板...</a></p>
+					<p><a href="../menu/wdmb.html" title="">更多</a></p>
+				</div>
+			</div>
+			
+			
+			<div class="tabs-box mt27">
+				<div class="pbd_navSet_box" style="margin-bottom: 0px;">
+					<div class="pbd_navSet_left">
+						<div class="pbd_navSet_title lh33">一级菜单预览</div>
+						<div class="pbd_navSet_nav">
+							<ul class="pbd_navSet_list">
+								<li class="pbd_navSet_line">账户信息
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line"> 转账业务
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line">代发代扣
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line"> 缴费业务
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line">  服务管理
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line">票据业务
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line">国际业务
+									<a class="pbd_navSet_del"><img src="../../images/menuset/pbd_navset_del.png" /></a>
+								</li>
+								<li class="pbd_navSet_line addButton">
+									<a href="#"><img src="../../images/menuset/pbd_navset_add.png" style="padding-top:7px;" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="pbd_navSet_up up"></div>
+					</div>
+					<span class = "pbd_navSet_remains" style="padding-right: 0px; float: left; padding-left: 20px;">						
+					<p>您还可以设置<i class="red menuNumber">9</i>个一级菜单</p>
+					</span>
+				</div>
+				 <p class="ts_p"></p>
+				<!--菜单列表 start-->
+				<div class="pbd_menuSet_box">
+					<div class="menuSet_box">
+						<div class="cddt_area">
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >账户信息</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="">转账业务</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >代发代扣</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >现金管理</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="">缴费业务</div>
+							
+							<div class="menuSet_up upType mt10 mr10"></div>
+						</div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>账户信息查询</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>建行活期账户</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定期账户</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>银行内部账户</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>一户通</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>财资账户</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>透支账户</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>他行活期账户</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>批量账户查询</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>电子回单查询</label></div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>集成资讯</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>综合页</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>基金查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>贵金属查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>理财产品查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>汇率查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>理财计算器</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>电子对账</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>对账单查询与回签</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>明细账单查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>对账结果查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>电子对账签约管理</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>转账制单</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单笔付款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>付款冻结</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单笔收款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>跨行实时转账</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>批量转账</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>请领款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>证券资金转账</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>新股网下申购</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>单据维护</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据修改</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据删除</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据收回</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>复核员变更</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>流水查询</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>转账流水查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定制交易查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>常用账户管理</label></div>
+								
+							</div>
+						</div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>代发业务</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代发制单</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代发复核</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据收回</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据修改删除</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据复核员变更</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定制交易查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代发工资额度查询</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>代扣业务</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代扣制单</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代扣复核</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据收回</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据修改删除</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>单据复核员变更</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>授权账户查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定制交易查询</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>E付通</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>收款企业</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>付款企业</div>
+								</div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>单据撤销</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>客户信息查询</label></div>
+							</div>
+						</div>
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>信息报告</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定制交易查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>集团收付款</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>集团账户</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>集团理财</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>内部账户管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>集团式账户管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>现金池管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>预算管理</label></div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>应收应付</label></div>
+								<!--<div class="pbd_menuSet_list_h2 f12 text_r pr10"><a href="#">更多>></a></div>-->
+							</div>	
+						</div>
+						
+						<div class="pbd_menuSet_list pbd_menuSet_list_liner">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>网银费用缴交</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>现金产品缴费</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>代缴费</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>定制交易查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>银税通</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>银关通</label></div>
+							</div>
+						</div>
+					</div>
+					<div class="menuSet_box">
+						<div class="cddt_area">
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >票据业务</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="">国际业务</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >信贷融资</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >投资理财</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="">电子商务</div>
+							<div class="menuSet_up upType mt10 mr10"></div>
+						</div>
+						<!--<div class="menuSet_up upType"></div>-->
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>电子商业汇票</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>出票</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>背书</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>贴现</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>质押</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>提示付款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>应答</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>验票</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>代办业务</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>集团票据业务</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>签约管理</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>票据池</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>入池</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>集中存放</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>提取</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>提示付款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>背书</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>贴现</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>质押</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>应答</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>额度管理</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>保证金管理</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>提示</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>汇本票</label></div>
+							</div>
+						</div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>购汇</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>购汇申请</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>购汇</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>结汇</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>收汇划转申请</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>自主结汇交易</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>资本金结汇申请</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>结售汇牌价查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>外汇汇款</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>进口信用证</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>代理行业务</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>贷记通知</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>委托付款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>汇票见票提示付款通知</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查复书</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>收件箱</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>信息维护</label></div>
+							</div>
+					   </div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>e贷款（贷款客户）</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>贷款合同</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>交易信息管理</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>支用</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>还款</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>缴费</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>e联通</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>e速通</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>e贷通</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>网银循环贷</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul"></span><label>定向保理</label></div>
+							</div>
+						</div>
+						
+						<div class="pbd_menuSet_list">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>债券业务</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>债券查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>债券交易</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>基金业务</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>基金查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>基金交易</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>基金分析</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>证券管理</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>开户管理</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>交易账户管理</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>证券卡管理</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>理财产品</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>理财产品查询</div>
+								</div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>银期直通车</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>银期所通</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>定期存款</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>通知存款</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>协定存款</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>期货业务</label></div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>鑫存管</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>代理贵金属</label></div>
+							</div>	
+						</div>
+					  
+						<div class="pbd_menuSet_list pbd_menuSet_list_liner">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>E商贸通</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询（主管/操作员）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>现货交易（主管/操作员）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>e单通（主管/操作员）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>出入金（操作员）</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>网上支付</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>百易安</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>商户管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>商城账户充值</label></div>
+							</div>
+						</div>
+					</div>
+					<div class="menuSet_box">
+						<div class="cddt_area">
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >财政社保</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="">卡类业务</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >服务管理</div>
+							<div class="pbd_menuSet_list_h1 w229 fl"><input type="checkbox" onclick="" >特色业务</div>
+							
+							<div class="menuSet_up upType mt10 mr10"></div>
+						</div>
+						
+						<!--<div class="menuSet_up upType"></div>-->
+						<div class="pbd_menuSet_list pbd_menuSet_list_lineb">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>中央财政授权支付</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>制单</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>复核</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>财政授权支付</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>制单</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>复核</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>财政支付</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>制单</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>复核</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>查询</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>公积金</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>信息查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>个人账户转移</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>个人账户转移（复核）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>个缴转封存</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>个缴转封存（复核）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>基数调整</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>基数调整（复核）</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>缴存业务</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>企业年金</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>社保基金</label></div>
+							</div>
+						</div>
+						
+						<div class="pbd_menuSet_list pbd_menuSet_list_lineb">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>军队武警公务卡</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>单位商务卡</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span></span>商务卡管理</div>
+								</div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>中央财政公务卡</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>公务卡报销</label></div>
+							</div>
+					   </div>
+					   
+					   <div class="pbd_menuSet_list pbd_menuSet_list_lineb">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>待办业务</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>操作员管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>业务申请</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>流程管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>授权管理</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>个性设置</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>修改密码</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>外联平台管理</label></div>
+								
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>信息中心</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul"></span><label>账户管理</label></div>
+							</div>
+					   </div>
+						
+						<div class="pbd_menuSet_list  pbd_menuSet_list_lineb ">
+							<div class="sorll_list">
+								<div class="pbd_menuSet_list_h2 item_2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>分行银企通</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>特色查询</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick="" ><span class="pbd_ul pbd_ul_add"></span><label>税单打印</label></div>
+								<div class="pbd_menuSet_list_h2"><input type="checkbox" onclick=""><span class="pbd_ul pbd_ul_add"></span><label>CASS清算</label></div>
+								<div class="hide menuThird">
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>综合查询</div>
+									<div class="pbd_menuSet_list_h3 pr36"><input type="checkbox" onclick=""><span class="pbd_ul"></span>CASS业务</div>
+								</div>
+							</div>	
+						</div> 
+						
+						<div class="pbd_menuSet_list  pbd_menuSet_list_lineb pbd_menuSet_list_liner"></div>
+					</div>
+					<div style="display:block; height:30px; clear:both;"></div>
+					<p style="text-align: center;">
+						<a id="savesz" class="pbd_btn_standard pbd_btn_w100 mr15">保存设置</a>
+						<a id="savemb" class="pbd_btn_standard pbd_btn_w100 mr15">存为模板</a>
+						<a class="pbd_btn_standard pbd_btn_w100" href="dyzfsq_1.html">还原设置</a>
+					</p>
+				</div>
+				<!--菜单列表 end-->
+				<!--温馨提示 START-->
+				<div class="tip-msg">
+					<div class="pbd_tips_title">温馨提示：</div>
+					<ul>
+						<li>对一级菜单的设置只对本人的菜单展示有效，不影响其它操作员菜单。</li>
+					</ul>
+				</div>
+				<!--温馨提示 END-->
+			</div>
+			<!--主内容区 end-->
+		</div>
+		
+		<!--右边功能栏-->
+		<div id="fn_menu"></div>
+		<!--底部信息-->
+		<div id="pft_common"></div>
+		<!--返回顶部-->
+		<div id="back_to_top"></div>
+		<!--通用底部悬浮层-->
+		<div id="foot_float"></div>
+		
+		
+		
+		<!--弹窗 start-->
+	<div id="window_blue" class="window_hide hide"></div>
+	<div class="panel window bcsz" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+		
+		<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+			<div class="panel-title">保存设置</div>
+			<div class="panel-tool">
+				<a class="panel-tool-close" href="javascript:void(0)"></a>
+			</div>
+		</div>
+		<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+			<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 20px 10px;"></div>
+			
+			<div class="alert-feedback" style="padding: 0px 40px 20px 137px;">
+				<span class="fail-icon"></span>
+				<div class="feedback-infor"><p style="line-height: 24px;">设置成功，是否保存设置？</p></div>
+			</div>
+			<div class="bnt-con text_c">
+				<span class="pbd_btn_standard pbd_btn_w100" id="saveSettings">确定</span>
+				<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel window mb_1" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+		<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+			<div class="panel-title">存为模板</div>
+			<div class="panel-tool">
+				<a class="panel-tool-close" href="javascript:void(0)"></a>
+			</div>
+		</div>
+		<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+			<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 15px 10px;"></div>
+			
+			<div class=" text_c" style="min-height: 65px; padding-bottom: 25px;">
+				<label class="label-style" style="width:130px;">请输入模板名称：</label>
+				<input type="text" class="pbd_input_normal" id="mbname">
+			</div>
+			<div class="bnt-con text_c pb20">
+				<span class="pbd_btn_standard pbd_btn_w100" id="sure_btn">确定</span>
+				<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+			</div>
+			
+		</div>
+	</div>	
+	<!--弹窗 end-->
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    /*勾选所有在默认菜单中的项 begin*/
+    $(".pbd_navSet_line").each(function() {
+        var thisValue = $(this).text().trim();
+        $(".pbd_menuSet_list_h1").each(function() {
+            if ($(this).text().trim() == thisValue) {
+                $(this).children("input").attr("checked",true);
+            }
+        })
+    });
+     /*勾选所有在默认菜单中的项 end*/
+	 
+    /*编辑一级预览菜单 begin*/
+   /*一级和二级菜单添加和删除到预览菜单 begin*/
+    $(".pbd_menuSet_list_h1 > input,.pbd_menuSet_list_h2 > input").click(function() {
+		var tempObj = $(this); 
+        var tempObjValue;
+        if(tempObj.parent().hasClass("pbd_menuSet_list_h2")) {
+            var h2Value = tempObj.siblings("label").text();
+            if (h2Value.length > 4) {
+                tempObjValue = h2Value.substring(0,4) + "...";
+            } else {
+                tempObjValue = h2Value;
+            }
+        } else {
+            tempObjValue = tempObj.parent().text();
+        }
+
+        if (tempObj.is(':checked')) {
+            var newLi = "<li class='pbd_navSet_line'>" + tempObjValue + "<a class='pbd_navSet_del'><img src='../../images/menuset/pbd_navset_del.png' /></a></li>";
+            var  menus = $(".pbd_navSet_line").length;
+            addLi(tempObjValue,newLi,menus);
+            if (tempObj.parent().hasClass("pbd_menuSet_list_h2")) {
+                tempObj.parent().addClass("blue"); 			
+            }
+			
+        } else if (!tempObj.is(':checked')) {
+            removeLi(tempObjValue);
+            if (tempObj.parent().hasClass("pbd_menuSet_list_h2")) {
+                tempObj.parent().removeClass("blue");
+            }
+			
+        }
+    })
+    /*一级菜单和二级添加和删除到预览菜单 end*/
+
+    /*将三级菜单添加到一级菜单 begin*/
+    $(".pbd_menuSet_list_h3").click(function() {
+        var tempObj = $(this);
+        var tempObjValue;
+            var h3Value = tempObj.text();
+            if (h3Value.length > 4) {
+                tempObjValue = h3Value.substring(0,4) + "...";
+            } else {
+                tempObjValue = h3Value;
+            }
+        if(tempObj.attr("class") != "pbd_menuSet_list_h3 pr36 blue menuAdd"){
+            var newLi = "<li class='pbd_navSet_line'>" + tempObjValue + "<a class='pbd_navSet_del'><img src='../../images/menuset/pbd_navset_del.png' /></a></li>";
+            var  menus = $(".pbd_navSet_line").length;
+            addLi(tempObjValue,newLi,menus);
+            tempObj.children("input").attr("checked",true);
+            tempObj.addClass("blue");
+            tempObj.addClass("menuAdd");
+       } else {
+            tempObj.children("input").attr("checked",false);
+            tempObj.removeClass("blue menuAdd");
+            removeLi(tempObjValue);
+        }
+    });
+    /*将三级菜单添加到一级菜单 end*/
+
+    //该函数实现添加菜单到预览菜单
+    function addLi(tempValue,newLi,menus) {
+        var lastMenu = $(".pbd_navSet_list > li:last-child");
+        var addState = true;
+        var allLi = $(".pbd_navSet_list > li");
+        allLi.each(function() {
+            if (tempValue == $(this).text().trim()) {
+                addState = false;
+                return;
+            }
+        });
+        if (addState == true) {
+            if (menus <= 15) {
+				if (menus == 8) {
+					$(".pbd_navSet_title").removeClass("lh33");
+					up();
+				} 
+				lastMenu.before(newLi);
+            } else if (menus == 16 && lastMenu.hasClass("addButton"))  {
+               
+				lastMenu.remove();
+                $(".pbd_navSet_list").append(newLi);
+            }
+            $(".menuNumber").text(16 - menus);
+            }
+    }
+
+    //该函数实现删除菜单功能
+    function removeLi(removeLiValue) {
+        var allLi = $(".pbd_navSet_list > li");
+        allLi.each(function() {
+            if (removeLiValue == $(this).text().trim()) {
+                $(this).detach();
+                return;
+            }
+        });
+        var  menus = $(".pbd_navSet_line").length;
+        if (menus == 8) {
+            $(".pbd_navSet_title").addClass("lh33");
+			down();
+        } else if (menus == 15 && !$(".pbd_navSet_list li").eq(-1).hasClass("addButton") ) {
+		   var addButton = "<li class='pbd_navSet_line addButton'><a href='#'><img src='../../images/menuset/pbd_navset_add.png' style='padding-top:7px;'' /></a></li>";
+            $(".pbd_navSet_list").append(addButton);
+        }
+         var  menus = $(".pbd_navSet_line").length;
+        $(".menuNumber").text(17 - menus);
+    }
+    
+    /*点击减号删除菜单 begin*/
+    $(".pbd_navSet_list").delegate('.pbd_navSet_del',"click",function() {
+       var thisValue = $(this).parent().text().trim();
+       if (thisValue.length > 4) {
+            thisValue = thisValue.substring(0,4);
+       }
+       $(this).parent().remove();
+       var  menus = $(".pbd_navSet_line").length;
+       $(".menuNumber").text(17 - menus);
+       if (menus == 8) {
+       	down();
+        $(".pbd_navSet_title").addClass("lh33");
+    }
+    else if (menus == 15 && !$(".pbd_navSet_list li").eq(-1).hasClass("addButton") ) {
+            var addButton = "<li class='pbd_navSet_line addButton'><a href='#'><img src='../../images/menuset/pbd_navset_add.png' style='padding-top:7px;'' /></a></li>";
+            $(".pbd_navSet_list").append(addButton);
+        }
+        $(".pbd_menuSet_list_h1").each(function() {
+            var tempObj = $(this);
+            if(tempObj.text() == thisValue) {
+                tempObj.children("input").attr("checked",false);
+                return;
+            }
+        });
+
+        $(".pbd_menuSet_list_h2").each(function() {
+            var tempObj = $(this);
+            var h2Text = tempObj.text();
+            if (h2Text[0] == "+" || h2Text[0] == "-") {
+                h2Text = h2Text.substring(1);
+            }
+            if (h2Text.length > 4) {
+                h2Text = h2Text.substring(0,4);
+            }
+            if(h2Text == thisValue) {
+                tempObj.removeClass("blue").children("input").attr("checked",false);
+                return;
+            }
+        });
+
+        $(".pbd_menuSet_list_h3").each(function() {
+            var tempObj = $(this);
+            var h3Text = tempObj.text();
+            if (h3Text.length > 4) {
+                h3Text = h3Text.substring(0,4);
+            }
+            if(h3Text == thisValue) {
+                tempObj.removeClass("blue").children("input").attr("checked",false);
+                return;
+            }
+        });
+
+    });
+    /*点击减号删除菜单 end*/
+
+    /*编辑一级预览菜单 end*/
+
+    /*一级菜单预览的展开和收起 begin*/
+	$(".pbd_navSet_up").click(function(){
+		if($(this).hasClass("up")){
+			up();
+		}else{
+			down();
+		}
+	})
+	function up(){
+		$(".pbd_navSet_left").css({"height":"66px","overflow":"hidden"});
+		$(".pbd_navSet_title").removeClass("lh33");
+		$(".pbd_navSet_up").css("background","url('../../images/menuset/pbd_navset_up.png')");
+		$(".pbd_navSet_up").removeClass("up");
+	}
+	
+	function down(){
+		$(".pbd_navSet_left").css({"height":"33px","overflow":"hidden"});
+		$(".pbd_navSet_title").addClass("lh33");
+		$(".pbd_navSet_up").css("background","url('../../images/menuset/pbd_navset_down.png')");
+		$(".pbd_navSet_up").addClass("up");
+	}
+    /*$(".pbd_navSet_up").slideToggle(function() {
+	alert(1);
+        $(".pbd_navSet_left").css({"height":"66px","overflow":"hidden"}).removeClass("mt23");
+        $(".pbd_navSet_title").removeClass("lh33");
+        $(this).css("background","url('../../images/menuset/pbd_navset_up.png')");
+	},function() {
+		alert(3);
+       $(".pbd_navSet_left").css({"height":"33px","overflow":"hidden"}).addClass("mt23");
+        $(".pbd_navSet_title").addClass("lh33");
+        $(this).css("background","url('../../images/menuset/pbd_navset_down.png')");
+    });*/
+     /*一级菜单预览的展开和收起 end*/
+    
+    /*一级选择菜单显示与隐藏*/
+	$(".menuSet_box").each(function (i) {
+		$(this).find("div.menuSet_up").click(function () {
+			if ($(this).parent().parent().find(".pbd_menuSet_list").is(":visible")) {
+				$(this).parent().parent().find(".pbd_menuSet_list").addClass("hide");
+				$(this).addClass("menuSet_down");
+				$(this).removeClass("menuSet_up");
+				$(".pbd_menuSet_list").css("min-height","0px");
+			} else {
+				$(this).parent().parent().find(".pbd_menuSet_list").removeClass("hide");
+				$(this).addClass("menuSet_up");
+				$(this).removeClass("menuSet_down");
+				$(".menuThird").addClass("hide");
+			}
+		})
+	})
+	
+
+    /*二级菜单和三级菜单的展开和收起 begin*/
+    $(".pbd_menuSet_list_h2 > span,.pbd_menuSet_list_h2 > label").click(function() {
+        var tempObj = $(this).parent();
+        if (!tempObj.hasClass("open") ){
+            //把其他三级菜单都隐藏
+            tempObj.siblings(".menuThird").addClass("hide");
+            //把对应的一级菜单下面的所有二级菜单含有三级菜单的减号变成加号
+            tempObj.parent().children(".pbd_menuSet_list_h2").each(function() {
+                $(this).removeClass("open");
+                 if ($(this).children("span").hasClass("pbd_ul_add")|| $(this).children("span").hasClass("pbd_ul_cut")) {
+                    $(this).children("span").addClass("pbd_ul_add");
+                    $(this).children("span").removeClass("pbd_ul_cut");
+                }
+            });
+            tempObj.addClass("open");
+            if (tempObj.children("span").hasClass("pbd_ul_add")) {
+             	 tempObj.children("span").addClass("pbd_ul_cut");
+              	 tempObj.children("span").removeClass("pbd_ul_add");
+             //alert($(this).children("label").text());
+            }
+            //如果下一个节点是三级菜单，那么就隐藏
+            if(tempObj.next().hasClass("menuThird")) {
+                tempObj.next().removeClass("hide");
+            }
+        } else {
+            tempObj.removeClass("open blue").children("input").attr("checked",false);
+            if(tempObj.next().hasClass("menuThird")) {
+                tempObj.next().addClass("hide");
+                tempObj.children("span").addClass("pbd_ul_add");
+                tempObj.children("span").removeClass("pbd_ul_cut");
+            }
+            if (tempObj.children("span").text()) {
+                tempObj.children("span").addClass("pbd_ul_add");
+            }
+        }
+    });
+    /*二级菜单和三级菜单的展开和收起 end*/
+
+     /*待选一二三级菜单编辑 end*/
+    
+	
+	/*页签 start*/
+    $(".tabs-com a").click(function(){
+		$(this).siblings("a").removeClass("current").end().addClass("current");
+		if($(this).index()==0){
+			$(".tabs-box").show();
+		}else{
+			$(".tabs-box").hide();
+		}
+	});
+	
+	/*我的模板 start*/
+  function wdmb_k(){
+		$(".wdmb_k").removeClass("hide");	
+	}
+	
+	function wdmb_close(){
+		$(".wdmb_k").addClass("hide");
+	}
+   /*我的模板 end*/
+</script>
+
+<script type="text/javascript">
+	/*保存设置 start*/
+    $("#savesz").click(function () {
+   	    $(".bcsz").show();
+   	    $(".window_hide").removeClass("hide");
+   	    
+   	    $(".bcsz").find(".panel-tool-close").click(function(){
+			$(".bcsz").hide();
+			$(".window_hide").addClass("hide");
+		})
+   	    
+   	    $(".bcsz").find(".pbd_btn_standard ").click(function(){
+   	    	$(".bcsz").hide();
+			$(".window_hide").addClass("hide");
+   	    })
+    })
+    /*保存设置 end*/
+   
+    //保存模板 start
+	$("#savemb").click(function () {
+			$(".mb_1").show();
+			$(".window_hide").removeClass("hide");
+			
+			$(".mb_1").find(".pbd_btn_standard ").click(function(){
+	   	    	$(".mb_1").hide();
+				$(".window_hide").addClass("hide");
+	   	    })
+			
+			$(".mb_1").find(".panel-tool-close").click(function(){
+				$(".mb_1").hide();
+				$(".window_hide").addClass("hide");
+			})
+	});
+	
+	$(".mb_1 #sure_btn").click(function (){
+			var _Val=$("#mbname").val();
+			if(_Val==null||_Val==""){
+				
+			}else{
+					$(".wdmb_k").prepend('<p><a href="javascript:void(0);" title="">'+_Val+'</a></p>');
+					$(".wdmb_k p").eq(3).remove();
+					$("#mbname").val("");
+			}
+		});
+	//  保存模板 end
+</script>
+<script type="text/javascript">
+	
+		
+		
+		$(function(){
+			window.parent.nav.refreshHtml(null, 7);/*设置选中的一级菜单*/
+		})
+		
+		$("#saveSettings").click(function (){
+			window.location.href='dyzfsq_1_B.html';
+		});
+		
+		
+	</script>
+<script type="text/javascript">
+$(".sorll_list").slimScroll({
+    width: '231px',				//可见滚动区域的像素宽度。默认值:none
+    height: '170px',			//可见滚动区域的像素高度。默认值: 250px
+    size: '8px',				//滚动条宽度。	默认值: 7px
+    position: 'right',			//滚动条位置。默认值: right
+    color: '#ccc',			//滚动条颜色。默认值: #000000
+    alwaysVisible: true,		//滚动条隐藏禁用。默认值: false
+    distance: '0px',			//滚动条到边缘距离。默认值: 1px
+    start: $('.item_2'),		//滚动条的初始位置。默认值: top
+    railVisible: false,			//滚动条轨迹。默认值: false
+    railColor: '#222',			//滚动条轨迹颜色。默认值: #333333
+    railOpacity: 0.3,			//滚动条轨迹透明度。默认值: #333333
+    wheelStep: 10,				//鼠标滚轮的整数值。默认值: 20
+    allowPageScroll: true,		//检查如果鼠标滚轮滚动页面达到顶部或底部的容器
+    disableFadeOut: true		//禁用滚动条自动消退。默认值: false
+	//scrollTo——跳滚动到指定的值。 可以呼吁任何元素slimScroll已经启用。 例子:$(element).slimScroll({ scrollTo: '50px' });
+	//scrollBy——增加/减少当前滚动值指定的数量(正面或负面)。 可以呼吁任何元素slimScroll已经启用。 例子:$(element).slimScroll({ scrollBy: '60px' });
+	//touchScrollStep ——允许设置不同的触摸滚动事件的敏感性。 负数反转方向滚动。默认值: 200
+});
+/*$(".scroll_box").slimScroll().bind('slimscroll', function(e, pos){
+    console.log("Reached " + pos);
+});*/
+</script>

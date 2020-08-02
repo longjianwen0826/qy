@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+	</head>
+    <style>
+        .exit{
+            position: absolute;
+            width: 62px;
+            height: 25px;
+            right: 120px;
+            top: 8px;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+    </style>
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>还款</b></div>
+            
+			<div id="phd_context">
+				<!--表格标题 start-->
+				<div class="pbd_table_h2 ml10">
+					<span>请确认以下信息</span>
+				</div>
+				<!--表格标题 end-->
+				
+				<!--纵向表格型 start-->
+				<div class="table_warp_list">
+					<table border="0" cellspacing="0" cellpadding="0" class="pbd_table_four_list" width="100%">
+						<tr>
+							<th class="w229">贷款账号：</th>
+							<td class="w350">
+								<span >1108 6532 8742 4563 2314</span>
+							</td>
+							<th class="w229">还款账号：</th>
+							<td class="w350">
+								<select class="easyui-combobox" style="width:230px; height:27px">
+		                            <option value="1">5986 3562 3652 9655 1251</option>
+		                            <option value="2">5467 5164 5785 1365 1143</option>
+		                        </select>
+							</td>
+						</tr>
+						<tr>
+							<th class="w229">贷款金额(元)：</th>
+							<td class="w350">
+								<span class="fb">1,000,000.00</span>
+							</td>
+							<th class="w229">待还本金(元)：</th>
+							<td class="w350">
+								<span class="fb">200,000.00</span>
+							</td>
+						</tr>
+						<tr>
+							<th class="w229">还款金额：</th>
+							<td class="w350">
+								<span class="fb">贰拾万元整</span>
+							</td>
+							<th class="w229">小写(元)：</th>
+							<td class="w350">
+								<span class="fb">200,000.00</span>
+							</td>
+						</tr>
+						<tr>
+							<th class="w229 lb_no">利息(元)：</th>
+							<td class="w350 lb_no">
+								<span class="fb">6,000.00</span>
+							</td>
+							<th class="w229 lb_no">结清贷款：</th>
+							<td class="w350 lb_no">
+								<input class="mr5 fontShow" type="radio" checked="checked" name="radio2" />是
+								<input class="mr5 fontNo"  type="radio" name="radio2" />否
+								<span class="fontHide red">*</span><span>结算该贷款本合同终止。</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!--纵向表格型 end-->
+				
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form mt15">
+		            <tr>
+		                <td class="first_td text_r">
+		                	选择下级复核员<span>：</span>
+		                </td>
+		            	<td>
+		            		<select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+	                            <option value="1">张三</option>
+	                        </select>
+		            	</td>
+		            </tr>
+		            <tr>
+		                <td class="first_td text_r">
+		                	<span class="pbd_font_required">*</span>输入交易密码<span>：</span>
+		                </td>
+		            	<td>
+		            		<input class="pbd_input_normal" type="password" />
+		            	</td>
+		            </tr>
+				</table>
+				
+				<!--操作按钮 START-->
+				<div class="pl225 mt30">
+					<a class="pbd_btn_standard pbd_btn_w100" href="xwqykd_hk_1_tips.html">提交</a>
+					<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_hk_1.html">返回</a>
+				</div>
+				<!--操作按钮 END-->
+				
+				<!--温馨提示 START-->
+				<div class="tip-msg">
+					<div class="pbd_tips_title">温馨提示：</div>
+					<ul>
+						<li>全部还款时对应本全部分的利息同时扣除。</li>
+					</ul>
+				</div>
+				<!--温馨提示 END-->
+				
+			</div>
+		
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				allowDownload();
+				
+				//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zy_1.html" data-text="支用" data-href="../xdrz_xwqykd/xwqykd_zy_1.html">支用</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hk_1.html" data-text="还款" data-href="../xdrz_xwqykd/xwqykd_hk_1.html">还款</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+				
+				//联动选择显示
+				$(".fontShow").click(function(){
+					$(".fontHide").removeClass("hide");
+				});
+				
+				$(".fontNo").click(function(){
+					$(".fontHide").addClass("hide");
+				});
+				
+				
+			});
+		</script>
+	</body>
+</html>

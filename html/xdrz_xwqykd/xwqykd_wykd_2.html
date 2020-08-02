@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_xdrz.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+	</head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step2.png) no-repeat center center;
+        }
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>我要快贷</b></div>
+			
+            
+            <!--content START-->
+            <div class="message">
+                <span>1</span><label style="margin-left: 5px">请选择贷款办理机构</label>
+
+            </div>
+            <!--content END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top: 15px">
+                <tr>
+                    <td style="width:112px;text-align: right">
+                        贷款办理机构：
+                    </td>
+                    <td style="width:238px;text-align: left;">
+                       <select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+                            <option value="1">中国建设银行广州天河支行</option>
+                            <option value="2">中国建设银行广州越秀支行</option>
+                        </select>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+
+            </table>
+            <!--table选择 END-->
+            
+
+            <!--content START-->
+            <div class="message">
+                <span>2</span><label style="margin-left: 5px">请核实企业实际控制人信息</label>
+
+            </div>
+            <!--content END-->
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top:15px">
+                <tr>
+                    <td style="text-align: right">
+                        实际控制人（企业主）：
+                    </td>
+                    <td style="width:101px;text-align: left;">
+                       <span style="margin-left: 5px;">王倩文</span>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:73px;text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;身份证号：</td>
+                    <td style="width:80px;text-align: left;">
+                        <span style="margin-left:5px;width:230px;float:left;">4401031975****5715&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <a class="blue bule_newa" href="javascript:void();" style="margin-left:15px;">实际控制人信息有误？</a>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:73px;text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;短信通知：</td>
+                    <td style="width:80px;text-align: left;">
+                   	 	<input type="checkbox" name="checkbox_2" style="position: relative;top: 2px;">		
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr class="tr_sj hide">
+                    <td style="width:73px;text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;实际控制人手机：</td>
+                    <td style="width:80px;text-align: left;">
+                   	 	<input class="pbd_input_normal" type="text">		
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            
+
+            <!--content START-->
+            <div class="message togges">
+                <span>3</span><label style="margin-left: 5px">请签订《小微企业快贷实际控制人操作授权协议》、《企业征信查询授权书》</label>
+
+            </div>
+            <!--content END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form togges" style="margin-top: 15px">
+                <tr>
+                    <td style="width:112px;text-align: right">
+                    </td>
+                    <td colspan="2">
+                        <label class="pbd_checkbox pbd_checkbox1">
+                            <input type="checkbox" name="checkbox_1" style="position: relative;top: 2px;">
+                             <span>我已认真阅读<a class="blue" href="#">《小微企业快贷实际控制人操作授权协议》</a>，现授权上述自然人办理我司小微企业快贷业务。</span>
+                        </label>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:80px;text-align: right">
+                    </td>
+                    <td style="width:80px;text-align: left;" colspan="2">
+                        <label class="pbd_checkbox pbd_checkbox1">
+                            <input type="checkbox" name="checkbox_1" style="position: relative;top: 2px;">
+                             <span>我已认真阅读<a class="blue" href="#">《企业征信查询授权书》</a>，现授权中国建设银行查询我司的征信信息。</span>
+                        </label>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+            
+            
+            <!--content START-->
+            <div class="message togges_two hide">
+                <span>3</span><label style="margin-left: 5px">请提供联系人，以便我行客户经理确认企业主信息</label>
+
+            </div>
+            <!--content END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form togges_two hide" style="margin-top: 15px">
+                <tr>
+                    <td style="width:112px;text-align: right">
+                    	<span class="pbd_font_required">*</span>联系人：
+                    </td>
+                    <td style="width:238px;text-align: left;">
+                       <input type="text" class="pbd_input_normal" onBlur="onblur_ipt();" name="ipt_1">
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                    	<span class="pbd_font_required">*</span>联系人手机：
+                    </td>
+                    <td style="width:101px;text-align: left;">
+                       <input type="text" class="pbd_input_normal"  onBlur="onblur_ipt();" name="ipt_2" >
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <!--<tr>
+                    <td style="width:112px;text-align: right">
+                        贷款受理机构：
+                    </td>
+                    <td style="width:238px;text-align: left;">
+                       <select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+                            <option value="1">中国建设银行广州天河支行</option>
+                            <option value="2">中国建设银行广州越秀支行</option>
+                        </select>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>-->
+
+            </table>
+            <!--table选择 END-->
+            
+            
+
+            <!--btn按钮 START-->
+            <div class="btn_select togges" style="padding-left: 212px">
+                <a class="pbd_btn_standard pbd_btn_w100 ml15 naxt_btn1" href="xwqykd_wykd_3_tips.html" style="background:#999999;" >提交</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="xwqykd_wykd_1.html" style="margin-left: 10px;">取消</a>
+            </div>
+            <!--btn按钮 END-->
+            
+             <!--btn按钮2 START-->
+            <div class="btn_select togges_two hide" style="padding-left: 212px">
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="xwqykd_wykd_3s_tips.html" >提交</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="xwqykd_wykd_1.html" style="margin-left: 10px;">取消</a>
+            </div>
+            <!--btn按钮2 END-->
+
+           
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>
+
+		<script>
+		function onblur_ipt(){
+				if($("input[name='ipt_1']").val()!=""&&$("input[name='ipt_2']").val()!=""){
+					$('.naxt_btn1').removeAttr("disabled");
+					$(".naxt_btn1").css("background","#1f93d5");
+				}
+			}
+		
+        $(function(){
+			var numtext = 0;
+			$(".pbd_checkbox input").click(function(){
+				if($(this).prop("checked")){
+					numtext=numtext+1;
+				}else{
+					numtext=numtext-1;
+				};
+				//if(numtext==2&&$(".combobox-item-selected").html()!="***请选择***"){
+				if(numtext==2){
+					$('.naxt_btn1').removeAttr("disabled");
+					$(".naxt_btn1").css("background","#1f93d5");
+				}else{
+					$('.naxt_btn1').attr('disabled',"true");
+					$(".naxt_btn1").css("background","#999999");
+				}
+			});
+			
+			/*$(".combobox-item").click(function(){
+				//if(numtext==2&&$(".combobox-item-selected").html()!="***请选择***"){
+				if(numtext==2){
+					$('.naxt_btn1').removeAttr("disabled");
+					$(".naxt_btn1").css("background","#1f93d5");
+				}else{
+					$('.naxt_btn1').attr('disabled',"true");
+					$(".naxt_btn1").css("background","#999999");
+				}
+			});*/
+			
+			
+			$("input[name='checkbox_2']").click(function(){
+				if($(this).prop("checked")){
+					$(".tr_sj").removeClass("hide");
+				}else{
+					$(".tr_sj").addClass("hide");
+				};
+			});
+			
+			
+			//选择一级菜单信贷融资，重置2级菜单
+			var pageStr='<div id="mainnav">'
+					+'<ul class="nav_second">'
+					+'<li>'
+						+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+						+'<ul class="nav_third">'
+						+'<li><a href="../xdrz_xwqykd/xwqykd_wykd_1.html" data-text="我要快贷" data-href="../xdrz_xwqykd/xwqykd_wykd_1.html">我要快贷</a></li>'
+						+'<li><a href="../xdrz_xwqykd/xwqykd_zysp_1.html" data-text="支用审批" data-href="../xdrz_xwqykd/xwqykd_zysp_1.html">支用审批</a></li>'
+						+'<li><a href="../xdrz_xwqykd/xwqykd_hksp_1.html" data-text="还款审批" data-href="../xdrz_xwqykd/xwqykd_hksp_1.html">还款审批</a></li>'
+						+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+						+'</ul>'
+					+'</li>'
+				+'</ul>'
+				+'</div>';
+		   $("#mainnav").children().remove();
+		   $("#mainnav").html(pageStr);
+			$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+			$("#nav_sya a").each(function(){
+				if($(this).html()=="信贷融资"){
+					$(this).addClass('active');	
+				}
+			});
+			
+			
+			
+            //获取页面url参数
+            //获取当前url
+            var url=location.search;
+            var Request = new Object();
+            if(url.indexOf("?")!=-1){
+                var str = url.substr(1);
+                strs = str.split("&");
+                for(var i=0;i<strs.length;i++){
+                    Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1],strs[i].split("=")[2]);
+                }
+            }
+            //1左边logo得到得值做相应得处理
+            var _name=$('._nameUrl');
+            var _text=$('._textUrl');
+            if(Request["lg_name"]==1){
+                _name.attr('value','李建');
+            }else if(Request["lg_name"]==2){
+                _name.attr('value','赵颕');
+            }else if(Request["lg_name"]==3){
+                _name.attr('value','刘耕宏');
+            }else{
+                return false
+            }
+
+            if(Request["lg_text"]==1){
+                _text.attr('value','41001501210050237189');
+            }else if(Request["lg_text"]==2){
+                _text.attr('value','35001870007052616649');
+            }else if(Request["lg_text"]==3){
+                _text.attr('value','35001880007052613257');
+            }else{
+                return false
+            }
+        })
+        var _item={
+            itemTitle1:'1.代付制单选择',
+            itemTitle2:'2.单笔代发制单',
+            itemTitle3:'3.单笔代发确认',
+            itemTitle4:'4.单笔代付成功',
+            itemTitle5:'2.批量代发确认',
+            itemTitle6:'3.批量代发成功'
+        }
+        $('.radio').eq(0).on('click',function(){
+             var _li=$('.stepNav').find('li');
+             _li.eq(0).html(_item.itemTitle1);
+             _li.eq(1).html(_item.itemTitle2);
+             _li.eq(2).html(_item.itemTitle3);
+             _li.eq(3).html(_item.itemTitle4);
+             $('.stepNav span,.df_tr').addClass('hide');
+        });
+        $('.radio').eq(1).on('click',function(){
+            var _li=$('.stepNav').find('li');
+            _li.eq(0).html(_item.itemTitle1);
+            _li.eq(1).html(_item.itemTitle5);
+            _li.eq(2).html(_item.itemTitle6);
+            _li.eq(3).html('');
+            $('.stepNav span,.df_tr').removeClass('hide');
+        });
+        $(".detail").click(function(){
+            window.open('dfzd_skrmc.html','中国建设银行企业网银','width=600,height=400,scrollbars=yes');
+
+        });
+		
+		//信息有误弹层
+		$('.bule_newa').click(function(){
+			$('.togges').addClass('hide');
+			$('.togges_two').removeClass('hide');
+		});
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

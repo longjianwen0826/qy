@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>菜单调整</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/public.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/jquery.ui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/p_cddt.css"/>
+
+		<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../../js/jquery-ui.js"></script>
+		<script src="../../js/fa.browser.storage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/widget.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			ul{ list-style-type: none; }
+			  
+			
+			  .main{
+			    border:1px solid #ccc;
+			    background: #f6f6f6;
+			  }
+			  .main .main_title{
+			    border-bottom:1px solid #dfe0f2;
+			    background:#eff8ff;
+			    height:39px;
+			    line-height:39px;
+			    padding-left:12px;
+			    font-size:14px;
+			    font-weight:bold;
+			  }
+			  .main .main_box{
+			    padding:10px 0px 10px 49px;
+			    font: "微软雅黑" !important;
+			    font-size: 14px !important;
+			  }
+			  .menu_box .menu_list{
+			    background:#FFF;
+			    border:1px solid #62a7e3;
+			    width:150px;
+			    margin-top:15px;
+			    margin-right:29px;
+			    float:left;
+			    cursor: pointer;
+			  }
+			  .menu_box .mTitle{
+			    /*background:url(../../images/menu_dt.png);*/
+			    /*padding-left:12px;*/
+			    /*font-weight:bold;*/
+			    width: 100%;
+			    height:34px;
+			    line-height:34px;
+			    text-align: center;
+			    font-family: "微软雅黑";
+			    font-size: 14px;
+			  }
+			  
+			  .menu_box .mTitle:hover{
+			  	background: #229ee6;
+			  	color: #FFFFFF;
+			  }
+			  
+			  .menu_zb{
+			  	background-image: url(../../images/menu_dz.png) !important;
+			  	color: #FFFFFF;
+			  	position: relative;
+			  }
+			  
+			  .menu_box .mEdt, .menu_box .mAdd, .menu_box .mChecked{
+			    background-image:url(../../images/icon_revise.png);
+			    background-repeat:no-repeat;
+			    background-position:center center;
+			    /*float:right;*/
+			    width:20px;
+			    text-indent:-1000px;
+			    overflow:hidden;
+			    position: absolute;
+					right: 0;
+					top: 10px;
+					display: inline-block;
+					height: 12px;
+			  }
+			  .menu_box .mAdd{
+			    background-image:url(../../images/icon_increased.png);
+			  }
+			  .menu_box .mChecked{
+			    background-image:url(../../images/icon_confirm.png);
+			  }
+			  .menu_box .mText{
+			    width:100px;
+			    height:22px;
+			    text-align: center;
+			  }
+			  .menu_box .mBody{
+			  }
+			  .menu_box .mItem{
+			    /*padding-left:12px;*/
+			    height:22px;
+			    /*line-height:22px;*/
+			    padding-top: 15px;
+					padding-bottom: 15px;
+					border-bottom: 1px dashed #CCCCCC;	
+					text-align: center;
+					font-family: "微软雅黑";
+			    font-size: 14px;
+			  }
+			  
+				.menu_box .mItem_border{
+					border-bottom: 1px dashed #CCCCCC;	
+				}
+			
+				.menu_box {
+			  	position: relative;	
+			  }
+			  
+			  
+			  .menu_box .state_high{
+			 
+			  }
+			  
+			  .menu_box .state_high_B{
+			  	
+			  }
+			 
+			  
+			  .ui-sortable .mItem{
+			  	padding: 11px 0px;
+			  }
+			
+			  .ui-sortable .mItem:hover{
+			  	background: #229ee6;
+			  	color: #FFFFFF;
+			  }
+			  
+			  /*添加到分组中的每个li都加虚线*/
+			  .border_bottom{
+				  border-bottom:1px dashed #CCCCCC;
+			  }
+			  
+			  /*添加到分组中的最后一个li删除虚线*/
+			  .border_none{
+				border-bottom:none !important;  
+			  }
+			  
+			  
+			  .nav_four{
+					left: 120px;
+					padding-bottom: 10px;
+					padding-left: 4px;
+					position: absolute;
+					top: 1px;
+					z-index: 99999;
+					background-color: #FFFFFF;
+					border: 1px #ccc solid;
+					border-top: none;
+					border-radius: 2px;
+					border-top-left-radius: 0;
+					text-align: left;
+					min-width: 120px;
+					-moz-box-shadow: 0px 1px 2px #CCC;
+					-webkit-box-shadow: 1px 0px 2px #CCC;
+					box-shadow: 0px 1px 2px #CCC;
+					display: none;
+			  }
+			  
+			  .nav_four_a_tri{
+			  	display: inline-block !important;
+					height: 20px;
+					line-height: 20px;
+					font-size: 14px;
+					font-weight: bold;
+					color: #1f93d5;
+					text-decoration: none;
+					position: relative;
+					top: 0;
+					padding: 0 13px 0 3px;
+					background: url(../../images/menu/menu_blue_left.png) right no-repeat;
+			  }
+			  .nav_third li:hover a.nav_four_a_tri{
+			  	color: #1f93d5;
+			  	background: url(../../images/menu/menu_blue_right.png) right no-repeat;
+			  	font-weight: bold;
+			  }
+			  .nav_third li:hover >div{
+			  	display: block;
+			  }
+			  
+			.feedback-infor {
+						padding-top: 15px;
+			}
+			/*我的模板按钮摆放位置*/
+			  .pbd_navSet_remains {
+					padding-right: 0px !important;
+					float: left !important;
+					padding-left: 2px;
+			  }
+			  
+			  /*保存模板弹窗中的图片*/
+			  .fail-icon{
+			  	background-position: 0 -80px;
+			  }
+		</style>
+		<script>
+			//业务需求，注释了jq-ui 240行。 event.preventDefault();
+			  $(function() {
+			  	/*
+			  	 *disableSelection  因为他们要拖动，所以尽量设置他们的文字不能选择
+			  	 * */
+			    $(".mBody ul, .menu_box").sortable({
+			      connectWith: ".mBody ul, .menu_box",//允许sortable对象连接另一个sortable对象，可将item元素拖拽到另一个中。  
+			      stop: function( event, ui ) {
+			        
+			      }
+			    }).disableSelection();
+			
+					
+			    $( "#droppable" ).droppable({
+			      drop: function( event, ui ) {
+			        $( this )
+			          .addClass( "ui-state-highlight" )
+			          .find( "p" )
+			            .html( "Dropped!" );
+			      }
+			    });
+			
+			
+			    var mEdt = $('<span class="mEdt"></span>');
+			    function fnEdt(mEdt){
+			      mEdt.on('click', function(){
+			        var _text = $(this).parent()[0].childNodes[0].nodeValue;
+			        $(this).parent()[0].childNodes[0].nodeValue = null;
+			        $(this).parent().prepend('<input type="text" class="mText" value="'+ _text +'" name="mText"/>');
+					$("input[name=mText]").focus();
+			        $(this).parent().append(mChcd);
+			        fnChcd(mChcd);
+			        $(this).remove();
+			      });
+			    }
+			
+			    var mChcd = $('<span class="mChecked"></span>');
+			    function fnChcd(mChcd){
+			      mChcd.on('click', function(){
+			        $(this).parent().html($(this).siblings('input').val()).append(mEdt);
+			        fnEdt(mEdt);
+			      });
+			    }
+			    
+			
+			    
+			    $('.mEdt').on('click', function(){
+			      var text = $(this).parent()[0].childNodes[0].nodeValue;
+			      $(this).parent()[0].childNodes[0].nodeValue = null;
+			      $(this).parent().prepend('<input type="text" class="mText" value="'+ text +'">');
+			      $(this).parent().append(mChcd);
+			      $(this).remove();
+			    });
+			
+			
+			    $('.mAdd').on('click', function(){
+			      var text = $(this).parent()[0].childNodes[0].nodeValue;
+			      $(this).parent().siblings('.mBody').find('ul').append('<li class="mItem">'+ text +'</li>');
+			      $(this).parent().html('<input type="text" class="mText" value="分组2">').append(mChcd);
+			    });
+				
+			    $trash = $( "#trash" );
+			    // let the trash be droppable, accepting the gallery items
+			    $trash.droppable({
+			      accept: ".menu_box > li",
+			      activeClass: "state_high",
+			      autoRefresh :  false,
+			      drop: function( event, ui ) {
+			        deleteImage( ui.draggable );
+			      }
+			    }); 
+					
+			
+			    $trash2 = $( "#trash2" );
+			    // let the trash be droppable, accepting the gallery items
+			    $trash2.droppable({
+			      accept: ".menu_box > li",
+			      activeClass: "state_high_B",
+			      drop: function( event, ui ) {
+			        deleteImage2( ui.draggable );
+			      }
+			    });
+			
+			    var num = 1;
+			    function deleteBorder(_id){/*所有border添加虚线，最后一个删除虚线*/
+			    	$(_id+" .ui-sortable .mItem").removeClass("border_none");
+				 		$(_id+" .ui-sortable .mItem").last("li").addClass("border_none");
+			    }
+			   
+			    function addWithPadding(_id){
+			    	$(_id).eq(0).css("width","148");
+			       	//$(_id).css("padding","0");
+			    }
+			    
+			    function deleteImage( $item ) {
+			      var text = $item.find('.mTitle').text();
+			      $item.remove();
+			      //console.log($trash.find(".mEdt").length);
+			      addWithPadding("#trash");
+				   
+				  	/*第二次打后的li合并都是进入===========================================*/  
+			      if($trash.find(".mEdt").length || $trash.find(".mChecked").length){
+			        $("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+								//  alert(1);
+			      }else{
+							/*第一次li合并进入===========================================*/  
+			        $("<li class='mItem'>"+ $trash.find('.mTitle').text() +"</li>").appendTo($trash.find('ul'));
+			        var mEdt_01 = $('<span class="mEdt"></span>');
+			        $trash.find('.mTitle').text('分组1').append(mEdt_01);
+			        $trash.find('.mTitle').addClass("menu_zb");
+			        fnEdt(mEdt_01);
+			        num++;
+			        $("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+			      }
+				 		
+					  deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+			      $trash.removeClass('state_high');
+			      $trash2.removeClass('state_high_B');
+						//alert(3);
+			      $trash.find('ul').sortable({
+			    		connectWith: ".mBody ul, .menu_box",
+			        stop: function( event, ui ){/*当已经结束选中一个元素时触发此事件*/
+			          if(ui.item.parent().hasClass('menu_box')){
+			        		var text = ui.item.text();
+			            ui.item.text('');
+			            ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+									ui.item.removeClass("border_none");
+			          }
+					  	deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+			      },
+						receive: function(event, ui){ /*当一个已连接的sortable对象接收到另一个sortable对象的元素后触发此事件。*/
+							deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+						}
+			    	}).disableSelection()
+			    }
+			
+			    function deleteImage2( $item ) {
+			      var text = $item.find('.mTitle').text();
+			      $item.remove();
+			      addWithPadding("#trash2");
+			      /*第二次打后的li合并都是进入===========================================*/  
+			      if($trash2.find(".mEdt").length || $trash2.find(".mChecked").length){
+			       	 	$("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+			      }else{
+			      	/*第一次li合并进入===========================================*/  
+			        $("<li class='mItem'>"+ $trash2.find('.mTitle').text() +"</li>").appendTo($trash2.find('ul'));
+			        var mEdt_01 = $('<span class="mEdt"></span>');
+			        $trash2.find('.mTitle').text('分组2').append(mEdt_01);
+			        $trash2.find('.mTitle').addClass("menu_zb");
+			        fnEdt(mEdt_01);
+			        num++;
+			        $("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+			      }
+			      deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+			      $trash.removeClass('state_high');
+			      $trash2.removeClass('state_high_B');
+			
+			      $trash2.find('ul').sortable({
+			        connectWith: ".mBody ul, .menu_box",
+			        stop: function( event, ui ){
+			          if(ui.item.parent().hasClass('menu_box')){
+			            var text = ui.item.text();
+			            ui.item.text('');
+			            ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+			            ui.item.removeClass("border_none");
+			          }
+			          deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+			        },
+			        receive: function(event, ui){ //当鼠标拖拽移动时，触发此事件。
+								deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+							}
+			      }).disableSelection();
+			    }
+			  });
+			  
+			   /*我的模板 start*/
+			  function wdmb_k(){
+					$(".wdmb_k").removeClass("hide");	
+				}
+				
+				function wdmb_close(){
+					$(".wdmb_k").addClass("hide");
+				}
+			   /*我的模板 end*/
+		</script>
+	</head>
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common">
+				<div class="logo"><img src="../../images/CCB_logo.png"></div>
+				<div class="page_color_change">
+					<div class="phd_search">
+						<input name="" type="text">
+						<a href="#"><img src="../../images/btn_header_seach.jpg"></a>
+					</div>
+					<ul class="header_second fr">
+						<li><a class="nav_second_current phd_welcome" href="../welcome/welcome.html">欢迎页</a></li>
+						<li class="b"><a class="nav_second_current phd_go" href="#d">转到<span><img src="../../images/icon_triangle.png"></span></a>
+							<ul class="header_third">
+								<li><a href="#">个人网银</a></li>
+								<li><a href="#">善融商务</a></li>
+								<li><a href="#">建设银行首页</a></li>
+							</ul>
+						</li>
+						<li class="b"><a class="nav_second_current phd_set" href="#d">设置<span><img src="../../images/icon_triangle.png"></span></a>
+							<ul class="header_third">
+								<li><a href="#" id="windowPop_set">系统设置</a></li>
+								<li><a href="#" id="set_index">设为首页</a></li>
+								<li><a class="login_set" href="../../login.html">登录页设置</a></li>
+							</ul>
+						</li>
+						<li class="b"><a class="nav_second_current phd_more" href="#d">展开更多<span><img src="../../images/icon_triangle.png"></span></a>
+							<ul class="header_third" style="width: 107px;">
+								<li class="phd_service"><a href="#">在线客服</a></li>
+								<li class="phd_faq"><a href="#" id="windowPop_help">帮助</a></li>
+							</ul>
+						</li>
+						<li class="ml10"><a class="nav_second_current phd_exit" href="#">退出</a></li>
+					</ul>
+					<p class="clear text_r f12 pt10">尊敬的 ××基金公司 (客户号：P000607305898) ×××，您好！</p>
+				</div>
+				<p class="user_message">尊敬的一汽大众集团（客户号：SH721984613#12）<b>张翔</b>，您好！</p>
+				<!--消息弹窗 START-->
+				<div id="window_blue2" class="hide"></div>
+				<div class="system_set2 hide">
+					<div class="window_blue_header">
+						<div class="window_blue_title">系统设置<span><a class="window_blue_close" id="closebt3" href="#"></a></span></div>
+					</div>
+					<div class="window_blue_body" style="height: 464px;">
+						<!--页面标签 start-->
+						<div class="tabs-com">
+							<div class="tabs-com-p28 clearfix" id="set_con"><a href="#" class="current">字体设置</a><a href="#">颜色定制</a><a href="#">辅助功能定制</a><a href="#">恢复默认设置</a></div>
+						</div>
+						<!--页面标签 end-->
+						<!--字体设置 START-->
+						<div class="window_blue_set mh306 text_c" style="height: 306px;">
+							<div class="popUp_font_table pt10 pl10">
+								<p class="text_l fb pb10 popUp_font_default_text">默认表格样式</p>
+								<div style="width: 1200px;">
+									<div class="table_warp">
+										<table border="0" cellspacing="0" cellpadding="0" class="set_font_table" width="100%">
+											<thead>
+												<tr>
+													<th width="60" class="text_l" style="padding-left: 10px; font-size: 14px; font-family: 宋体;">
+														<input type="checkbox" name="allcheck" class="mh5" disabled="disabled">全选</th>
+													<th style="font-size: 14px; font-family: 宋体;">账号</th>
+													<th style="font-size: 14px; font-family: 宋体;">账户名称</th>
+													<th style="font-size: 14px; font-family: 宋体;">币种</th>
+													<th style="font-size: 14px; font-family: 宋体;">开户机构</th>
+													<th style="font-size: 14px; font-family: 宋体;">签约类型</th>
+													<th style="font-size: 14px; font-family: 宋体;">账户别名</th>
+												</tr>
+												<tr>
+													<td style="font-size: 14px; font-family: 宋体;">
+														<input type="checkbox" name="items" class="ml5" disabled="disabled">
+													</td>
+													<td style="font-size: 14px; font-family: 宋体;">41050260860800000020</td>
+													<td style="font-size: 14px; font-family: 宋体;">一汽大众发动机公司</td>
+													<td style="font-size: 14px; font-family: 宋体;">人民币</td>
+													<td style="width: 12em; font-size: 12px; font-family: 宋体;">中国建设银行上海分行虹桥分行</td>
+													<td style="font-size: 14px; font-family: 宋体; padding-left: 15px;">签约账户</td>
+													<td style="font-size: 14px; font-family: 宋体;">发动机公司</td>
+													<td class="text_r" style="font-size: 14px; font-family: 宋体; text-align: right; padding-right: 30px;">7,190.00</td>
+													<td style="font-size: 14px; font-family: 宋体; width: 15%;">2015-03-10 09:21:00</td>
+												</tr>
+												<tr class="odd">
+													<td style="font-size: 14px; font-family: 宋体;">
+														<input type="checkbox" name="items" class="ml5" disabled="disabled">
+													</td>
+													<td style="font-size: 14px; font-family: 宋体;">41050260860800000020</td>
+													<td style="font-size: 14px; font-family: 宋体;">一汽大众工资账户</td>
+													<td style="font-size: 14px; font-family: 宋体;">人民币</td>
+													<td style="width: 12em; font-size: 12px; font-family: 宋体;">中国建设银行上海分行虹桥分行</td>
+													<td style="font-size: 14px; font-family: 宋体; padding-left: 15px;">签约账户</td>
+													<td style="font-size: 14px; font-family: 宋体;">工资账户</td>
+													<td class="text_r" style="font-size: 14px; font-family: 宋体; text-align: right; padding-right: 30px;">500,000.00</td>
+													<td style="font-size: 14px; font-family: 宋体; width: 15%;">2015-03-10 10:21</td>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+							<p style="padding-right: 100px;" class="set_font_size">字号大小：
+								<input name="radio" class="mr5" type="radio" value="16"><span class="f16">大</span>
+								<input name="radio" class="mr5" checked="checked" type="radio" value="14"><span class="f14">中</span>
+								<input name="radio" class="mr5" type="radio" value="12"><span class="f12">小</span></p>
+							<div class="clearfix" style="width: 280px;margin-left: 252px;"><span class="fl">字体：</span>
+								<div id="set_font_family" class="fr">
+									<div class="select"><span>请选择</span>
+										<input type="hidden" class="define_input" value="">
+										<a class="hover" href="javascript:;"></a>
+									</div>
+									<ul class="option">
+										<li><a href="javascript:;">宋体</a></li>
+										<li><a href="javascript:;" style="font-family:微软雅黑">微软雅黑</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="text_c window_set_button"><a class="pbd_btn_standard pbd_btn_w100 ml15 closebt4">确定</a><a class="pbd_btn_standard pbd_btn_w100 ml15 closebt5">取消</a></div>
+						</div>
+						<!--字体设置 END-->
+						<!--颜色定制 START-->
+						<div></div>
+						<!--颜色定制 END-->
+						<!--辅助功能 START-->
+						<div class="window_help mh355 p20 hide">
+							<table class="assist_table">
+								<tbody>
+									<tr class="odd">
+										<td>
+											<input type="checkbox" value="show_sidebar" id="show_sidebar">
+											<label for="show_sidebar">显示侧边功能栏</label>
+										</td>
+										<td class="lock_screen">
+											<input type="checkbox" id="lock_screen_input">
+											<label for="lock_screen_input">网银登录超时</label>
+											<input type="text" class="input" name="lock_screen_minute" value="03" disabled="">分
+											<input type="text" class="input" name="lock_screen_second" value="00" disabled="">秒</td>
+									</tr>
+									<tr class=""></tr>
+								</tbody>
+							</table>
+							<div class="text_c window_set_button"><a class="pbd_btn_standard pbd_btn_w100 ml15 setSidebar closebt4">确定</a><a class="pbd_btn_standard pbd_btn_w100 ml15 closebt5">取消</a></div>
+						</div>
+						<!--辅助功能 END-->
+						<!--默认设置 START-->
+						<div class="window_help2 mh355 hide" style="padding-top: 20px;">
+							<div class="mb15 pl20">
+								<input type="checkbox" class="mr5 allChecked">全选</div>
+							<ul class="tool_list">
+								<li><img src="../../images/menu/icon_dly.png">
+									<p>
+										<input type="checkbox">登录页</p>
+								</li>
+								<li><img src="../../images/menu/icon_hyy.png">
+									<p>
+										<input type="checkbox">欢迎页</p>
+								</li>
+								<li><img src="../../images/menu/icon_ztsz.png">
+									<p>
+										<input type="checkbox" checked="checked" class="fontSet">字体设置</p>
+								</li>
+								<li style="margin-right: 0px;"><img src="../../images/menu/icon_ztdz.png">
+									<p>
+										<input type="checkbox">主题定制</p>
+								</li>
+								<li><img src="../../images/menu/icon_ysdz.png">
+									<p>
+										<input type="checkbox">颜色定制</p>
+								</li>
+								<li><img src="../../images/menu/icon_gndz.png">
+									<p>
+										<input type="checkbox">功能定制</p>
+								</li>
+								<li><img src="../../images/menu/icon_swsy.png">
+									<p>
+										<input type="checkbox" checked="checked" class="setIndex">设为首页</p>
+								</li>
+								<li style="margin-right: 0px;"><img src="../../images/menu/icon_cdlsz.png">
+									<p>
+										<input type="checkbox">菜单栏设置</p>
+								</li>
+								<li><img src="../../images/menu/icon_xgj.png">
+									<p>
+										<input type="checkbox">小工具</p>
+								</li>
+							</ul>
+							<div class="text_c window_set_button"><a class="pbd_btn_standard pbd_btn_w100 ml15 defaultSet closebt4">确定</a><a class="pbd_btn_standard pbd_btn_w100 ml15 closebt5">取消</a></div>
+						</div>
+						<!--默认设置 END-->
+					</div>
+				</div>
+				<!--消息弹窗 end-->
+			</div>
+			<div id="pnav">
+				<div class="hideNav hide">
+					<ul id="nav_third">
+						<li><a class="nav_third_cddt" href="../menu/cddt.html">菜单地图</a></li>
+						<li><a class="nav_third_szyjcd" href="../menu/dyzfsq_1.html">设置一级菜单</a></li>
+					</ul>
+				</div>
+				<div class="nav_first">
+					<div class="nav_f1 ui-sortable" id="nav_sya">
+						<a href="javascript:;" class="active ui-sortable-handle">查询类业务</a>
+						<a href="javascript:;" class="ui-sortable-handle">资金类业务</a>
+						<a href="javascript:;" class="ui-sortable-handle">代发代扣</a>
+						<a href="javascript:;" class="ui-sortable-handle">现金管理</a>
+						<a href="javascript:;" class="ui-sortable-handle">缴费业务</a>
+						<a href="javascript:;" class="ui-sortable-handle">票据业务</a>
+						<a href="javascript:;" class="ui-sortable-handle">电子商务</a>
+						<a href="javascript:;" class="ui-sortable-handle">卡类业务</a>
+						<!--<a href="javascript:;" class="ui-sortable-handle">国际业务</a>
+						<a href="javascript:;" class="ui-sortable-handle">信贷融资</a>
+						<a href="javascript:;" class="ui-sortable-handle">投资理财</a>
+						<a href="javascript:;" class="ui-sortable-handle">电子商务</a>
+						<a href="javascript:;" class="ui-sortable-handle">财政社保</a>
+						
+						<a href="javascript:;" class="ui-sortable-handle">特色业务</a>-->
+					</div>
+					<div href="javascript:;" title="展开所有一级菜单" class="getallnav" id="nav_f1"><span>展开</span></div>
+				</div>
+				<div class="nav_div"></div>
+				<div id="mainnav">
+					<ul class="nav_second">
+						<li>
+							<a class="nav_second_a_tri" href="javascript:;">账户信息</a>
+							<ul class="nav_third">
+								<li style="position: relative;">
+										<a href="javascript:;" class="nav_four_a_tri">账户信息查询</a>
+										<div class="nav_four">
+												<ul>
+													<li><a href="../zhcx/jxhqzh_1.html" data-text="建行活期账户" data-href="../zhcx/jxhqzh_1.html">建行活期账户</a></li>
+													<li><a href="../dqzh/dqzh_1.html" data-text="定期账户" data-href="../dqzh/dqzh_1.html">定期账户</a></li>
+													<li><a href="javascript:;" data-text="银行内部账户" data-href="javascript:;">银行内部账户</a></li>
+													<li><a href="javascript:;" data-text="一户通" data-href="javascript:;">一户通</a></li>
+													<li><a href="javascript:;" data-text="财资账户" data-href="javascript:;">财资账户</a></li>
+													<li><a href="javascript:;" data-text="透支账户" data-href="javascript:;">透支账户</a></li>
+													<li><a href="javascript:;" data-text="他行活期账户" data-href="javascript:;">他行活期账户</a></li>
+											</ul>
+										</div>
+										
+								</li>
+								<li><a href="javascript:;">批量信息查询</a></li>
+								<li><a href="javascript:;">电子回单查询</a></li>
+								<li><a href="javascript:;">集成资讯</a></li>
+								<li><a href="javascript:;">电子对账</a></li>
+							</ul>
+						</li>
+						<li><a class="nav_second_a_tri" href="javascript:;">国际业务</a></li>
+						<li><a class="nav_second_a_tri" href="javascript:;">信息维护</a></li>
+						<li><a class="nav_second_a_tri" href="javascript:;">财政社保</a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：设置一级菜单</div>
+			<div class="pbd_navSet_box mb15 lh74">
+				<div class="pbd_navSet_left wid_920">
+					<div class="pbd_navSet_title">一级菜单预览</div>
+					<div class="pbd_navSet_nav wid_776">
+						<ul class="pbd_navSet_list">
+							<li class="pbd_navSet_line">账户信息
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line"> 转账业务
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line">代发代扣
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line"> 缴费业务
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line">  服务管理
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line">票据业务
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line">国际业务
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line">建行活期...
+								<a class="pbd_navSet_del"></a>
+							</li>
+							<li class="pbd_navSet_line mt10">转账制单
+								<a class="pbd_navSet_del"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="pbd_navSet_up up">
+						<span class="navSet_up"></span>
+					</div>
+				</div>
+				<span class = "pbd_navSet_remains">						
+					<p>您还可以设置<i class="red menuNumber">7</i>个一级菜单</p>
+				</span>
+				<a class="pbd_btn_standard pbd_btn_w100 ml10 fr">我的模板</a>
+			</div>
+			<div id="phd_context">
+				<div class="main mt27">
+					<div class="main_box">
+						<ul class="menu_box clearfix">
+							<li id="trash" class="menu_list ui-droppable ui-sortable-handle" style="width: 148px;">
+								<div class="mTitle menu_zb">查询类业务<span class="mEdt"></span></div>
+								<div class="mBody">
+								  	<ul class="ui-sortable">
+									  	<li class="mItem ui-sortable-handle">账户信息 </li>
+									  	<li class="mItem ui-sortable-handle">代发代扣</li>
+								  		<li class="mItem ui-sortable-handle">国际业务</li>
+								  		<li class="mItem ui-sortable-handle border_none"> 缴费业务</li>
+								  	</ul>
+								</div>
+							</li>
+							<li id="trash2" class="menu_list ui-sortable-handle ui-droppable" style="width: 148px;">
+								<div class="mTitle menu_zb">资金类业务<span class="mEdt"></span></div>
+								<div class="mBody">
+									<ul class="ui-sortable">
+									  	<li class="mItem ui-sortable-handle">转账业务</li>
+									  	<li class="mItem ui-sortable-handle">服务管理</li>
+									  	<li class="mItem ui-sortable-handle">票据业务</li>
+									  	<li class="mItem ui-sortable-handle border_none">建行活期...</li>
+									</ul>
+								</div>
+							  </li>
+							<li class="menu_list">
+								<div class="mTitle">转账制单</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt30 text_c">
+					<a id="savesz" class="pbd_btn_standard pbd_btn_w100 mr15">保存设置</a>
+					<a id="savemb" class="pbd_btn_standard pbd_btn_w100 mr15">存为模板</a>
+					<a class="pbd_btn_standard pbd_btn_w100" href="dyzfsq_2.html">还原设置</a>
+				</div>
+				<!--温馨提示 START-->
+				<div class="tip-msg mt15">
+					<div class="pbd_tips_title">温馨提示：</div>
+					<ul>
+						<li>您可以通过拖动菜单实现菜单分组。</li>
+					</ul>
+				</div>
+				<!--温馨提示 END-->
+			</div>
+
+			<!--右边功能栏-->
+			<div id="fn_menu">
+				<div class="fn_menu_lable fn_menu_lable_out"></div>
+				<div class="fn_menu_hide_msg" style="display: none;"></div>
+				<div class="fn_menu_hide_btn" style="display: none;"></div>
+				<div class="fn_menu_title_wrap text_c">您好！张翔<i class="fn_menu_question_mark"></i><span><i class="fn_menu_left_arrow"></i><i class="fn_menu_right_arrow"></i></span><span class="fn_menu_title_close"><a class="white" href="#" title="关闭">×</a></span></div>
+				<div class="fn_menu_main_wrap">
+					<div id="submenu" class="clearfix">
+						<!--tag标题-->
+						<ul id="subnav">
+							<li><a href="#" class="selected">常用功能</a></li>
+							<li><a href="#" class="">历史记录</a></li>
+							<li><a href="#" class="">精品推荐</a></li>
+						</ul>
+						<!--二级菜单-->
+						<div id="submenu_con">
+							<div class="tag" style="display:block">
+								<ul class="fn_menu_links_wrap">
+									<li class="fn_menu_link"><span class="dian">●</span>账户查询<span class="icon_position"></span><i class="fn_menu_closebtn"></i></li>
+									<li class="fn_menu_link hide"><a href="javascript:;">查看工作台</a><i class="fn_menu_closebtn">×</i></li>
+								</ul>
+							</div>
+							<div class="tag" style="display:none">
+								<ul class="fn_menu_links_wrap" style=" height: 282px; overflow: hidden;">
+									<li class="fn_menu_link"><span class="dian">●</span>指令业务<span class="icon_position"></span><i class="fn_menu_closebtn"></i></li>
+								</ul>
+							</div>
+							<div class="tag" style="display:none">
+								<ul class="tag_new_ul">
+									<li class="tag_new_block"><img src="../../images/menu/tag_new_li1.png" alt=""></li>
+									<li class="tag_new_a"><a href="javascript:;">查看详情</a></li>
+									<li class="tag_new_block"><img src="../../images/menu/tag_new_li2.png" alt=""></li>
+									<li class="tag_new_a"><a href="javascript:;">查看详情</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fn_menu_info text_r"><a href="javascript:;">【设置】</a></div>
+			</div>
+			<!--底部信息-->
+			<div id="pft_common">
+				<!--通用页尾 start-->
+				<p><img src="../../images/login_bgl.png"><span>中国建设银行 版权所有 </span></p>
+				<p>有任何问题请致电：95533或联系您的客户经理</p>
+				<!--通用页尾 end-->
+			</div>
+			<!--返回顶部-->
+			<div id="back_to_top">
+				<p>返回顶部</p>
+			</div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float" style="bottom: 0px;">
+				<!--足迹 START-->
+				<div id="scheme_d">
+					<div class="scheme_div2">
+						<div style="position:relative;"><img id="bimg"></div>
+					</div>
+					<div class="scheme_div active"><img src="../../images/foot_show_window.png" class="foot_show_window hide"><a href="../zhcx/jxhqzh_1.html" data-href="../../zhcx/zhxxcx/jxhqzh_1.html">建行活期账户</a><em></em></div>
+				</div>
+				<!--足迹END-->
+				<!-- 底部工具栏START-->
+				<div class="scheme_r">
+					<a href="javascript:;" id="windowPop">
+						<div class="scheme_r_info" style="position: relative;"><span>2</span>
+							<div class="littleToolTip" style="top: -30px; left: -100%;">消息提醒</div>
+						</div>
+					</a>
+					<a href="javascript:;">
+						<div class="scheme_r_tool" style="position: relative;">
+							<div class="littleToolTip" style="top: -30px; left: -100%;">小工具</div>
+						</div>
+					</a>
+					<!-- 底部消息 START-->
+					<div class="min-remind" style="display: block;">
+						<div class="min-remind-title">提醒<span class="min-remind-minimize"></span></div>
+						<div class="min-remind-contains">
+							<ul>
+								<li>您有<span class="number">1</span>笔<a href="javascript:;">转账</a>业务待复核</li>
+								<li>您有<span class="number">3</span>笔<a href="javascript:;">代发代扣</a>业务待复核</li>
+								<li>您有<span class="number">3</span>笔<a href="javascript:;">网银循环贷</a>业务待复核</li>
+							</ul>
+							<div class="min-remind-foot"><a href="javascript:;">查看更多</a>
+								<div class="min-remind-show">
+									<input type="checkbox" class="min-remind-no-show-again">下次不显示提示框</div>
+							</div>
+							<div class="min-remind-arrow"></div>
+						</div>
+					</div>
+					<!--底部消息 END-->
+				</div>
+				<!--底部工具栏END-->
+				<!--底部工具 START-->
+				<div class="fixed_tool hide">
+					<div class="fixed_tool_title">
+						<h2 class="white">小工具</h2>
+						<a class="fixed_tool_reduce" href="#"></a>
+					</div>
+					<div class="box-content">
+						<div class="b-tool"><span><img src="../../images/menu/small_hlb.png"><p><a href="###" class="blue interestRate_popUp">利率表</a></p></span><span><img src="../../images/menu/big_kszt.png"><p><a href="###" class="blue">快速截图</a></p></span><span><img src="../../images/menu/magnifying_glass.png"><p><a href="###" class="blue">放大镜</a></p></span><span><img src="../../images/calculator.png"><p><a href="javascript:;" class="blue">计算器</a></p></span></div>
+					</div>
+					<div class="b-tool-add"><a href="javascript:;" class="blue edit">编辑</a></div>
+					<div class="fixed_tool_arrow"></div>
+				</div>
+				<!--底部工具 END-->
+				<!--小工具(编辑)弹窗 start-->
+				<div id="window_blue" class="hide"></div>
+				<div class="system_set hide">
+					<div class="window_blue_header">
+						<div class="window_blue_title">小工具<span><a class="window_blue_close closebt3" href="#"></a></span></div>
+					</div>
+					<div class="window_blue_body pt30">
+						<ul class="tool_list">
+							<li><img src="../../images/menu/big_hlb.png">
+								<p>
+									<input type="checkbox" checked="checked" class="mytool">利率表</p>
+							</li>
+							<li><img src="../../images/menu/magnifying_glass.png">
+								<p>
+									<input type="checkbox" class="mytool" checked="">放大镜</p>
+							</li>
+							<li><img src="../../images/menu/big_kszt.png">
+								<p>
+									<input type="checkbox" class="mytool" checked="checked">快速截图</p>
+							</li>
+							<li style="margin-right: 0px;"><img src="../../images/calculator.png">
+								<p>
+									<input type="checkbox" class="mytool" checked="">计算器</p>
+							</li>
+						</ul>
+					</div>
+					<div class="text_c window_set_button"><a class="pbd_btn_standard pbd_btn_w100 ml10 set_tool_btn closebt4">确定</a></div>
+				</div>
+				<!--小工具(编辑)弹窗 end-->
+				<!--小工具(利率表)弹窗 start-->
+				<div id="window_blue3" class="hide"></div>
+				<div class="system_set3 hide">
+					<div class="window_blue_header">
+						<div class="window_blue_title">利率表<span><a class="window_blue_close closebt3" href="#"></a></span></div>
+					</div>
+					<div class="window_blue_body">
+						<!--利率表内容START-->
+						<div class="p20 pl20">
+							<div class="popUp_interestRate_relative">
+								<div id="choose_llb" class="">
+									<div class="select"><span>请选择时间</span>
+										<input type="hidden" class="define_input" value="">
+										<a class="hover" href="javascript:;"></a>
+									</div>
+									<ul class="option">
+										<li><a href="javascript:;">2015-08-06</a></li>
+										<li><a href="javascript:;">2015-06-28</a></li>
+									</ul>
+								</div>
+								<div class="popUp_interestRate_infoTips"><span class="pl212 thatTime ff-st">日期：2015-08-06</span></div>
+							</div>
+							<div class="popUp_interestRate_table mt15">
+								<ul>
+									<li class="bgc8e0f5 fb">项目</li>
+									<li class="bgc8e0f5 fb">年利率(％)</li>
+								</ul>
+								<div class="table_box">
+									<table border="0" cellspacing="0" cellpadding="0" class="pbd_table_show" width="100%">
+										<tbody>
+											<tr>
+												<td>一、城乡居民存款</td>
+												<td></td>
+											</tr>
+											<tr class="odd">
+												<td>（一）活期</td>
+												<td>0.35</td>
+											</tr>
+											<tr>
+												<td>（二）定期</td>
+												<td></td>
+											</tr>
+											<tr class="odd">
+												<td> 1.整存整取</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>三个月</td>
+												<td>1.60</td>
+											</tr>
+											<tr class="odd">
+												<td>半年</td>
+												<td>1.80</td>
+											</tr>
+											<tr>
+												<td>一年</td>
+												<td>2.00</td>
+											</tr>
+											<tr class="odd">
+												<td>二年</td>
+												<td>2.50</td>
+											</tr>
+											<tr>
+												<td>三年</td>
+												<td>3.00</td>
+											</tr>
+											<tr class="odd">
+												<td>五年</td>
+												<td>3.05</td>
+											</tr>
+											<tr>
+												<td> 2.零存整取、整存零取、存本取息</td>
+												<td></td>
+											</tr>
+											<tr class="odd">
+												<td>一年</td>
+												<td>1.60</td>
+											</tr>
+											<tr>
+												<td>三年</td>
+												<td>1.80</td>
+											</tr>
+											<tr class="odd">
+												<td>五年</td>
+												<td>1.85</td>
+											</tr>
+											<tr>
+												<td> 3.定活两便</td>
+												<td>按一年以内定期整存整取同档次利率打六折执行</td>
+											</tr>
+											<tr class="odd">
+												<td>二、通知存款</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>一天</td>
+												<td>0.80</td>
+											</tr>
+											<tr class="odd">
+												<td>七天</td>
+												<td>1.35</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!--利率表END-->
+					</div>
+				</div>
+				<!--小工具(利率表)弹窗 end-->
+				<!-- 计算器 START-->
+				<div id="calculator_mark"></div>
+				<div id="calculator">
+					<div class="calculator_title">计算器 <span class="calculator_min"></span></div>
+					<div id="calculator_content">
+						<h3><input id="calculator_input" type="text" value="0"></h3>
+						<ul>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+							<li>+</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>-</li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>×</li>
+							<li>0</li>
+							<li>C</li>
+							<li>=</li>
+							<li>÷</li>
+						</ul>
+					</div>
+					<div id="calculatorBg"></div>
+				</div>
+				<!-- 计算器END -->
+			</div>
+		</div>
+
+		<!--弹窗 start-->
+		<div id="window_blue" class="window_hide hide"></div>
+		<div class="panel window bcsz" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+
+			<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+				<div class="panel-title">保存设置</div>
+				<div class="panel-tool">
+					<a class="panel-tool-close" href="javascript:void(0)"></a>
+				</div>
+			</div>
+			<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+				<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 20px 10px;"></div>
+
+				<div class="alert-feedback" style="padding: 0px 40px 20px 137px;">
+					<span class="fail-icon"></span>
+					<div class="feedback-infor">
+						<p style="line-height: 24px;">设置成功，是否保存设置？</p>
+					</div>
+				</div>
+				<div class="bnt-con text_c">
+					<span class="pbd_btn_standard pbd_btn_w100">确定</span>
+					<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="panel window mb_1" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+			<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+				<div class="panel-title">存为模板</div>
+				<div class="panel-tool">
+					<a class="panel-tool-close" href="javascript:void(0)"></a>
+				</div>
+			</div>
+			<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+				<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 15px 10px;"></div>
+
+				<div class=" text_c" style="min-height: 65px; padding-bottom: 25px;">
+					<label class="label-style" style="width:130px;">请输入模板名称：</label>
+					<input type="text" class="pbd_input_normal" id="mbname">
+				</div>
+				<div class="bnt-con text_c pb20">
+					<span class="pbd_btn_standard pbd_btn_w100" id="sure_btn">确定</span>
+					<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+				</div>
+
+			</div>
+		</div>
+		<!--弹窗 end-->
+	</body>
+	<script type="text/javascript">
+		/*保存设置 start*/
+	    $("#savesz").click(function () {
+	   	    $(".bcsz").show();
+	   	    $(".window_hide").removeClass("hide");
+	   	    
+	   	    $(".bcsz").find(".panel-tool-close").click(function(){
+				$(".bcsz").hide();
+				$(".window_hide").addClass("hide");
+			})
+	   	    
+	   	    $(".bcsz").find(".pbd_btn_standard ").click(function(){
+	   	    	$(".bcsz").hide();
+				$(".window_hide").addClass("hide");
+	   	    })
+	    })
+	    /*保存设置 end*/
+	   
+	    //保存模板 start
+		$("#savemb").click(function () {
+				$(".mb_1").show();
+				$(".window_hide").removeClass("hide");
+				
+				$(".mb_1").find(".pbd_btn_standard ").click(function(){
+		   	    	$(".mb_1").hide();
+					$(".window_hide").addClass("hide");
+		   	    })
+				
+				$(".mb_1").find(".panel-tool-close").click(function(){
+					$(".mb_1").hide();
+					$(".window_hide").addClass("hide");
+					
+				})
+		});
+		//  保存模板 end
+	</script>
+
+</html>

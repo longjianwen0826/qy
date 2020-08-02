@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_dbfk.css" />
+
+        <script src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+    </head>
+
+    <body>
+        <div id="Warp">
+            <!--顶部导航 START-->
+            <div id="phd_common"></div>
+            <!--当前位置 START-->
+			<div class="pbd_tab_current">当前位置：转账业务<span>&gt;</span>转账制单<span>&gt;</span><b>单笔付款</b></div>
+            <!--当前位置 END-->
+            <!--顶部导航 END-->
+            <!--右边功能栏 START-->
+            <div id="fn_menu"></div>
+            <!--右边功能栏 END-->
+            <!--主内容区 START-->
+            <div id="pbd_content">
+                <!-- 付款人 START -->
+                <div class="table-form-title panel_title mb15"><span>1</span><b>请选择付款人</b></div>
+                <div class="pbd_table_form_body">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r">付款人账号<span>：</span></td>
+                            <td>
+                                <select class="easyui-combobox" style="width:230px;height:27px">
+                                    <option value="1">请选择账户类别</option>
+                                    <option value="2">全部</option>
+                                    <option value="3">未分类</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td"></td>
+                            <td>
+                                <select class="easyui-combobox" style="width:230px;height:27px">
+                                    <option value="1">按账户优先级排序</option>
+                                    <option value="2">按账号排序</option>
+                                    <option value="3">按账户名排序</option>
+                                </select>
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td class="first_td"></td>
+                            <td>
+                                <select class="easyui-combobox" style="width:565px;height:27px">
+                                    <option value="1">3500 1870 0070 5251 6810 一汽大众集团 人民币 中国建设银行上海分行虹桥支行</option>
+                                    <option value="2">3500 1870 0070 5251 6810 一汽大众集团 人民币 中国建设银行上海分行虹桥支行</option>
+                                    <option value="3">3500 1870 0070 5251 6810 一汽大众集团 人民币 中国建设银行上海分行虹桥支行</option>
+                                </select>
+                                <input type="checkbox" value="" class="pbd_inp_span" /> 设置为默认付款人账户</span>
+                                <a class="pl10 yue_check" href="javascript:void(0);" onclick="openwin1();">余额查询</a>
+                                <!-- <span id="yue_span">88,000.00 元</span> -->
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td class="first_td"></td>
+                            <td>
+                                <input type="text" class="pbd_input_normal" />
+                                <a class="pl10 mohu_check" href="javascript:void(0);">模糊查询</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 付款人 END -->
+                <!-- 收款人 START -->
+                <div class="table-form-title panel_title mb15 mt15"><span>2</span><b>请选择收款人</b></div>
+                <div class="pbd_table_form_body">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>收款人行别<span>：</span></td>
+                            <td>
+                                <input type="radio" name="items1" class="mr5" checked="checked" />收款单位为建行
+                                <input type="radio" name="items1" class="ml15 mr5 other_inp" />收款单位为他行
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>收款人账号<span>：</span></td>
+                            <td>
+                                <input type="text" class="pbd_input_normal" id="field_1" value="" maxlength="24" name="selInput" placeholder="请输入账号" notEmpty="true" nonEmptyMsg="账号不能为空" onblur="fun2(this)" onkeydown="fun1(),document.getElementById('field_1').value=this.value.replace(/(\d{4})(?=\d)/g,'$1 ')" onkeyup="$('#words_div').text($(this).val())" />
+                                <div class="input_words_div" style="display:none; color: #f76c1e; font-size:16px; font-weight:bold;" id="words_div"></div> 
+                                <a href="javascript:void(0);" onclick="openwin2();" class='shoukuan_span ml5'>常用收款账号</a>
+                                <a href="javascript:void(0);" onclick="openwin3();" class='shouquan_span'> 签约及授权账户</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form other hide">
+                            <tr>
+                                <td class="first_td text_r"><span class="pbd_font_required">*</span>收款人单位全称<span>：</span></td>
+                                <td>
+                                    <select class="easyui-combobox" style="width:230px;height:27px">
+                                        <option value="1">***请选择***</option>
+                                        <option value="2">大连亚明公司</option>
+                                        <option value="3">北京阿里巴巴信息技术有限公司</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first_td text_r"><span class="pbd_font_required">*</span>收款单位开户行<span>：</span></td>
+                                <td>
+                                    <input type="radio" name="items2" checked="checked" class="mr5" />快速选择网点
+                                    <input type="radio" name="items2" class="ml15 mr5" />手工录入
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="first_td"></td>
+                                <td>
+                                    <select class="easyui-combobox" style="width:230px;height:27px">
+                                        <option value="1">请选择或输入开户行</option>
+                                        <option value="2">工商银行</option>
+                                        <option value="3">农业银行</option>
+                                    </select>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td class="first_td"></td>
+                                <td>
+                                    <select class="easyui-combobox" style="width:230px;height:27px">
+                                        <option value="1">请选择或输入省份</option>
+                                        <option value="2">北京市</option>
+                                        <option value="3">上海市</option>
+                                        <option value="4">广东省</option>
+                                    </select>
+                                    <select class="easyui-combobox" style="width:230px;height:27px">
+                                        <option value="1">请选择或输入城市</option>
+                                        <option value="2">北京</option>
+                                        <option value="3">上海</option>
+                                        <option value="4">广州</option>
+                                    </select>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td class="first_td"></td>
+                                <td>
+                                    <select class="easyui-combobox" style="width:565px;height:27px">
+                                        <option value="1">请选择具体网点</option>
+                                        <option value="2">广州中山一路支行</option>
+                                        <option value="3">广州市广州大道中支行</option>
+                                        <option value="4">广州市东华西支行</option>
+                                    </select> 
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+                <!-- 收款人 END -->
+                <!-- 金额及用途 START -->
+                <div class="table-form-title panel_title mb15 mt15"><span>3</span><b>请选择金额及用途</b></div>
+                <div class="pbd_table_form_body">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>金额<span>：</span></td>
+                            <td><input type="text" class="pbd_input_normal"/>（元）</td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r"><span class="pbd_font_required">*</span>用途<span>：</span></td>
+                            <td>
+                                <select class="easyui-combobox" style="width:230px;height:27px">
+                                    <option value="1">贷款</option>
+                                    <option value="2">往来款</option>
+                                    <option value="3">划款</option>
+                                </select>
+                                <input type="checkbox" value="" class="pbd_inp_span" /> 设置为默认用途</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">客户方流水号<span>：</span></td>
+                            <td><input type="text" class="pbd_input_normal" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first_td text_r">定时处理<span>：</span></td>
+                            <td>
+                                <input type="checkbox" id="dingshi" value=""/>
+                            </td>
+                        </tr> 
+                    </table>
+                </div>
+                <div class="pbd_table_form_filter hide" id="dingshi_div">
+                    <div class="pbd_table_form_body">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form">
+                            <tr>
+                                <td class="first_td text_r"><input type="radio" name="items3" /> 定时<span>：</span></td>
+                                <td><input type="text" class="pbd_input_normal"  style="margin-left:5px;" /></td>
+                            </tr>
+                            <tr>
+                                <td class="first_td text_r" rowspan="3"><input type="radio" name="items3" /> 定频率<span>：</span></td>
+                                <td><input type="radio" name="items4" class="ml5" /> 每天</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="items4" class="ml5" /> 每周 <input type="text" class="pbd_input_normal" disabled="disabled" /><span class="pl5">（各执行日期之间用“，”隔开 如“1,3”则表示每周一、周三执行交易）</span></td>
+                            </tr> 
+                            <tr>
+                                <td><input type="radio" name="items4" class="ml5" /> 每月 <input type="text" class="pbd_input_normal" disabled="disabled"/><span class="pl5">（各执行日期之间用“，”隔开 如“1,15”则表示每月1号、15号执行交易）</span></td>
+                            </tr>
+                            <tr>
+                                <td class="first_td text_r"><input type="checkbox" name="" /> 执行时间<span>：</span></td>
+                                <td class="pl5">
+                                    <select class="easyui-combobox" style="width:230px;height:27px;">
+                                        <option value="1">8点</option>
+                                        <option value="2">9点</option>
+                                        <option value="3">10点</option>
+                                        <option value="3">11点</option>
+                                        <option value="4">12点</option>
+                                        <option value="5">13点</option>
+                                        <option value="6">14点</option>
+                                        <option value="7">15点</option>
+                                        <option value="8">16点</option>
+                                        <option value="9">17点</option>
+                                        <option value="10">18点</option>
+                                    </select>   
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div> 
+                <!-- 金额及用途 END -->
+                <!--操作区 ATART-->
+                <div class="mt15 btn_l">
+                    <a class="text_c pbd_btn_standard pbd_btn_w100 next_btn" href="ZZZD_dbfk_step_1.html">下一步</a>
+                </div>
+                <!--操作区 END-->
+                <!--温馨提示 START-->
+                <div class="tip-msg">
+                    <div class="pbd_tips_title">温馨提示</div>
+                    <ul>
+                        <li>1.转账手续请参见中国建设银行电子渠道资金划转手续费标准，具体收费标准可能会因为地区差异及客户差异有所不同，请以柜面标准或协议定价为准。</li>
+                        <li>2.因节假日人行大额支付系统不开放，金额大于5万元的跨行定时/定频转账，遇节假日无法正常执行，其余时点正常执行，给您带来的不便敬请见谅。</li>
+                        <li>3.交易时间：行内转账7*24小时。跨行转账5万元以下（含5万元）7*24小时，5万元以上（不含5万元）以当地人行大额支付系统营业时间为准。</li>
+                        <li>4.到账时间：行内转账实时到账，普通跨行转账24小时内到账，加急跨行转账2小时内到账。</li>
+                    </ul>
+                </div>
+                <!--温馨提示 END-->
+            </div>
+            <!--主内容区 END-->
+            <!--底部信息 START-->
+            <div id="pft_common"></div>
+            <!--底部信息 END-->
+            <!--返回顶部 STRAT-->
+            <div id="back_to_top"></div>
+            <!--返回顶部 END-->
+            <!--通用底部悬浮层 START-->
+            <div id="foot_float"></div>
+            <!--通用底部悬浮层 END-->
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    function fun1() {
+        divs.style.display = 'block';
+    }
+    function fun2(obj) {
+        divs.style.display = 'none';
+    }
+    function openwin1() {
+　　    window.open ("../zhcx/jxhqzh_ssye_1_tips.html", "newwindow", "height=500, width=400, toolbar =no, menubar=no, resizable=yes, location=no,scrollbars=yes, status=no");
+　　}
+    function openwin2() {
+　　    window.open ("page.html", "newwindow", "height=500, width=400, toolbar =no, menubar=no, resizable=yes, location=no, scrollbars=yes, status=no");
+　　}
+    function openwin3() {
+　　    window.open ("page.html", "newwindow", "height=500, width=400, toolbar =no, menubar=no, resizable=yes, location=no, scrollbars=yes, status=no");
+　　}
+    $(document).ready(function(){
+        // 余额查看 start
+        // $('.yue_check').toggle(function(){
+        //     $('#yue_span').show();
+        //     $('.yue_check').text('隐藏余额');
+        // },function(){
+        //     $('#yue_span').hide();
+        //     $('.yue_check').text('余额查询');
+        // });
+        // 余额查看 end
+        // 定时处理 start
+        $('#dingshi').click(function(){
+            if($(this).attr('checked') == 'checked'){
+                $('#dingshi_div').removeClass('hide');
+            }else{
+                $('#dingshi_div').addClass('hide');
+            }
+        });
+        // 定时处理 end
+        // 行内与他行切换 start
+        $(document).click(function(){
+            if($('.other_inp').attr('checked')=="checked"){
+                $('.other').removeClass('hide');
+            }else{
+                $('.other').addClass('hide');
+            }
+        });
+        // 行内与他行切换 end
+        // 每天每周每月 input状态切换 start  
+        $("input[name='items4']").click(function(){
+            $("input[name='items4']").next('input').attr('disabled','disabled');
+            var _this = $(this);
+            if(_this.attr('checked') == 'checked'){
+                _this.next('input').removeAttr('disabled');
+            }
+        });
+        // 每天每周每月 input状态切换 end
+    });
+
+</script>

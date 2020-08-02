@@ -1,0 +1,235 @@
+/* CSS Document */
+/*个人贷款模块 陈丽萍 2015年12月7日*/
+.rel{
+	position:relative;
+}
+.abs{
+	position:absolute;
+}
+
+.a1{
+	color: #0066b3;
+	text-decoration:underline;
+}
+.a1:hover{
+	color: #3da4f1;
+}
+
+/* 列表模式 start*/
+.list_mode .one_lines_table{
+	border: 1px solid #dedede;
+}
+
+.one_lines_table a{
+    color: #0066b3;
+}
+
+.one_lines_table a:hover{
+	color: #3da4f1;
+    text-decoration: none;
+}
+
+.list_mode .one_lines_table th{
+	height: 40px;
+	width: 10%;
+	border: none;
+}
+.list_mode .one_lines_table td{
+	height: 40px;
+}
+.trbg {
+    background: #f5f5f5;
+}
+/* 列表模式 end*/
+/*网盾样式 start*/
+.z_network{
+    background-color:#fff;
+    width: 360px;
+    height: 200px;
+    position: absolute;
+    margin-top: -90px;
+    top: 50%;
+    left: 50%;
+    margin-left: -180px;
+}
+.z_network>.z_network_hread{
+	text-align: center;
+	height: 48px;
+	line-height: 48px;
+	font-size: 18px;
+	background: #0066b3;
+	color: #FFF
+}
+.z_network_content{
+	padding: 0 20px;
+	height: auto;
+}
+.z_network_content dl{
+	width: 100%;
+	height:35px;
+	margin-top: 35px;
+}
+.z_network_content dl>dt{
+	margin-left: 25px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+	line-height: 35px;
+}
+.z_network_content dl>dd{
+	margin-left: 5px;
+	width: 157px;
+	height: 32px;
+	line-height: 32px;
+	text-align: left;
+	text-indent: 5px;
+}
+.z_network_content dl>dd input{
+	text-indent: 5px;
+	width: 150px;
+	height: 30px;
+	border: 1px solid #0066B3;
+	font-size: 14px;
+	color: #666;
+}
+.z_network_foot{
+	width: 100%;
+	height: 52px;
+	line-height: 52px;
+	background-color: #eee;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+/*网盾样式 end*/
+
+/** 小微快贷 **/
+.imglist{
+	/*
+	overflow: hidden;*/
+	/*height: 220px;*/
+	margin: 0 auto;
+	width: 936px;
+	
+}
+
+.imglist>ul>li{
+	/*
+	float: left;
+	width: 223px;
+	position: relative;
+	margin-left:14px;
+	*/
+	height:250px;border:1px solid #d8d8d8;width:934px;margin-top:10px;
+}
+
+.imglist ul li .img{
+	width:387px;height:236px;margin:7px;position:relative;margin-right:0;
+}
+
+.imglist ul li .btn{
+	position:absolute; width:118px; left:17px; bottom:17px;
+}
+
+.imglist ul li .msg{
+	height:226px;width:515px;float:right;padding:12px;
+}
+
+.msg_title ul{
+	width: 515px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 16px;
+}
+
+.msg_title ul li {
+    float: left;
+    padding: 0 10px;
+    text-align: center;
+	cursor:pointer;
+}
+
+.msg_title ul li.active {
+    color: #0066b3;
+    border-bottom: 2px solid #0066B3;
+}
+
+.msg_title a{
+	position:absolute;right:0;top:5px;color:#0066b3;font-size:14px;
+}
+
+.imglist ul li:first-child{
+	margin-left:0;
+}
+
+.imglist ul li i{
+	bottom: 42px;
+	height: 8px;
+	left: 50%;
+	margin-left: -8px;
+	width: 15px;
+	position: absolute;
+	background: url(../images/p_grdk/icon_grdk_sj.png) no-repeat;
+}
+
+.kd_img{
+	width: 223px;
+	height: 140px;
+	border-radius: 2px;
+}
+
+.ke_img{
+	background: url(../images/p_grdk/kd_cp_list_yyd.png) no-repeat;
+}
+
+.re_img{
+	background: url(../images/p_grdk/kd_cp_list_yxd.png) no-repeat;
+}
+
+.zy_img{
+	background: url(../images/p_grdk/kd_cp_list_zyd.png) no-repeat;
+}
+
+.se_img{
+	background: url(../images/p_grdk/kd_cp_list_sed.png) no-repeat;
+}
+
+.kdsq_text{
+	font-size: 14px;
+	font-weight: normal;
+	padding:0 12px;
+	margin-bottom:20px;
+}
+
+.kdsq_text p{
+	text-indent:2em;
+	line-height:2em;
+}
+
+.kdsq_text ul li{
+	line-height:25px;
+	text-indent:2em;
+}
+
+.xwkd_read{
+	color: #0066B3;
+	cursor: pointer;
+}
+
+.xwkd_read:hover{
+	text-decoration: none;
+	color:#3da4f1;
+}
+
+/*贷款方案*/
+.dkfa_icon{
+	background: url(../images/p_grdk/dkfa.jpg) no-repeat 30px center;
+	height: 142px;
+	padding: 30px 0 30px 30px;
+	border-collapse: collapse;
+}
+
+.dkfa_span{
+	}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_dfdk.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+	</head>
+    <style>
+        .stepNav ul{
+            background: url(../../images/step2.png) no-repeat center center;
+        }
+    </style>
+
+
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：代发代扣<span>&gt;</span>代发业务<span>&gt;</span><b>代发制单</b></div>
+
+            <!--步骤导航 START-->
+            <div class="stepNav">
+                <ul class="clearfix">
+                    <li class="fl stepNav_ul_list1 stepNav_ul_color2">1.代发制单选择</li>
+                    <li class="fl stepNav_ul_list2 stepNav_ul_color1">2.单笔代发制单</li>
+                    <li class="fl stepNav_ul_list3 stepNav_ul_color2">3.单笔代发确认</li>
+                    <li class="fl stepNav_ul_color2">4.单笔代发成功</li>
+                </ul>
+                <span class="hide"></span>
+            </div>
+            <!--步骤导航 END-->
+
+            <!--content START-->
+            <div class="message">
+                <span>1</span><label style="margin-left: 5px">付款人信息</label>
+
+            </div>
+            <!--content END-->
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top:15px">
+                <tr>
+                    <td style="text-align: right">
+                        全称:
+                    </td>
+                    <td style="width:101px;text-align: left;">
+                       <span style="margin-left: 5px;">一汽大众集团</span>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:80px;text-align: right">
+                        账号:
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <span style="margin-left:5px;font-weight: bold">3500 0070 1870 5251 6810</span>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:80px;text-align: right">
+                        开户行:
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <span style="margin-left:5px;">中国建设银行上海分行虹桥支行</span>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <!--content START-->
+            <div class="message">
+                <span>2</span><label style="margin-left: 5px">收款人信息</label>
+
+            </div>
+            <!--content END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top: 15px">
+                <tr>
+                    <td style="width:112px;text-align: right">
+                        <label class="_red">*</label>
+                        姓名:
+                    </td>
+                    <td style="width:238px;text-align: left;">
+                       <input type="text" class="input _nameUrl" value="" style="margin-left: 5px"/>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+
+                <tr>
+                    <td style="width:80px;text-align: right">
+                        <label class="_red">*</label>
+                        账号:
+                    </td>
+                    <td style="width:80px;text-align: left;" colspan="2" class="Lg_other">
+                        <input type="text" class="input _textUrl" style="margin-left:5px"/>
+
+                        <span></span>
+                        <a href="javascript:void(0)" class="detail">收款人名册</a>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <!--content START-->
+            <div class="message">
+                <span>3</span><label style="margin-left: 5px">详细信息</label>
+
+            </div>
+            <!--content END-->
+
+            <!--table选择 START-->
+            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form" style="margin-top: 15px">
+                <tr>
+                    <td style="width:112px;text-align: right">
+                        <span>
+                            用途:
+                        </span>
+                    </td>
+                    <td>
+                        <span style="margin-left:5px">代发工资</span>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:80px;text-align: right">
+                        <label class="_red">*</label>
+                        金额:
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <input type="text" class="input" style="margin-left:5px"/>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+                <tr>
+                    <td style="width:80px;text-align: right">
+                        摘要:
+                    </td>
+                    <td style="width:80px;text-align: left;">
+                        <input type="text" class="input" style="margin-left:5px"/>
+                    </td>
+                    <td style="width:80px;text-align: left;"></td>
+                    <td style="width:80px;text-align: left;"></td>
+                </tr>
+            </table>
+            <!--table选择 END-->
+
+            <!--btn按钮 START-->
+            <div class="btn_select" style="padding-left: 212px">
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="dfzd_1.html">上一步</a>
+                <a class="pbd_btn_standard pbd_btn_w100 ml15" href="dfzd_dbdf_3.html" style="margin-left: 10px;">下一步</a>
+            </div>
+            <!--btn按钮 END-->
+
+            <!--温馨提示START-->
+            <div class="tip-msg">
+                <div class="pbd_tips_title">
+                    温馨提示
+                </div>
+                <ul>
+                    <li>若收款账户为一户通子账户，收款账号请输入主账户+“-”+分账户序号。</li>
+                </ul>
+            </div>
+            <!--温馨提示END-->
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<div id="foot_float"></div>
+		</div>
+
+		<script>
+        $(function(){
+            //获取页面url参数
+            //获取当前url
+            var url=location.search;
+            var Request = new Object();
+            if(url.indexOf("?")!=-1){
+                var str = url.substr(1);
+                strs = str.split("&");
+                for(var i=0;i<strs.length;i++){
+                    Request[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1],strs[i].split("=")[2]);
+                }
+            }
+            //1左边logo得到得值做相应得处理
+            var _name=$('._nameUrl');
+            var _text=$('._textUrl');
+            if(Request["lg_name"]==1){
+                _name.attr('value','李建');
+            }else if(Request["lg_name"]==2){
+                _name.attr('value','赵颕');
+            }else if(Request["lg_name"]==3){
+                _name.attr('value','刘耕宏');
+            }else{
+                return false
+            }
+
+            if(Request["lg_text"]==1){
+                _text.attr('value','41001501210050237189');
+            }else if(Request["lg_text"]==2){
+                _text.attr('value','35001870007052616649');
+            }else if(Request["lg_text"]==3){
+                _text.attr('value','35001880007052613257');
+            }else{
+                return false
+            }
+        })
+        var _item={
+            itemTitle1:'1.代付制单选择',
+            itemTitle2:'2.单笔代发制单',
+            itemTitle3:'3.单笔代发确认',
+            itemTitle4:'4.单笔代付成功',
+            itemTitle5:'2.批量代发确认',
+            itemTitle6:'3.批量代发成功'
+        }
+        $('.radio').eq(0).on('click',function(){
+             var _li=$('.stepNav').find('li');
+             _li.eq(0).html(_item.itemTitle1);
+             _li.eq(1).html(_item.itemTitle2);
+             _li.eq(2).html(_item.itemTitle3);
+             _li.eq(3).html(_item.itemTitle4);
+             $('.stepNav span,.df_tr').addClass('hide');
+        });
+        $('.radio').eq(1).on('click',function(){
+            var _li=$('.stepNav').find('li');
+            _li.eq(0).html(_item.itemTitle1);
+            _li.eq(1).html(_item.itemTitle5);
+            _li.eq(2).html(_item.itemTitle6);
+            _li.eq(3).html('');
+            $('.stepNav span,.df_tr').removeClass('hide');
+        });
+        $(".detail").click(function(){
+            window.open('dfzd_skrmc.html','中国建设银行企业网银','width=600,height=400,scrollbars=yes');
+
+        })
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

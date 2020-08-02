@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>拖拽效果</title>
+<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../js/plugin.dragula.min.js"></script>
+<style type="text/css">
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {			/*拖拽对象本体*/
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+.gu-mirror {			/*拖拽对象镜像*/
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  cursor:move;
+}
+
+.clearfix{ *zoom:1}
+.clearfix:before,
+.clearfix:after{ display:table; line-height:0; content:""}
+.clearfix:after{ clear:both;}
+
+#single1{
+	background:#ddd;}
+#single1 p{
+	width:300px;
+	height:30px;
+	background:red;
+	margin:10px;
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+	transition: all 0.4s ease-in-out;
+	float:left;
+}
+</style>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="single1" class="container clearfix">
+			<p>Item 1.</p>
+			<p>Item 2.</p>
+			<p>Item 3.</p>
+			<p>Item 4.</p>
+			<p>Item 5.</p>
+			<p>Item 6.</p>
+			<p>Item 7.</p>
+			<p>Item 8.</p>
+			<p>Item 9.</p>
+		</div>
+    </div>
+	<button type="button">停止拖拽</button>
+</body>
+</html>
+<script type="text/javascript">
+dragula([$('#single1').get(0)], {
+	accepts: function (el, target, source, sibling) {
+		return true;         // elements can be dropped in any of the `containers` by default
+	},
+	revertOnSpill:false,
+	removeOnSpill: false,
+	direction:'vertical'
+});
+$(function(){
+	$("button").on("click",function(){
+		dragula([$('#single1').get(0)], { revertOnSpill:false}).destroy();
+	});
+});
+</script>

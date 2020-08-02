@@ -1,0 +1,456 @@
+﻿/*======头部======*/
+
+#header {
+    height: 54px;
+    width: 100%;
+    background-color: #109cd9;
+}
+#header-con {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 23px;
+    color: #fff;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+#header-con a {
+    color: #fff;
+}
+#header-list {
+    float: left;
+    height: 30px;
+    padding-right: 104px;
+    margin-left: 15px;
+    background: url(../images/welcome/header_logo.png) no-repeat 290px 0;
+}
+#header-list li {
+    display: inline-block;
+}
+#header-service {
+    margin-right: 2px;
+    float: right;
+}
+#header .service-phone {
+    margin-right: 17px;
+}
+#header-service a {
+    display: inline-block;
+    width: 80px;
+}
+#header-service a span {
+    margin-right: 6px;
+}
+.icon-onLine {
+    width: 15px;
+    height: 16px;
+    background: url(../images/icon/icon_onLine.png) no-repeat scroll top left;
+}
+.icon-head-user {
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon/icon-head-user.png) no-repeat scroll top left;
+}
+.icon-head-tv {
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon/icon-head-tv.png) no-repeat scroll top left;
+}
+.icon-head-time {
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon/icon-head-time.png) no-repeat scroll top left;
+}
+.icon-head-mes {
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon/icon-head-mes.png) no-repeat scroll top left;
+}
+.icon-hint {
+    width: 20px;
+    height: 30px;
+    background: url(../images/icon/icon-hint.png) repeat scroll top left;
+}
+.icon-date {
+    width: 25px;
+    height: 25px;
+    background: url(../images/icon/icon-date.png) no-repeat scroll top left;
+}
+.icon-backlog {
+    width: 25px;
+    height: 30px;
+    background: url(../images/icon/icon-backlog.png) no-repeat scroll center left;
+}
+.icon-welcome-arrow-right {
+    width: 10px;
+    height: 18px;
+    background: url(../images/icon/icon-welcome-arrow-right.png) repeat scroll top left;
+}
+.icon-welcome-arrow-left {
+    width: 10px;
+    height: 18px;
+    background: url(../images/icon/icon-welcome-arrow-left.png) repeat scroll top left;
+}
+.icon-gnmk-menu {
+    width: 17px;
+    height: 17px;
+    background: url(../images/icon/icon-gnmk-menu.png) no-repeat;
+    cursor: pointer;
+}
+
+#footer-con{width: 1160px;padding-bottom: 30px;
+background-color: #EEEEEE;}
+/*======底部======*/
+
+#footer {
+    margin-top: 10px;
+    width: 100%;
+    height: 138px;
+    /*background-color: #109cd9;*/
+    font-family: '微软雅黑';
+    position: relative;
+}
+#footer-con {
+    color: #7E7E7E;
+    font-size: 14px;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+#footer-copyright {
+    float: left;
+    padding-top: 16px;
+    padding-left: 42px;
+    background: url(../images/welcome/footer_copyright.png) no-repeat 0px 17px;
+	margin-left: 30px;
+}
+#footer-copyright p {
+    line-height: 24px;
+}
+#footer .footer-copyright1 {
+    margin-left: 20px;
+    margin-right: 50px;
+}
+#footer .footer-copyright2 {
+    margin-right: 30px;
+}
+#footer-scan {
+    float: right;
+}
+#footer-scan li {
+    float: left;
+    margin-left: 7px;
+    margin-right: 17px;
+    width: 70px;
+    height: 80px;
+}
+#footer-scan .scan_1 {
+    background: url(../images/layout/scan_1.png) repeat scroll top left;
+}
+#footer-scan .scan_2 {
+    background: url(../images/layout/scan_2.png) repeat scroll top left;
+}
+#footer-scan .scan_3 {
+    background: url(../images/layout/scan_3.png) repeat scroll top left;
+}
+#footer-scan .scan_4 {
+    background: url(../images/layout/scan_4.png) repeat scroll top left;
+}
+/*=====底部 END=====*/
+/*===== 系统消息 提示 START =====*/
+
+#jsonzMark {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.6;
+    display: none;
+	z-index:2;
+}
+#jsonzAlert {
+    display: none;
+    width: 482px;
+    min-height: 239px;
+    position: fixed;
+    left: 50%;
+    margin-left: -250px;
+    top: 20%;
+    border: 1px solid #62a7e3;
+    background-color: #f7fafd;
+    padding: 1px;
+    overflow: hidden;
+    z-index: 10;
+    font-size: 14px;
+}
+/*标题*/
+
+#jsonzAlert .jsonz_alert_title {
+    background: url(../images/layout/panel_title_bj.png);
+    position: relative;
+    border: 1px solid #fff;
+}
+#jsonzAlert .jsonz_alert_title p {
+    height: 34px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #000000;
+    text-indent: 10px;
+}
+#jsonzAlert .icon-alert-close {
+    background: url(../images/layout/icon-alert-close.png) no-repeat;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 8px;
+}
+/*主体头部*/
+
+#jsonzAlert .jsonz_alert_con {} #jsonzAlert .jsonz_alert_logo {
+    margin: 20px 0 19px 10px;
+    height: 20px;
+    background: url(../images/layout/alert_CCB_logo.png) no-repeat;
+}
+#jsonzAlert .jsonz_alert_logo img {}
+/*主体*/
+
+#jsonzAlert .jsonz_alert_body {
+    min-height: 68px;
+    background: #F7FAFD;
+    overflow: hidden;
+    vertical-align: middle;
+    position: relative;
+    padding: 0px 20px 20px 137px;
+    position: relative;
+}
+#jsonzAlert .jsonz_alert_icon {
+    background: url(../images/layout/jsonz_alert_icon.png) no-repeat 0 -88px;
+    height: 66px;
+    width: 66px;
+    display: inline-block;
+    left: 60px;
+    position: absolute;
+}
+#jsonzAlert .jsonz_alert_mes {
+    line-height: 50px;
+    vertical-align: top;
+    font-family: "宋体", arial;
+}
+/*主体底部*/
+
+#jsonzAlert .jsonz_alert_footer {
+    text-align: center;
+}
+.alert_btn,
+.jsonz_btn,
+.alert_btn_false {
+    text-align: center;
+    font-size: 14px;
+    width: 98px;
+    line-height: 33px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: '宋体';
+    outline: none;
+}
+.alert_btn,
+.jsonz_btn {
+    background: #1f93d5;
+    color: #fff;
+    border: 1px solid transparent;
+}
+.alert_btn_false {
+    border: 1px solid #1f93d5;
+    color: #000000;
+    background: #DDDDDD;
+}
+.alert_btn:hover,
+.jsonz_btn:hover {
+    background: #229ee6;
+    color: #fff;
+    text-decoration: none;
+}
+.alert_btn_false:hover {
+    background: #efefef;
+}
+.alert_btn:active,
+.jsonz_btn:active {
+    background: #1e89c7;
+    color: #fff;
+}
+.alert_btn_false:active {
+    background: #ddd;
+}
+#jsonzAlert .jsonz_alert_false {
+    margin-left: 15px;
+}
+#jsonzAlert .jsonz_alert_true {}
+/*===== 系统消息 提示 END =====*/
+/*======上传图片编辑和删除 STRAT======*/
+
+.picload>img {
+    height: 100%;
+    width: 100%;
+}
+.picload-del {
+    right: 0;
+}
+.picload-re {} .picload-del,
+.picload-re {
+    position: absolute;
+    display: none;
+    width: 50%;
+    height: 20px;
+    background-color: azure;
+    top: 100%;
+    color: #000000;
+    text-align: center;
+}
+/*======上传图片编辑和删除 EDN======*/
+/*======上传图片弹窗 START======*/
+#uploadPic {
+    width: 500px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+    position: fixed;
+    background-color: #fff;
+    font-family: '宋体';
+    z-index: 3;
+    overflow: hidden;
+    border: 1px solid #DBDBDB;
+    box-shadow: 0px 0px 7px #CCC;
+}
+/*头部*/
+#uploadPic h3 {
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    background: #eaeaea;
+    font-size: 18px;
+    text-indent: 10px;
+    color: #000;
+    text-align: left;
+}
+#uploadPic .uploadPicClose {
+    display: block;
+    float: right;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    background: url(../images/layout/icon-alert-close.png) no-repeat;
+    margin-right: 8px;
+    margin-top: -28px;
+    cursor: pointer;
+}
+/*主体*/
+#uploadPic .uploadForm {
+    padding-left: 80px;
+    padding-top: 10px;
+}
+#uploadPic .uploadCon {
+    margin-bottom: 10px;
+}
+#uploadPic .uploadCon span{
+    margin-left: -60px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'microsoft yahei';
+    line-height: 40px;
+}
+#uploadPic .uploadPath {
+    border: 1px solid #CCCCCC;
+    height: 36px;
+    line-height: 36px;
+    width: 200px;
+    margin-right: 10px;
+}
+#uploadPic .uploadBtn {
+    width: 70px;
+    height: 38px;
+    color: #FFFFFF;
+    background: #0066b3;
+    font-size: 16px;
+    border-radius: 2px;
+}
+#uploadPic .uploadFile {
+    display: none;
+}
+#uploadPic .uploadTip {
+    color: #3f3f3f;
+    font-family: "微软雅黑";
+    position: absolute;
+    left: 25px;
+    bottom: 70px;
+    line-height: 22px;
+}
+#uploadPic .uploadShow {
+    margin-bottom: 10px;
+    margin-left: -53px;
+}
+#uploadPic .uploadShow img {
+    max-height: 100px;
+}
+/*底部*/
+#uploadPic .uploadFoot {
+    height: 45px;
+    width: 100%;
+    line-height: 45px;
+    background: #f0f0f0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+#uploadPic .uploadFoot button {
+    margin-left: 10px;
+}
+#uploadPic .alert_btn,.alert_btn_false{
+    width: 80px;
+    line-height: 30px;
+    border-radius: 1px;
+}
+
+/*======上传图片弹窗 EDN======*/
+/*=====拖拽组件 START =====*/
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+}
+.gu-hide {
+    display: none !important;
+}
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+.gu-transit {
+    /*拖拽对象本体*/
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+}
+.gu-mirror {
+    /*拖拽对象镜像*/
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    cursor: move;
+    list-style: none;
+}
+/*=====拖拽组件 END=====*/
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,376 @@
+
+/* ------------------------------------------------------------
+   version:	基本样式表1.0
+	author:	时代财富
+   content: 重置样式、便捷样式
+	create:	2015-09-02
+------------------------------------------------------------ */
+
+@charset "utf-8";
+
+/* ------------------------------------------	重置样式 START	------------------------------------------ */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td{
+	margin: 0;
+	padding: 0;
+	border:none;
+	font: 14px SimSun,Tahoma,Geneva, sans-serif;
+}
+body,
+button,
+input,
+select,
+textarea {
+	/*font: 14px/1.5 '宋体', Arial, Helvetica, Tahoma, sans-serif;*/
+	color: #3f3f3f;
+}
+button {
+	cursor: pointer;
+}
+em,i{
+	font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+}
+h1 {
+	font-size: 18px;
+}
+h2 {
+	font-size: 16px;
+}
+h3 {
+	font-size: 14px;
+}
+ul,
+ol {
+	list-style: none;
+}
+img {
+	border: 0;
+	vertical-align: middle;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: #333;
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: #0066b3;
+	text-decoration: underline;
+}
+input[type=button],
+input[type=submit],
+button {
+	cursor: pointer;
+	overflow: visible;
+}
+/*解决Input button padding 在IE里面不兼容问题*/
+
+p {
+	line-height: normal;
+}
+
+select, textarea, input {
+  outline: none;
+  font-family: SimSun,Geneva,sans-serif;
+}
+
+/* ------------------------------------------	重置样式 END	    ------------------------------------------ */
+
+/* ------------------------------------------	 布局样式 START	------------------------------------------ */
+#warp{
+	width: 1160px;
+	margin: 0 auto;
+}
+
+/*页脚 START*/
+#pft{
+	text-align: center;
+	font-size: 14px;
+}
+#pft p span{
+	padding-left: 5px;
+}
+/*页脚 END*/
+
+/* ------------------------------------------	布局样式 END	---------------------------------------------- */
+.fl{float: left;}
+.fr{float: right;}
+.text_c{text-align: center !important;}
+.text_l{text-align: left !important ;}
+.text_r{text-align: right !important;}
+
+/* 清除浮动 */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;}
+.clearfix {
+	display: inline-block;}
+.clearfix {
+	display: block;	/* Hide from IE Mac */}
+.clear {
+	clear: both;
+	height: 0px;
+	width: 0px;
+	line-height: 0px;
+	visibility: hidden;}
+
+
+/*color START*/
+.white{color: white !important;}
+.blue{color: #0066b3 !important;}
+.red{color: red !important;}
+.grey{ color: #999 !important;}
+/*color END*/
+
+/*text 文本字本 START*/
+.f14,h2{ font-size: 14px;}
+.f12{font-size: 12px!important;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.fb{ font-weight: bold;}
+/*text 文本字体 END*/
+
+/*边距 START*/
+.mv15{margin: 15px 0;}
+.pt30{padding-top: 30px;}/*页脚边距*/
+.h70{ height: 70px;}/*页脚高度*/
+.lh42{ line-height: 42px;}/*行高42像素(用在筛选条件处)*/
+
+.mt5{margin-top:5px;}
+.mt30{margin-top:30px;}
+.mb5{margin-bottom:5px;}
+.ml5{margin-left:5px;}
+.mr5{margin-right:5px;}
+.mh5{margin:0px 5px;}
+.mv5{margin:5px 0px;}
+.m5{margin:5px;}
+
+
+.ml3{margin-left: 3px;}
+.ml8{ margin-left: 8px;}
+.ml10{margin-left:10px;}
+.ml15{margin-left: 15px;}
+.ml30{margin-left: 30px;}
+
+.mr5{margin-right:5px;}
+.mr10{margin-right:10px;}
+.mr15{margin-right:15px;}
+.mr30{margin-right:30px;}
+
+.mh10{margin:0px 10px;}
+.mv10{margin:10px 0px;}
+.m10{margin:10px;}
+
+.mb10{margin-bottom:10px;}
+.mb0{margin-bottom: 0px !important;}
+.mb15{margin-bottom: 15px;}
+.mb30{margin-bottom: 30px;}
+.mt10{margin-top:10px;}
+
+.mt15{margin-top:15px;}
+.mt8{ margin-top:8px;}
+.mt40 { margin-top: 40px;}
+.mt55 {margin-top: 55px}
+
+.pl100{padding-left: 100px;}
+.pt5{padding-top:5px;}
+.pt20 {padding-top: 20px;}
+.pb5{padding-bottom:5px;}
+.pl5{padding-left:5px;}
+.pr5{padding-right:5px;}
+.ph5{padding:0px 5px;}
+.pv5{padding:5px 0px;}
+.p5{padding:5px;}
+.p6{padding:6px;}
+
+.ph20{padding: 0px 20px;}
+.pt10{padding-top:10px;}
+.pb10{padding-bottom:10px;}
+.pl10{padding-left:10px;}
+.pr10{padding-right:10px;}
+.ph10{padding:0px 10px;}
+.pv10{padding:10px 0px;}
+.p10{padding:10px;}
+.pl15{ padding-left:15px;}
+.pl30{ padding-left: 30px;}
+.pl45{padding-left: 45px;}
+.pb20{padding-bottom:20px;}
+.pr5{padding-right: 5px;}
+.pr22{padding-right: 22px;}
+.pl225{padding-left: 225px;}
+.pl199{padding-left: 199px;}
+.pt80{padding-top: 80px;}
+.mt27{margin-top: 27px;}
+.mt30{margin-top: 30px;}
+.pl20{ padding-left: 20px !important;}
+.pl212{ padding-left: 212px;}
+
+.mh306{min-height: 306px;}
+.mh355{min-height: 355px;}
+/*边距 END*/
+/*宽度 START*/
+.w50{ width: 50px;}
+.w55{ width: 55px;}
+.w60{ width: 60px;}
+.w65{ width: 65px;}
+.w70{ width: 70px;}
+.w75{ width: 75px;}
+.w80{ width: 80px;}
+.w85{ width: 85px;}
+.w90{ width: 90px;}
+.w100{ width: 100px;}
+.w150{ width: 150px;}
+.w200{ width: 200px;}
+/*宽度 END*/
+/*高度 START*/
+.h65{ height: 65px;}
+/*高度 END*/
+/* 字体大小 */
+
+
+/*公用按钮 START*/
+.pbd_btn_w100{width: 100px;}
+.pbd_btn_h27{
+	height: 27px;
+	line-height: 27px !important;
+	padding: 0 10px;
+}
+.pbd_btn_standard{
+	background: #1f93d5;
+	text-align: center;
+	color: #fff;
+	border: 0;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 5px;
+	line-height: 35px;
+	font-family: SimSun;
+}
+.pbd_btn_standard:hover{
+	background: #229ee6;
+	color: #fff;
+	text-decoration: none;
+}
+.pbd_btn_standard:active{
+	background: #1e89c7;
+	color: #fff;
+}
+.pbd_btn_standard[disabled]{
+	background: #999;
+	color: #fff;
+}
+/*公用按钮 END*/
+
+/*全局默认input框样式 START*/
+.pbd_input_normal{
+	height: 25px;
+	/*line-height: 25px;*/
+	overflow: hidden;
+	/*padding: 0px 4px;*/
+	padding-left: 10px;
+	width: 218px;
+	border: 1px #c5c5c5 solid;
+	position: relative;
+	font-size: 14px;
+	font-family: Tahoma, SimSun, Geneva, sans-serif;
+}
+.pbd_input_normal:hover{border: 1px #62a7e3 solid;}
+.pbd_input_normal[disabled]{
+	border: 1px #ccc solid;
+	background-color: #eee;
+}
+.pbd_input_normal_error{
+	border: 1px solid #fd9696;
+	background-color: #ffecec;
+}/*输入框错误时的*/
+.dashes{/*双输入时破折号*/
+	font-size: 4px !important;
+	padding:0px 2px;
+}
+/*全局默认input框样式 END*/
+.hide{display: none !important;}/*隐藏*/
+.clear{ clear: both;}/*清除浮动*/
+
+
+/*-----------------------------------系统弹窗提示 START-------------------------------------*/
+.mask { display: none; position: absolute;top: 0;left: 0;z-index: 100;opacity: 0.5;filter: alpha(opacity=50);background: #000;width: 100%;height: 100%;}
+.popstyle { width:800px; min-height:400px; height:auto; position:fixed; left:50%; top:10%; margin:-170px 0 0 -400px; z-index:110; background:#fff; border:5px solid #9D9D9D}
+.popstyle h3 { height:40px; line-height:40px; text-indent:15px; color:#fff; font-size:16px; background:#005DB5; padding:0 0 0 6px; font-weight:bold;}
+.popstyle h3 a { float:right; width:11px; height:11px; line-height:50px; display:inline-block; background:url(../images/popUp/ico.png) no-repeat -194px -370px; margin:13px; overflow:hidden;}
+.popstyle .table_order { border:1px solid #efefef; width:100%}
+.popstyle .table_order thead th { height:40px;font-size:14px;font-weight:normal;border-bottom:3px solid #158DF3;text-align:left;padding-left:10px; font-weight:bold /*background:#efefef;*/}
+.popstyle .popmain { padding:10px;}
+.popstyle .popmain td { height: 52px;font-size: 14px;padding-left: 10px;}
+.popstyle .page { margin:0 10px}
+.popstyle .bottombtn { background:#efefef; text-align:right; margin-top:15px;}
+.surebtn { background:#158DF3; font-family:Tahoma , 'Microsoft YaHei'; font-size:16px; margin:20px auto; padding:0 35px; line-height:30px; cursor:pointer; color:#fff; border:none}
+.surebtn:hover { background:#005db6}
+.closebtn,.closebtn_nohover { background:#fff; border:1px solid #71bbf9; font-family:Tahoma , 'Microsoft YaHei'; font-size:16px; /*margin:20px auto; */padding:0 35px; line-height:28px; cursor:pointer; color:#158df3;}
+.closebtn:hover { background:#71bbf9; color:#fff;}
+.closebtn_nohover { cursor:default}
+
+.addbz { padding:10px 20px; overflow:hidden; color:#333333; font-size:12px;}	
+	.addbz p { line-height:30px; width:100%; overflow:hidden}
+	.addbz p em,.addbz p label,.addbz p span,.addbz p span input { float:left;}
+	.mr30{margin-right:40px;}
+	.addbz p span input { margin:8px 5px 0 0 }
+	.addbz p span textarea{ border:1px solid #707070;}
+	.addbz .p_addbtn input { margin-left:82px;}
+	
+	.close { width:11px; height:11px; display:inline-block; background:url(../images/popUp/ico.png) no-repeat -194px -370px; float:right; margin:15px;}
+	.bzli { border-top:1px dashed #ccc; padding:10px 20px; height:90px; overflow-y:scroll}
+		.bzli li { padding:5px 0; line-height:21px; border-bottom:1px solid #f1f3f7; color:#333333;}
+		.bzli li em { margin-right:10px; font-style:normal; color:#999; font-size:12px;}
+		.bzli li .close { margin:6px; display:none;}
+		.bzli li:hover .close { display:block; cursor:pointer}
+.redico { color:#F00; /*font-family:Arial;红色小星星不垂直居中*/ margin-right:5px; font-size:16px; font-family:'SimSun'}
+.btn_com { height:30px; line-height:30px; font-size:14px; color:#fff; padding:0 15px; background:#00C5D7; border:none; cursor:pointer}
+.btn_com:hover { background:#158DF3;}
+
+/*-----------------------------------系统弹窗提示 START-------------------------------------*/
+[class^='icon'] {
+	display: inline-block;
+}
+.table-hover>tr:hover,.table-hover>tr.odd:hover,.table-hover>tr.even:hover{
+	cursor: pointer;
+	background: #ebf4fb;
+}

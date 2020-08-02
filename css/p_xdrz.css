@@ -1,0 +1,142 @@
+/* 信贷融资-小微企业快贷 Start*/
+.bg_wykd{
+	background:url(../images/xwqykd/wykd_img1c.png) no-repeat;
+	width:1162px;
+	height:380px;
+	margin: 0 auto;
+	position:relative;
+}
+.pbd_font_required {
+color: #F0102A;
+display: inline-block;
+padding: 0 2px;
+}
+.posi_img{
+	width:150px;
+	height:48px;
+	position:absolute;
+	bottom:7px;
+	right:93px;
+	cursor:pointer;
+	}
+/* 信贷融资-小微企业快贷 End */
+
+/*主内容区 START*/
+#pmain{
+	width:100%;
+	position:relative;}
+#pbd{
+
+	margin:0 auto;
+	min-height:270px;}
+/*主内容区 END*/
+.border_box {
+border: 1px solid #d8d8d8;
+position: relative;
+margin-bottom: 10px;
+}
+.mb_0 {
+margin-bottom: 0px !important;
+}
+.imglist {
+/* overflow: hidden; */
+/* height: 220px; */
+margin: 0 auto;
+padding: 0 10px;
+}
+.mb_10 {
+margin-bottom: 10px !important;
+}
+.imglist ul li:first-child {
+margin-left: 0;
+}
+.imglist>ul>li {
+height: 250px;
+border: 1px solid #d8d8d8;
+/*width: 934px;*/
+margin-top: 10px;
+}
+.imglist ul li .img {
+width: 387px;
+height: 236px;
+margin: 7px;
+position: relative;
+margin-right: 0;
+}
+.img_hd {
+font-size: 32px;
+top: 8px;
+left: 17px;
+position: absolute;
+}
+.img_bd_top {
+font-size: 15px;
+font-weight: bold;
+position: absolute;
+top: 65px;
+left: 17px;
+}
+.img_bd {
+font-size: 14px;
+top: 100px;
+left: 17px;
+position: absolute;
+}
+.msg_title ul {
+width: 715px;
+height: 30px;
+line-height: 30px;
+border-bottom: 1px solid #d8d8d8;
+font-size: 16px;
+}
+ul, ol {
+list-style: none;
+}
+.msg_title ul li.active {
+color: #0066b3;
+border-bottom: 2px solid #0066B3;
+}
+.msg_title ul li {
+float: left;
+padding: 0 10px;
+text-align: center;
+cursor: pointer;
+}
+.msg_t_form0, .msg_t_form1 {
+width: 515px;
+}
+.pbd_tips_inner {
+padding-left: 10px;
+}
+.pbd_tips_inner {
+margin-top: 10px;
+line-height: 22px;
+}
+.pbd_tips_inner li {
+line-height: 1.5em;
+}
+.pbd_tips_inner li {
+background: url(../images/bg_disc_grey.png) no-repeat 0px 14px;
+padding-left: 10px;
+color: #666;
+line-height: 2em;
+font-size: 14px;
+}
+.msg_t_form0, .msg_t_form1 {
+width: 715px;
+}
+.pbd_tips_inner {
+margin-top: 10px;
+line-height: 22px;
+}
+.imglist ul li .msg {
+height: 226px;
+width: 715px;
+float: right;
+padding: 12px;
+}
+.msg_title ul li {
+height: 30px;
+line-height: 30px;
+font-size: 16px;
+}

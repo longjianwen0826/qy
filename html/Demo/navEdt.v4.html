@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Sortable - Handle empty lists</title>
+  <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+  <link rel="stylesheet" href="../../css/jquery.ui.css">
+  <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+  <style>
+  ul{ list-style-type: none; }
+  .main{
+    border:1px solid #96c2f1;
+  }
+  .main .main_title{
+    border-bottom:1px solid #dfe0f2;
+    background:#eff8ff;
+    height:39px;
+    line-height:39px;
+    padding-left:12px;
+    font-size:14px;
+    font-weight:bold;
+  }
+  .main .main_box{
+    padding:10px 10px;
+  }
+  .menu_box .menu_list{
+    background:#FFF;
+    border:1px solid #62a7e3;
+    width:144px;
+    padding:2px;
+    margin-top:10px;
+    margin-right:10px;
+    float:left;
+  }
+  .menu_box .mTitle{
+    background:url(../../images/menu_dt.png);
+    padding-left:12px;
+    font-weight:bold;
+    height:33px;
+    line-height:33px;
+  }
+  .menu_box .mEdt{
+    background-image:url(../../images/icon_revise.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    float:right;
+    width:20px;
+    text-indent:-1000px;
+    overflow:hidden;
+  }
+  .menu_box .mBody{
+  }
+  .menu_box .mItem{
+    padding-left:12px;
+    height:22px;
+    line-height:22px;
+  }
+  </style>
+  <script>
+  $(function() {
+    
+    $(".menu_box, .menu_list").sortable({
+      connectWith: ".menu_box, .menu_list",
+      items: "div:not(.mTitleDisabled)"
+    }).disableSelection();
+
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+
+  });
+  </script>
+</head>
+<body>
+
+<div class="main">
+  <div class="main_title">菜单调整</div>
+  <div class="main_box">
+
+    <ul class="menu_box clearfix">
+      <li class="menu_list">
+        <div class="mTitle mTitleDisabled">分组1<span class="mEdt">编辑</span></div>
+        <div class="mItem">账户查询</div>
+        <div class="mItem">财政社保</div>
+        <div class="mItem">电子商务</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle mTitleDisabled">转账业务<span class="mEdt">编辑</span></div>
+        <div class="mItem">转账审批</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle mTitleDisabled">代发代扣<span class="mEdt">编辑</span></div>
+        <div class="mItem">单据复核员变更</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle">缴费业务</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle">服务管理</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle">票据业务</div>
+      </li>
+      <li class="menu_list">
+        <div class="mTitle">国际业务</div>
+      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+<!-- 
+<div class="menu">
+  <div class="mItem">
+    <ul class="droptrue">
+      <li class="ui-state-default">Can be dropped..</li>
+      <li class="ui-state-default">..on an empty list</li>
+      <li class="ui-state-default">Item 3</li>
+      <li class="ui-state-default">Item 4</li>
+      <li class="ui-state-default">Item 5</li>
+    </ul>
+  </div>
+  <div class="mItem">
+    <ul class="droptrue">
+      <li class="ui-state-highlight">Cannot be dropped..</li>
+      <li class="ui-state-highlight">..on an empty list</li>
+      <li class="ui-state-highlight">Item 3</li>
+      <li class="ui-state-highlight">Item 4</li>
+      <li class="ui-state-highlight">Item 5</li>
+    </ul>
+  </div>
+</div> -->
+
+ 
+<br style="clear:both">
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>中国建设银行企业网上银行</title>
+        <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/menu.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/p_plzz.css" />
+
+        <script src="../../js/jquery-1.7.2.min.js"></script>
+        <script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+        <script src="../../js/p_Layout.js" charset="utf-8"></script>
+        <script src="../../js/widget.js"></script>
+        <script src="../../js/public.js"></script>
+    </head>
+
+    <body>
+        <div id="Warp">
+            <!--顶部导航 START-->
+            <div id="phd_common"></div>
+            <!--当前位置 START-->
+			<div class="pbd_tab_current">当前位置：转账业务<span>&gt;</span>转账制单<span>&gt;</span>批量转账<span>&gt;</span><b>文件录入</b></div>
+            <!--当前位置 END-->
+            <!--顶部导航 END-->
+            <!--右边功能栏 START-->
+            <div id="fn_menu"></div>
+            <!--右边功能栏 END-->
+            <!--主内容区 START-->
+            <div id="pbd_content">
+
+                <!-- 表格内容 START -->
+                <div class="pbd_table_title">上传失败记录</div>
+                <!--列表表格 START-->
+                <div class="table_warp">
+                    <table border="0" cellspacing="0" cellpadding="0" class="set_font_table" width="100%">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>批量名称</th>
+                                <th>付款账号</th>
+                                <th>付款账号名称</th>
+                                <th>收款账号</th>
+                                <th>收款账户名称</th>
+                                <th>收款账户开户行</th>
+                                <th>金额（元）</th>
+                                <th>用途</th>
+                                <th>上传失败原因</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>日常转账2</td>
+                                <td><input type="text" class="pbd_table_input w100" value="11001042200053003681" /></td>
+                                <td><input type="text" class="pbd_table_input w100" value="一汽大众发动机公司" /></td>
+                                <td><input type="text" class="pbd_table_input w100" value="350510422000530"/></td> 
+                                <td><input type="text" class="pbd_table_input w100" value="广州网易有限公司"/></td>
+                                <td><input type="text" class="pbd_table_input w100" value="中国建设银行有限公司"/></td>
+                                <td><input type="text" class="pbd_table_input w60" value="100000.00"/></td>
+                                <td><input type="text" class="pbd_table_input w60" value="广告费"/></td>
+                                <td>付款账户不存在</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pbd_table_bottom">
+                    <span>上传失败笔数：1笔</span> <span class="pl10">上传失败金额（元）：100,000.00</span>
+                </div>
+                <!--列表表格 END-->
+                <div class="pbd_table_title mt15">上传成功记录</div>
+                <!--列表表格 START-->
+                <div class="table_warp">
+                    <table border="0" cellspacing="0" cellpadding="0" class="set_font_table" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="60" class="text_l"><input type="checkbox" name="allcheck" class="mh5 allCheck" />全选</th>
+                                <th>序号</th>
+                                <th>批量名称</th>
+                                <th>付款账号</th>
+                                <th>付款账号名称</th>
+                                <th>收款账号</th>
+                                <th>收款账户名称</th>
+                                <th>金额（元）</th>
+                                <th>用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="items" class="td_inp" /></td>
+                                <td>1</td>
+                                <td>日常转账1</td>
+                                <td>11001042200053003681</td>
+                                <td>一汽大众发动机公司</td>
+                                <td>62270029501900021841</td> 
+                                <td>广州网易有限公司</td>
+                                <td><input type="text" class="pbd_table_input w60" value="100000.00"/></td>
+                                <td><input type="text" class="pbd_table_input w60" value="广告费"/></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="items" class="td_inp" /></td>
+                                <td>3</td>
+                                <td>日常转账3</td>
+                                <td>11001042200053003681</td>
+                                <td>一汽大众发动机公司</td>
+                                <td>35001870007052616649</td> 
+                                <td>广州腾讯科技有限公司</td>
+                                <td><input type="text" class="pbd_table_input w60" value="200000.00"/></td>
+                                <td><input type="text" class="pbd_table_input w60" value="广告费"/></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="items" class="td_inp" /></td>
+                                <td>4</td>
+                                <td>日常转账4</td>
+                                <td>11001042200053003681</td>
+                                <td>一汽大众发动机公司</td>
+                                <td>35001800070526132587</td> 
+                                <td>广州加多宝有限公司</td>
+                                <td><input type="text" class="pbd_table_input w60" value="150000.00"/></td>
+                                <td><input type="text" class="pbd_table_input w60" value="采购费"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pbd_table_bottom">
+                    <span>合计笔数：5笔</span> <span class="pl10">合计金额（元）：550,000.00</span> <span class="pl10">上传成功笔数：3笔</span> <span class="pl10">上传成功金额（元）：450,000.00</span> <span class="pl10">选择笔数：0</span> <span class="pl10">选择金额（0）：0.00</span>
+                </div>
+                <!--列表表格 END-->
+                <!-- 表格内容 END -->
+                <!--操作区 ATART-->
+                <div class="mt15 text_c btn_c">
+                    <a class="text_c pbd_btn_standard pbd_btn_w100" href="ZZZD_plzz_step_2.html">上一步</a>
+                    <a class="text_c pbd_btn_standard pbd_btn_w100 ml10" href="">重新提交</a>
+                    <a class="text_c pbd_btn_standard pbd_btn_w100 ml10" href="ZZZD_plzz_step_4_tips.html">下一步</a>
+                </div>
+                <!--操作区 END-->
+            </div>
+            <!--主内容区 END-->
+            <!--底部信息 START-->
+            <div id="pft_common"></div>
+            <!--底部信息 END-->
+            <!--返回顶部 STRAT-->
+            <div id="back_to_top"></div>
+            <!--返回顶部 END-->
+            <!--通用底部悬浮层 START-->
+            <div id="foot_float"></div>
+            <!--通用底部悬浮层 END-->
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+
+</script>

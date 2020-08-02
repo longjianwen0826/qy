@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>拖拽效果</title>
+  <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="../../css/jquery.ui.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+<a href="../zhcx/zhxxcx/jxhqzh_1.html" class="testIndex">建行活期账户</a>
+
+11111111111
+ 
+<script>
+$('.testIndex').on('click', function(){
+	window.parent.nav.refreshHtml(null, 8);
+	window.parent.nav.getCurrentPostion(["账户查询","账户信息查询","建行活期账户"]);
+});
+</script>
+</body>
+</html>

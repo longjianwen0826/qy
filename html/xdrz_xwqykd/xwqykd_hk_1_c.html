@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+        <script src="../../js/ccbbank.js"></script>
+	</head>
+    <style>
+        .exit{
+            position: absolute;
+            width: 62px;
+            height: 25px;
+            right: 120px;
+            top: 8px;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+    </style>
+	
+	<body>
+		<div id="Warp">
+			<!--顶部导航 START-->
+			<div id="phd_common"></div>
+			
+            <!--当前位置 start-->
+			<div class="pbd_tab_current">当前位置：信贷融资<span>&gt;</span>小微企业快贷<span>&gt;</span><b>还款</b></div>
+            
+			<div id="phd_context">
+				<!--表格标题 start-->
+				<div class="pbd_table_h2 ml10">
+					<span>请填写以下信息</span>
+				</div>
+				<!--表格标题 end-->
+				
+				<!--纵向表格型 start-->
+				<div class="table_warp_list">
+					<table border="0" cellspacing="0" cellpadding="0" class="pbd_table_four_list" width="100%">
+						<tr>
+							<th class="w229">贷款种类：</th>
+							<td class="w350">
+								<span >融e贷</span>
+							</td>
+							<th class="w229">贷款账号：</th>
+							<td class="w350">
+								<span >1108 6532 8742 4563 2314</span>
+							</td>
+						</tr>
+                        
+						<tr>
+                        	<th class="w229 lb_no ">待还本金(元)：</th>
+							<td class="w350 lb_no ">
+								<span class="fb">200,000.00</span>
+							</td>
+							<th class="w229 lb_no ">待还利息(元)：</th>
+							<td class="w350 lb_no ">
+								<span class="fb">6,000.00</span>
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+				<!--纵向表格型 end-->
+				
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" class="pbd_table_form mt15">
+                	
+                    <tr>
+                        <th class="first_td text_r  "><span class="pbd_font_required">*</span>还款方式：</th>
+                        <td>
+                            <input class="mr5 fontShow" type="radio"  name="radio2" value="1">全额还款
+                            <input class="mr5 fontNo" type="radio" name="radio2" value="2">部分还款
+                        </td>
+                    </tr>
+                	<tr class="bfhk hide">
+                        <th class="first_td text_r "><span class="pbd_font_required">*</span>还款金额(元)：</th>
+                        <td>
+                            <input type="text" class="pbd_input_normal" name="targetId" onblur="fun_2(this)" onkeyup="fun_1(),$('#money_div').text(add_Qfw(getoff_Qfw(this.value)))" notEmpty="true" nonEmptyMsg="金额(元)不能为空" maxlength="19" needmony="true" validationType="money" placeholder="请输入归还的本金金额" />
+                            &nbsp;&nbsp;<span>（利息在结息日自动扣取）</span>
+                        </td>
+                    </tr>
+                	<tr class="qehk hide">
+                        <th class="first_td text_r ">还款金额(元)：</th>
+                        <td>
+                            <span class="fb">206,000.00</span>
+                        </td>
+                    </tr>
+                    <tr class="bfhk hide">
+                        <th class="first_td text_r  ">还款账号：</th>
+                        <td>
+                            <select class="easyui-combobox" style="width:230px; height:27px">
+                                <option value="1">5986 3562 3652 9655 1251</option>
+                                <option value="2">5467 5164 5785 1365 1143</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="qehk hide">
+                        <th class="first_td text_r  ">还款账号：</th>
+                        <td>
+                            <select class="easyui-combobox" style="width:230px; height:27px">
+                                <option value="1">5986 3562 3652 9655 1251</option>
+                                <option value="2">5467 5164 5785 1365 1143</option>
+                            </select>
+                        </td>
+                    </tr>
+                	<tr class="qehk hide">
+                        <th class="first_td text_r ">结清贷款：</th>
+                        <td  >
+                            <input class="fontShow" type="radio" checked="checked" name="radio3" />是
+                            <input class="fontNo"  type="radio" name="radio3" />否&nbsp;&nbsp;
+                            <span class="fontHide">（结清后如有融资需求，需重新发起贷款申请）</span>
+                        </td>
+                    </tr>
+		            <tr>
+		                <td class="first_td text_r">
+		                	选择下级复核员<span>：</span>
+		                </td>
+		            	<td>
+		            		<select class="easyui-combobox combobox-f combo-f" style="width: 230px; height: 27px; display: none;">
+	                            <option value="1">张三</option>
+	                        </select>
+		            	</td>
+		            </tr>
+		            <tr>
+		                <td class="first_td text_r">
+		                	<span class="pbd_font_required">*</span>输入交易密码<span>：</span>
+		                </td>
+		            	<td>
+		            		<input class="pbd_input_normal" type="password" />
+		            	</td>
+		            </tr>
+				</table>
+				
+				<!--操作按钮 START-->
+				<div class="pl225 mt30 naxt_btn1">
+					<a class="pbd_btn_standard pbd_btn_w100" href="#"  style="background:#999999;">提交</a>
+					<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_hk_1.html">返回</a>
+				</div>
+				<!--操作按钮 END-->
+				
+			</div>
+		
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>	
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				$(".a_attr").click(function(){
+					window.location.href="xwqykd_hk_1_tips.html";
+				});
+				
+				//选择一级菜单信贷融资，重置2级菜单
+				var pageStr='<div id="mainnav">'
+						+'<ul class="nav_second">'
+						+'<li>'
+							+'<a class="nav_second_a_tri" href="javascript:;">小微企业快贷</a>'
+							+'<ul class="nav_third">'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_zy_1.html" data-text="支用" data-href="../xdrz_xwqykd/xwqykd_zy_1.html">支用</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_hk_1.html" data-text="还款" data-href="../xdrz_xwqykd/xwqykd_hk_1.html">还款</a></li>'
+							+'<li><a href="../xdrz_xwqykd/xwqykd_cx_1.html" data-text="查询" data-href="../xdrz_xwqykd/xwqykd_cx_1.html">查询</a></li>'
+							+'</ul>'
+						+'</li>'
+					+'</ul>'
+					+'</div>';
+			   $("#mainnav").children().remove();
+			   $("#mainnav").html(pageStr);
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="信贷融资"){
+						$(this).addClass('active');	
+					}
+				});
+			});
+			
+			$(".mr5").click(function(){
+				if($("input[name='radio2']:checked").val()==1){
+					$(".bfhk").addClass("hide");
+					$(".qehk").removeClass("hide");
+				}else{
+					
+					$(".qehk").addClass("hide");
+					$(".bfhk").removeClass("hide");
+				};
+			});
+			
+			//联动选择显示
+				$(".fontShow").click(function(){
+					$(".fontHide").removeClass("hide");
+				});
+				
+				$(".fontNo").click(function(){
+					$(".fontHide").addClass("hide");
+				});
+			
+			//disabled=true
+			$("input[name='radio2']").click(function(){
+				if($(this).prop("checked")){
+					
+					
+					var pageStr= '<a class="pbd_btn_standard pbd_btn_w100 naxt_btn1" href="xwqykd_hk_1_tips.html">提交</a>'
+										+'<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_hk_1.html">返回</a>';
+				   $(".naxt_btn1").children().remove();
+				   $(".naxt_btn1").html(pageStr);
+					
+				}else{
+					var pageStr= '<a class="pbd_btn_standard pbd_btn_w100" href="javascript:void()"  style="background:#999999;">提交</a>'
+					+'<a class="pbd_btn_standard pbd_btn_w100 ml8" href="xwqykd_hk_1.html">返回</a>';
+				   $(".naxt_btn1").children().remove();
+				   $(".naxt_btn1").html(pageStr);
+					
+				};
+			});
+			
+			
+		</script>
+	</body>
+</html>

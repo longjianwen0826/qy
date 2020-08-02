@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>登录页</title>
+        <link rel="stylesheet" type="text/css" href="css/p_login_3.css"/>
+        <link rel="stylesheet" type="text/css" href="css/base.css"/>
+        <link rel="stylesheet" type="text/css" href="css/layout.css"/>
+        <link rel="stylesheet" type="text/css" href="css/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="css/public.css"/>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/p_login1.js"></script>
+
+</head>
+<style>
+    #footer-scan:hover{border: none;margin-left: 0px;margin-top: 0px;padding: 0;margin-right: 0px;}
+    .menu{background-color:#FFF}
+    .select_li_1:hover .picload-del,.select_li_2:hover .picload-del,.select_li_3:hover .picload-del,.select_li_4:hover .picload-del {
+        display: none !important;
+    }
+    .select_li_1 .picload-re,.select_li_2 .picload-re,.select_li_3 .picload-re,.select_li_4 .picload-re{width:180px}
+    .select_li_1:hover .picload-re,.select_li_2:hover .picload-re,.select_li_3:hover .picload-re,.select_li_4:hover .picload-re{display: block}
+    .scan_1,.scan_2,.scan_3,.scan_4{overflow: hidden}
+    .picload-re,.picload-del{margin-top: -20px;opacity: 0}
+    #jsonzMark{z-index: 100}
+    #uploadPic{z-index: 101}
+    #footer-copyright{background:none}
+    #footer-copyright i{
+        display: inline-block;
+        width: 20px;
+        height: 26px;
+        position: absolute;
+        left: 0px;
+        background: url(images/welcome/footer_copyright.png) no-repeat;
+    }
+    #footer-con{width: 1160px;padding-bottom: 30px;
+background-color: #EEEEEE;}
+
+
+
+
+</style>
+<body>
+    <!--顶部 start -->
+    <!--<div id="setIndexBar" class="">
+        <div class="container clearfix">
+            <div class="left_tit">登录页装扮</div>
+            <ul class="right_btns clearfix">
+                <li class="has_nav">
+                    <a href="javascript:void(0);" class="module_li">增减模块</a>
+
+                </li>
+                <li class="has_nav">
+                    <a href="javascript:void(0);" class="tzbj">调整布局</a>
+
+                </li>
+               <li class="has_nav">
+                    <a href="javascript:void(0);" class="zbbb">装扮背景</a>
+
+                </li>
+                <li><a class="white pl20" onclick="loginPost()">预览</a></li>
+                <li><a class="white login_between_a4" style="cursor:pointer">恢复默认</a></li>
+                <li><button id="customSave" type="button" class="btn btn_blue login_between_a2">保存</button></li>
+                <li><button id="customCancle" type="button" class="btn btn_grey ml_10 login_between_a3">取消</button></li>
+            </ul>
+        </div>
+    </div>-->
+    <!--顶部 end-->
+    <!--调整布局 start-->
+    <!--<div class="buju_1">
+        <div class="buju_main">
+            <div class="buju_div">
+                <div class="buju_title">选择登录区布局：</div>
+                <div class="buju_body">
+                    <span class="layout_l bu_1"></span>
+                    <span class="layout_2 bu_2"></span>
+                    <span class="layout_3 bu_3 _select_on"></span>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--调整布局 end-->
+    <!--增减模块 start-->
+    <!--<div class="moduleHandle">
+        <div class="moduleHandle_child">
+            <ul class="clearfix">
+                <li class="fl moduleLi bg1"></li>
+                <li class="fl moduleLi bg1"></li>
+                <li class="fl moduleLi bg1"></li>
+                <li class="fl moduleLi bg1"></li>
+                <li class="fl moduleLi bg1"></li>
+            </ul>
+        </div>
+    </div>-->
+    <!--增减模块 end-->
+
+    <!--装扮背景 start-->
+    <!--<div class="zb_1">
+        <div class="zb_main">
+            <div class="box" id="setThemeFocus">
+                <ul class="clearfix hide icon_select">
+
+
+                    <li class="select_li_1">
+                        <div class="set_theme_item l_other  " data-src="theme_b_3.png">
+                            <p class="p_1">清凉一夏</p>
+                            <i class="icon_28_check"></i>
+                            <span></span>
+                        </div>
+                    </li>
+                    <li class="select_li_2">
+                        <div class="set_theme_item l_other  " data-src="theme_b_4.png">
+                            <p class="p_1">清凉一夏2</p>
+                            <i class="icon_28_check"></i>
+                            <span></span>
+                        </div>
+                    </li>
+
+                    <li class="select_li_3">
+                        <div class="set_theme_item l_other" data-src="theme_b_5.png">
+                            <p class="p_1">清凉一夏3</p>
+                            <i class="icon_28_check"></i>
+                            <span></span>
+                        </div>
+                    </li>
+
+                    <li class="select_li_4">
+                        <div class="set_theme_item l_other" data-src="theme_b_6.png">
+                            <p class="p_1">清凉一夏4</p>
+                            <i class="icon_28_check"></i>
+                            <span></span>
+                        </div>
+                    </li>
+
+                    <li class="abc">
+                        <div class="set_theme_item1">
+
+                        </div>
+                    </li>
+                    <li class="icon_select_li1">
+                        <div class="set_theme_item2">
+
+                        </div>
+                    </li>
+                    <li class="icon_select_li2">
+                        <div class="set_theme_item3">
+                        </div>
+                    </li>
+                    <li class="icon_select_li3">
+                        <div class="set_theme_item4">
+                        </div>
+                    </li>
+                    <li class="icon_select_li4">
+                        <div class="set_theme_item5">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="clearfix" id="setTheme">
+                    <li>
+                        <div class="set_theme_item on _not" data-src="b.png">
+                            <img src="images/login/theme_s_0.png">
+                            <p class="p_1">晶格化背景（默认）</p>
+                            <i class="icon_28_check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="set_theme_item l_other" data-src="theme_b_1.png">
+                            <img src="images/login/theme_s_1.png">
+                            <p class="p_1">春意盎然</p>
+                            <i class="icon_28_check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="set_theme_item l_other" data-src="theme_b_2.png">
+                            <img src="images/login/theme_s_2.png">
+                            <p class="p_1">夏日炎炎</p>
+                            <i class="icon_28_check"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="set_theme_item1">
+
+                        </div>
+                    </li>
+                </ul>
+                <div class="controlBar preBtn"></div>
+                <div class="controlBar nextBtn"></div>
+            </div>
+        </div>
+    </div>-->
+	<!--装扮背景 start-->
+    
+    <!--logo start-->
+    <div class="menu">
+        <div class="menuL" class="fl">
+
+            <div class="td1" id="td2">
+                <img src="images/logo.png" style="margin-left:20px;" />
+            </div>
+
+            <!--<div class="td3">
+                  <img class="login_right_logo" src="" id="td3" >
+            </div>
+            <div class="td4" id="td4">
+                 <img src="images/login/tj.png"  />
+            </div>-->
+        </div>
+    </div>
+    <!--logo end-->
+
+    <!--新版定制右边弹出层1 start-->
+    <div class="new_login_popup hide">
+        <div class="popup_head clearfix">
+            <div class="left_uploading">上传Logo</div>
+            <div class="right_uploading">
+                <i></i>
+            </div>
+        </div>
+        <div class="popup_content">
+            <div class="popup_content_motion">
+                <dl class="clearfix">
+                    <dt>
+                        <span style="color: #FF0000">*</span>
+                        上传图片:
+                    </dt>
+                    <dd>
+                        <input type="text" value="" class="d_file"  id="textfield"/>
+                        <input id="uoloadFile" class="file" type="file"  onchange="preview(this,'#preview',document.getElementById('textfield').value=this.value)"/>
+                        <span >浏览</span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_img" >
+                <div class="pImg">
+                    <div class="pBox">
+                        <p>
+                            <a class="pBox_a" id="preview">
+                                <img src=""/>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="popup_img_p_first">1.企业logo尺寸为宽322px,高度为45px,支持JPEG,JPG.GIF,PNG等格式;</p>
+            <p class="popup_img_p_second">2.选择图片大小不超过2MB</p>
+            <div class="popup_bottom">
+                <button class="popup_btn1 ">确定</button>
+                <button class="popup_btn2">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--新版定制右边弹出层1 end-->
+    
+    
+    <!--新版定制右边弹出层2 start-->
+    <div class=" right_login_popup hide" style="z-index:9999999;">
+        <div class="popup_head clearfix">
+            <div class="left_uploading">上传图片</div>
+            <div class="right_uploading">
+                <i></i>
+            </div>
+        </div>
+        <div class="popup_content">
+            <div class="popup_content_motion">
+                <dl class="clearfix">
+                    <dt>
+                        <span style="color: #FF0000">*</span>
+                        上传图片:
+                    </dt>
+                    <dd>
+                        <input type="text" value="" class="d_file" id="field"/>
+                        <input id="uoloadFile2" class="file" type="file"  onchange="preview(this,'#preview1',document.getElementById('field').value=this.value)"/>
+                        <span >浏览</span>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup_img" >
+                <div class="pImg">
+                    <div class="pBox">
+                        <p>
+                            <a class="pBox_a" id="preview1">
+                                <img src=""/>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="popup_img_p_first">1.企业图片尺寸为宽170px,高度为40px,支持JPEG,JPG.GIF,PNG等格式;</p>
+            <p class="popup_img_p_second">2.选择图片大小不超过2MB</p>
+            <div class="popup_bottom">
+                <button class="popup_btn1">确定</button>
+                <button class="popup_btn2">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--新版定制右边弹出层2 end-->
+ 
+ 
+    <!--banner start-->
+    <div class="banner">
+         <!--登录框 start-->
+         <div class="login">
+             <div class="login_div">
+                <table>
+                   <tr>
+                     <td>
+                        <div class="logo_ylxx">
+                            <span id="target" class="target_span">网上银行企业客户登录</span>
+                            <!--<input  type="text" value="网上银行企业客户登录" onkeyup="checkLength(this);" class="hide secai" style="height:26px; color:#636;"/>
+                            <i class="icon_16_edit"></i>
+                            <i class="icon_16_check hide">&nbsp; &nbsp; &nbsp; &nbsp;</i>
+                            <i class="icon_16_color hide"></i>
+                             <div class="sekuai">
+                                   <ul>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                     <li></li>
+                                   </ul>
+                             </div>
+                        </div>
+                        <span id="content_icon"></span>-->
+                     </td>
+                   </tr>
+                    <tr>
+                        <td>
+                            <div class="ipt_kh">
+                                <input class="Wrap_input_search" type="text" placeholder="客户识别号" onblur="if($(this).val()=='ccb'){$(this).next('.qipao_div').hide()}else{$(this).next('.qipao_div').show()}"/>
+                                <div class="qipao_div">
+                                    <div class="qipao_left"></div>
+                                    <div class="error-tip-box"><p></p><span class="header_bar_arrow"></span></div>
+                                    <div class="qipao_right"></div>
+                                </div>
+                            </div>
+                       </td>
+                     </tr>
+                     <tr>
+                        <td>
+                            <div class="ipt_cz">
+                                <input class="Wrap_input_search" type="text" placeholder="操作员代码" onblur="if($(this).val()=='ccb'){$(this).next('.qipao_div').hide()}else{$(this).next('.qipao_div').show()}"/>
+                                <div class="qipao_div">
+                                    <div class="qipao_left"></div>
+                                    <div class="error-tip-box"><p></p><span class="header_bar_arrow"></span></div>
+                                    <div class="qipao_right"></div>
+                                </div>
+                            </div>
+                       </td>
+                     </tr>
+                         <tr>
+                        <td>
+                            <div class="ipt_pwd">
+                                <input class="Wrap_input_search" type="text" placeholder="登录密码" onblur="if($(this).val()=='ccb'){$(this).next('.qipao_div').hide()}else{$(this).next('.qipao_div').show()}"/>
+                                <div class="qipao_div">
+                                    <div class="qipao_left"></div>
+                                    <div class="error-tip-box"><p></p><span class="header_bar_arrow"></span></div>
+                                    <div class="qipao_right"></div>
+                                </div>
+                            </div>
+                       </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="dl" onClick="location.href='html/welcome/welcome.html'">
+                             <span>登 录</span>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                         <td>
+                            <div class="dl_bottom"></div>
+                         </td>
+                     </tr>
+                </table>
+             </div>
+         </div>
+         <!--登录框 end-->
+         <!-- 轮播图 START-->
+         <div class="banner_img">
+            <div class="silder" id="silder">
+                <div class="silder_div_img" id="pbd_login"style=""></div>
+            </div>
+            <!--选择方式 start-->
+            <div class="select_icon_way">
+                 <ul style="padding: 0 10px">
+                     <li data-src="theme_b_0.png"></li>
+                     <li data-src="theme_b_1.png"></li>
+                     <li data-src="theme_b_2.png"></li>
+                 </ul>
+            </div>
+            <!--选择方式 end-->
+         </div>
+         <!-- 轮播图 END-->
+    </div>
+    <!--banner end-->
+
+    <!--main start-->
+    <div class="main" style="">
+        <ul class="clearfix">
+            <li><img src="images/login/czzn.png">
+            <p>操作指南</p>
+            </li>
+            <li><img src="images/login/gnys.png">
+            <p>功能演示</p>
+            </li>
+            <li><img src="images/login/cjwt.png">
+            <p>常见问题</p>
+            </li>
+            <li><img src="images/login/xzzx.png">
+            <p>下载中心</p>
+            </li>
+            <li><img src="images/login/gnjj.png">
+            <p>功能简介<img src="images/re_03.png" style="position:relative; top:-2px;"></p>
+            </li>
+            <li><img src="images/login/zxkf.png">
+            <p>在线客服</p>
+            </li>
+        </ul>
+        <div class="main_1 hide"></div>
+    </div>
+    <!--main end-->
+
+    <!--获取图片 start-->
+    <div class="layer_fixed_1 hide"></div>
+    <!--弹出背景选择框 start-->
+    <div class="_select_bg hide">
+        <span class="_select_bg_span1"></span>
+        <span class="_select_bg_span2"></span>
+    </div>
+    <!--弹出背景选择框 end-->
+    <div class="panel window bcsz hide" style=" width: 478px; height: 235px; left: 444px; top: 200px;z-index: 9002;">
+        <div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+            <div class="panel-title">保存设置</div>
+            <div class="panel-tool">
+                <a class="panel-tool-close" href="javascript:void(0)"></a>
+                <a class="panel-tool-close1 hide" href="javascript:void(0)"></a>
+            </div>
+        </div>
+        <div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+            <div style="background: url(images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 20px 10px;"></div>
+            <div class="alert-feedback">
+                <span class="fail-icon"></span>
+                <div class="feedback-infor"><p></p><p></p></div>
+            </div>
+            <div class="bnt-con" style="text-align: center">
+                <a class="pbd_btn_standard pbd_btn_w100" id="sure_btn" onclick="loginPost1()"><b>确定</b></a>
+                <a class="pbd_btn_standard pbd_btn_w100" id="sure_btn1"><b>确定</b></a>
+                <a class="pbd_btn_standard pbd_btn_w100" id="sure_btn2"><b>确定</b></a>
+                <a class="pbd_btn_standard pbd_btn_w100 hide" id="sure_btn3"><b>确定</b></a>
+                <span class="pbd_btn_standard pbd_btn_w100 ml15 hide" id="top-close"><b>取消</b></span>
+                <span class="pbd_btn_standard pbd_btn_w100 ml15" id="exit-close"><b>取消</b></span>
+            </div>
+        </div>
+    </div>
+    <!--隐藏图片菜单 start-->
+    <i class="login_conceal"></i>
+    <i class="top_conceal"></i>
+    <!--尾部START-->
+    <div style="height: 8px"></div>
+    <div id="footer" data-html="false">
+        <div class="main_3 hide"></div>
+        <div id="footer-con" class="clearfix">
+            <div id="footer-copyright">
+                <i class="tit"></i>
+                <p style="font-weight:bold;">
+                    <span>©版权所有中国建设银行</span>
+                    <span class="footer-copyright1">京ICP备13030780</span>
+                    <span>京公网安备：110102000450</span>
+                </p>
+                <p style="font-weight:bold;">
+                    <span class="footer-copyright2">总行地址：中国北京西城区金融大街25号</span>
+                    <span>邮编：100033</span>
+                </p>
+                <div class="main_2 hide"></div>
+            </div>
+            <ul id="footer-scan">
+				<li class="scan_1 picload"></li>
+                <li class="scan_2 picload"></li>
+            </ul>
+        </div>
+    </div>
+    <!--尾部END-->
+
+    <!--定义传惨 start-->
+    <input type="hidden" name="leftLogin"/>
+    <input type="hidden" name="rightLogin"/>
+    <input type="hidden" name="logoMove"/>
+    <input type="hidden" name="select" />
+    <input type="hidden" name="target1" />
+    <input type="hidden" name="main" />
+    <input type="hidden" name="fotter" />
+    <input type="hidden" name="_spanDel" />
+    <input type="hidden" name="scan1" />
+    <input type="hidden" name="scan2" />
+    <input type="hidden" name="scan3" />
+    <input type="hidden" name="scan4" />
+    <input type="hidden" name="img1" />
+    <input type="hidden" name="img2" />
+    <input type="hidden" name="img3" />
+    <input type="hidden" name="img4" />
+    <input type="hidden" name="img4" />
+    <!--定义传惨 end-->
+      
+
+</body>
+</html>
+
+<script>
+
+    //调整布局
+    //$(".tzbj").hover(function(){
+       // $(".buju_1").css("display","block");
+        //$(".zb_1").css("display","none");
+       // $(this).parent().addClass("tzbj_bg");
+       // $(".zbbb").parent().removeClass("tzbj_bg");
+       // },function(){
+    //})
+    //$(".zbbb").hover(function(){
+       // $(".buju_1").css("display","none");
+        //$(".zb_1").css("display","block");
+        //$(".tzbj").parent().removeClass("tzbj_bg");
+        //$(this).parent().addClass("tzbj_bg");
+        //},function(){
+
+    //})
+
+
+
+     //logo
+
+
+
+
+    //变色
+    $(".icon_16_color").click(function(){
+        $(".sekuai").css("display","block");
+        });
+    $(".icon_16_check").click(function(){
+        $(".sekuai").css("display","none");
+        });
+
+
+    $(".sekuai ul li").hover(function(){
+              var a =$(this).css("background-color");
+               $(".logo_ylxx input,.logo_ylxx").css("color",a);
+
+                },function(){
+
+     });
+
+    $(".right_uploading i,.panel-tool-close,#exit-close").click(function(){
+            $('.layer_fixed_1').addClass('hide')
+        ;});
+
+
+    //操作删除
+
+
+
+    //恢复默认
+    $("#sure_btn1").click(function(){window.location.reload();})
+    $('#sure_btn,#sure_btn1,#sure_btn2').click(function(){$(".layer_fixed_1").addClass('hide');})
+    //底部导航操作
+    var $foot = $('#footer');
+    var $footerClose = $foot.find('.wei-date-close');
+    var dateDel=$foot.find('.wei-date-span');
+    $footerClose.on('click',function(){
+        $(this).parent().addClass('del').hide();
+        if (!$('#footer-copyright').is(':visible') && !$('#footer-scan').is(':visible')) {
+            $foot.hide();
+        }
+    });
+    dateDel.on('click',function(){
+        $(this).parent().addClass('del').hide();
+        if (!$('#footer-copyright').is(':visible') && !$('#footer-scan').is(':visible')) {
+            $foot.hide();
+        }
+    });
+
+//===========将参数传递到预览页 start
+function loginPost(){
+    //第一步判断左边得logo是否有值 没值传1 有值传2
+    var _new_login_popup=$('.new_login_popup');
+    var _input=_new_login_popup.find('input').val();
+    var _src1=$('.td1').find('img').attr('src');
+
+    if(_src1=='images/logo.png'){
+
+        _new_login_popup.find('input').val('');
+        document.all.leftLogin.value="1";
+
+    }else{
+        document.all.leftLogin.value="2"
+    }
+
+    //第二步判断右边得logo是否有值 没值传1 有值传2
+    var _right_login_popup=$('.right_login_popup');
+    var _src2=$('.td3').find('img');
+    if(_src2.hasClass('hide')){
+        document.all.rightLogin.value="1";
+        _right_login_popup.find('input').val('');
+    }else{
+        document.all.rightLogin.value="2"
+    }
+
+    //第三步 判断位置得变动
+    if($('.layout_l').hasClass('_select_on')){
+
+        document.all.logoMove.value="1"
+    }else if($('.layout_2').hasClass('_select_on')){
+        document.all.logoMove.value="2"
+    }else if($('.layout_3').hasClass('_select_on')){
+        document.all.logoMove.value="3"
+    }
+    //第四步 判断大背景应用那个那个背景图 获取背景url
+    var _imgUrl=$('.silder_div_img');
+    if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b.png')>-1) {
+        document.all.select.value="0";
+
+
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_1.png')>-1){
+
+        document.all.select.value="1";
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_2.png')>-1){
+
+        document.all.select.value="2";
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_3.png')>-1){
+
+        document.all.select.value="3";
+    }
+    else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('.png')>-1){
+
+        document.all.select.value="4";
+    }
+
+
+    // 五步判断span字体变化
+    var _targetSpan=$('.logo_ylxx').find('span.target_span').html();
+    document.all.target1.value=_targetSpan;
+    //判断min是否是显示何隐藏
+
+    var _main=$('.main');
+    if(_main.hasClass('del')){
+        document.all.main.value=1;
+    }
+
+    //判断左边底部是否隐藏
+    var _fotter=$('#footer-copyright');
+    if(_fotter.hasClass('del')){
+        document.all.fotter.value=1;
+    }
+
+    var _spanDel=$('#footer');
+    if(_spanDel.hasClass('del')){
+        document.all._spanDel.value=1;
+    }
+    //判断微信是否是隐藏
+    if($('.scan_1 ').hasClass('del')){
+        document.all.scan1.value=1;
+    }
+    if($('.scan_2 ').hasClass('del')){
+        document.all.scan2.value=1;
+    }
+    if($('.scan_3 ').hasClass('del')){
+        document.all.scan3.value=1;
+    }
+    if($('.scan_4 ').hasClass('del')){
+        document.all.scan4.value=1;
+    }
+
+    //判断微信logo是否替换
+    var _scan_1Img=$('.scan_1').find('img').attr('src');
+    var _scan_2Img=$('.scan_2').find('img').attr('src');
+    var _scan_3Img=$('.scan_3').find('img').attr('src');
+    var _scan_4Img=$('.scan_4').find('img').attr('src');
+    if(_scan_1Img=='' || _scan_1Img==undefined ){
+        document.all.img1.value=0;
+    }else{
+        document.all.img1.value=1;
+    }
+    if(_scan_2Img=='' || _scan_2Img==undefined ){
+        document.all.img2.value=0;
+    }else{
+        document.all.img2.value=1;
+    }
+    if(_scan_3Img==''|| _scan_3Img==undefined ){
+        document.all.img3.value=0;
+    }else{
+        document.all.img3.value=1;
+    }
+    if(_scan_4Img==''|| _scan_4Img==undefined ){
+        document.all.img4.value=0;
+    }else{
+        document.all.img4.value=1;
+    }
+
+    //传递到login_content页面配上参数
+    url="login_content_1.html?leftLogin="+escape(document.all.leftLogin.value);//左边logo
+    url+="&rightLogin="+escape(document.all.rightLogin.value);//右边logo
+    url+="&logoMove="+escape(document.all.logoMove.value);//登录窗口位置变动
+    url+="&select="+escape(document.all.select.value);//背景图变化
+    url+="&target1="+escape(document.all.target1.value);//判断字体
+    url+="&main="+escape(document.all.main.value);//判断main
+    url+="&fotter="+escape(document.all.fotter.value);
+    url+="&_spanDel="+escape(document.all._spanDel.value);
+    url+="&scan1="+escape(document.all.scan1.value);//判断微信公众号
+    url+="&scan2="+escape(document.all.scan2.value);//判断企业手机
+    url+="&scan3="+escape(document.all.scan3.value);//判断善付通
+    url+="&scan4="+escape(document.all.scan4.value);//判断ERP
+    url+="&img1="+escape(document.all.img1.value);//判断微信是否替换图片
+    url+="&img2="+escape(document.all.img2.value);//判断企业是否替换图片
+    url+="&img3="+escape(document.all.img3.value);//判断善付通是否替换图片
+    url+="&img4="+escape(document.all.img4.value);//判断ERP是否替换图片
+    window.open(url);
+}
+function loginPost1(){
+    //第一步判断左边得logo是否有值 没值传1 有值传2
+    var _new_login_popup=$('.new_login_popup');
+    var _input=_new_login_popup.find('input').val();
+    var _src1=$('.td1').find('img').attr('src');
+
+    if(_src1=='images/logo.png'){
+
+        _new_login_popup.find('input').val('');
+        document.all.leftLogin.value="1";
+
+    }else{
+        document.all.leftLogin.value="2"
+    }
+
+    //第二步判断右边得logo是否有值 没值传1 有值传2
+    var _right_login_popup=$('.right_login_popup');
+    var _src2=$('.td3').find('img');
+    if(_src2.hasClass('hide')){
+        document.all.rightLogin.value="1";
+        _right_login_popup.find('input').val('');
+    }else{
+        document.all.rightLogin.value="2"
+    }
+
+    //第三步 判断位置得变动
+    if($('.layout_l').hasClass('_select_on')){
+
+        document.all.logoMove.value="1"
+    }else if($('.layout_2').hasClass('_select_on')){
+        document.all.logoMove.value="2"
+    }else if($('.layout_3').hasClass('_select_on')){
+        document.all.logoMove.value="3"
+    }
+    //第四步 判断大背景应用那个那个背景图 获取背景url
+    var _imgUrl=$('.silder_div_img');
+    if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b.png')>-1) {
+        document.all.select.value="0";
+
+
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_1.png')>-1){
+
+        document.all.select.value="1";
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_2.png')>-1){
+
+        document.all.select.value="2";
+    }else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('theme_b_3.png')>-1){
+
+        document.all.select.value="3";
+    }
+    else if(!!_imgUrl.css('background-image') && _imgUrl.css('background-image').indexOf('.png')>-1){
+
+        document.all.select.value="4";
+    }
+
+
+    // 五步判断span字体变化
+    var _targetSpan=$('.logo_ylxx').find('span.target_span').html();
+    document.all.target1.value=_targetSpan;
+    //判断min是否是显示何隐藏
+
+    var _main=$('.main');
+    if(_main.hasClass('del')){
+        document.all.main.value=1;
+    }
+
+    //判断左边底部是否隐藏
+    var _fotter=$('#footer-copyright');
+    if(_fotter.hasClass('del')){
+        document.all.fotter.value=1;
+    }
+
+    var _spanDel=$('#footer');
+    if(_spanDel.hasClass('del')){
+        document.all._spanDel.value=1;
+    }
+    //判断微信是否是隐藏
+    if($('.scan_1 ').hasClass('del')){
+        document.all.scan1.value=1;
+    }
+    if($('.scan_2 ').hasClass('del')){
+        document.all.scan2.value=1;
+    }
+    if($('.scan_3 ').hasClass('del')){
+        document.all.scan3.value=1;
+    }
+    if($('.scan_4 ').hasClass('del')){
+        document.all.scan4.value=1;
+    }
+
+    //判断微信logo是否替换
+    var _scan_1Img=$('.scan_1').find('img').attr('src');
+    var _scan_2Img=$('.scan_2').find('img').attr('src');
+    var _scan_3Img=$('.scan_3').find('img').attr('src');
+    var _scan_4Img=$('.scan_4').find('img').attr('src');
+    if(_scan_1Img=='' || _scan_1Img==undefined ){
+        document.all.img1.value=0;
+    }else{
+        document.all.img1.value=1;
+    }
+    if(_scan_2Img=='' || _scan_2Img==undefined ){
+        document.all.img2.value=0;
+    }else{
+        document.all.img2.value=1;
+    }
+    if(_scan_3Img==''|| _scan_3Img==undefined ){
+        document.all.img3.value=0;
+    }else{
+        document.all.img3.value=1;
+    }
+    if(_scan_4Img==''|| _scan_4Img==undefined ){
+        document.all.img4.value=0;
+    }else{
+        document.all.img4.value=1;
+    }
+
+    //传递到login_content页面配上参数
+    url="html/zhcx/jxhqzh_1.html?leftLogin="+escape(document.all.leftLogin.value);//左边logo
+    url+="&rightLogin="+escape(document.all.rightLogin.value);//右边logo
+    url+="&logoMove="+escape(document.all.logoMove.value);//登录窗口位置变动
+    url+="&select="+escape(document.all.select.value);//背景图变化
+    url+="&target1="+escape(document.all.target1.value);//判断字体
+    url+="&main="+escape(document.all.main.value);//判断main
+    url+="&fotter="+escape(document.all.fotter.value);
+    url+="&_spanDel="+escape(document.all._spanDel.value);
+    url+="&scan1="+escape(document.all.scan1.value);//判断微信公众号
+    url+="&scan2="+escape(document.all.scan2.value);//判断企业手机
+    url+="&scan3="+escape(document.all.scan3.value);//判断善付通
+    url+="&scan4="+escape(document.all.scan4.value);//判断ERP
+    url+="&img1="+escape(document.all.img1.value);//判断微信是否替换图片
+    url+="&img2="+escape(document.all.img2.value);//判断企业是否替换图片
+    url+="&img3="+escape(document.all.img3.value);//判断善付通是否替换图片
+    url+="&img4="+escape(document.all.img4.value);//判断ERP是否替换图片
+    window.open(url);
+}
+</script>
+  
+ 

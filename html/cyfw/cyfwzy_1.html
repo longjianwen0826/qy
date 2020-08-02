@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+	    <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/p_zhcx.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/fa.browser.storage.js"></script>
+        <script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../js/jquery.easyui.min.js"></script>
+		<script src="../../js/p_Layout.js" charset="utf-8"></script>
+		<script src="../../js/widget.js"></script>
+		<script src="../../js/p_jxhqzh.js"></script>
+
+		<!--必要样式-->
+		<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<!--<link href="../../css/city-picker.css" rel="stylesheet" type="text/css" />-->
+
+		<!-- import ElementUI CSS -->
+		<link rel="stylesheet" href="../../css/vue-index.css"  type="text/css"/>
+		
+	</head>
+    <style>
+		.city-picker-span{
+			background: rgba(247,249,251,1);
+			/*width: 150px !important;*/
+		}
+		.city-picker-span > .title{color:#242527;}
+		.city-picker-span > .title > span {
+			padding: 0px;
+		}
+		#phd_context{
+			padding:0px;
+		}
+		.el-popover{
+			padding:0px;
+		}
+		#addressPopover{
+			width:800px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 20px 40px 0px rgba(239,239,239,0.5);
+			border:1px solid rgba(239,239,239,1);
+			padding:24px 22px 30px 20px;
+			margin:0px;
+		}
+		#addressHead{
+			width:100%;
+			padding-bottom:11px;
+			border-bottom:1px solid #E4E9EF;
+		}
+		.valueText{
+			margin-right:9px;
+			font-size: 20px;
+			color: #0066B3;
+		}
+		.shouXing{
+			cursor:pointer;
+		}
+		.GuanBiIcon{
+			float:right;
+			margin-right:4px;
+			margin-top:4px;
+			cursor: pointer;
+		}
+		#addressMes{
+			width:100%;
+			float: left;
+			padding:30px 0px 10px 0px;
+			border-bottom:1px solid #E4E9EF;
+		}
+		.addressBut{
+			float:left;
+			font-size: 16px;
+			margin-right:59px;
+			margin-bottom:20px;
+			color: #242527;
+			cursor: pointer;
+		}
+		#tiShiMes{
+			width:100%;
+			font-size: 16px;
+			color:#242527;
+			float: left;
+    		line-height: 93px;
+		}
+		.butDiv{
+			padding-top:30px;
+		}
+		.queDingBut{
+			background-color:#0066B3;
+			color:#FFFFFF;
+			font-size: 16px;
+			margin-right:17px;
+		}
+		.queDingBut:focus{
+			background-color:#0066B3;
+			color:#FFFFFF;
+			outline: none;
+		}
+		.queDingBut:hover{
+			background-color:#0066B3;
+			color:#FFFFFF;
+			outline: none;
+		}
+        .exit{
+            position: absolute;
+            width: 62px;
+            height: 25px;
+            right: 120px;
+            top: 8px;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+		.dangQian{
+			height:35px;
+			line-height:35px;
+			color:#A2A2A2;
+			font-size: 14px;
+			width: 500px;
+		}
+		.form-group{float: left;}
+		.danqian-div{
+			background: rgba(247,249,251,1);
+			line-height: 34px;
+			float: left;
+			padding-left: 10px;
+		}
+		.headline{
+			margin-top:40px;
+			height:60px;
+			line-height:60px;
+			font-size: 26px;
+			font-weight: bold;
+		}
+		#headlineLan{
+			width:100%;
+			height:270px;
+			padding:0px 20px;
+		}
+		.fuWuKuang{
+			width:100%;
+			height:150px;
+			background-size:100% 100%;
+			color:#FFFFFF;
+			cursor:pointer;
+			border: 1px solid ;
+		}
+		.mesTop{
+			font-size:20px;
+			width:100%;
+			height:30px;
+			margin:15px 0px 5px 15px;
+		}
+		.mesBottom{
+			font-size:13px;
+			width:100%;
+			margin-left:15px;
+		}
+		.fuWuKuang_ka1{
+			background-image: url("../../images/cyfwImgS/card-企业信用查询.png");
+		}
+		.fuWuKuang_ka2{
+			background-image: url("../../images/cyfwImgS/card-财税库行.png");
+		}
+		.fuWuKuang_ka3{
+			background-image: url("../../images/cyfwImgS/card-缴费.png");
+		}
+		.fuWuKuang_ka4{
+			background-image: url("../../images/cyfwImgS/card-发票金融.png");
+		}
+		#enterprise{
+			Width:100%;
+			min-height:358px;
+			margin-top:40px;
+			padding:40px 10px 20px 20px;
+			background-color: #F9F9FB;
+		}
+		#enterpriseDaoHang{
+			width: 1130px;
+    		margin: 0 auto;
+		}
+		#enterpriseDaoHang .el-tabs__item{
+			font-size:26px;
+			margin-bottom:15px;
+			color:#000000;
+		}
+		#enterpriseDaoHang .el-tabs__item:focus{
+			font-size:26px;
+			margin-bottom:15px;
+			color:#000000;
+		}
+		#enterpriseDaoHang .el-tabs__active-bar{
+			background-color:#0166B1; 
+		}
+		#enterpriseDaoHang .el-button+ .el-button{
+			margin-left:0px;
+		}
+		.butSize {
+			float:left;
+			width:165px;
+			height:60px;
+			line-height:60px;
+			text-align:center;
+			background-color: white;
+			font-size:18px;
+			border-radius:4px;
+			margin-right:20px;
+			margin-bottom:30px;
+			cursor:pointer;/*获得鼠标焦点时变成手型箭头*/
+		}
+		.butSizeFalse{
+			float:left;
+			width:165px;
+			height:60px;
+			line-height:60px;
+			text-align:center;
+			color:#999999;
+			background-color: white;
+			font-size:18px;
+			border-radius:4px;
+			margin-right:20px;
+			margin-bottom:30px;
+		}
+		.butSize:focus{
+			background-color: #0166B1; 
+			outline: none;
+			color:white;
+		}
+		.butSize:hover{
+			background-color: #0166B1; 
+			outline: none;
+			color:white;
+		}
+		.butIcon{
+			width: 22px; 
+			height: 22px;
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		.butIcon_w{
+			width: 22px; 
+			height: 22px;
+			display:none;
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		.butSize:focus .butIcon{
+			outline: none;
+			display:none;
+		}
+		.butSize:focus .butIcon_w{
+			display:inline-block;	/*显示行内块元素。（CSS2.1 新增的值）*/
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		.butSize:hover .butIcon{
+			outline: none;
+			display:none;
+		}
+		.butSize:hover .butIcon_w{
+			display:inline-block;	/*显示行内块元素。（CSS2.1 新增的值）*/
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		.butText{
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		#affair{
+			width:100%;
+			height:650px;
+			padding:0px 20px;
+			margin-top:20px;
+			margin-bottom:20px;
+			/*border:1px solid #000000;*/
+		}
+		#affairLan{
+			width:100%;
+			height:40px;
+			margin-top:40px;
+			margin-bottom: 20px;
+		}
+		.affairTitle{
+			width:150px;
+			height:32px;
+			font-size: 26px;
+			font-weight: bold;
+			float:left;
+		}
+		.affairSouSuo{
+			height:40px;
+			line-height:40px;
+			float:right;
+		}
+		.shiXiangInput{
+			width:196px;
+			height:32px;
+			font-size: 12px;
+		}
+		.shiXiangBut{
+			width:52px;
+			height:32px;
+			font-size: 12px;
+			padding:0px;
+			background-color: #0166B1; 
+		}
+		.affairKuang{
+            position: relative;
+			padding:20px 20px 0px 20px;
+			margin-top:20px;
+			width:100%;
+			height:150px;
+			background-color: #F9F9FB;
+			cursor:pointer;
+		}
+		/*伪类点击后改变样色，不过需要在此元素中绑定tabindex="1"以此来绑定对应的元素*/
+		.affairKuang:focus{
+			background-color: #0166B1; 
+			outline: none;
+		}
+		/*伪类点击后改变此元素内的div样色*/
+		.affairKuang:focus div {
+			background-color: #0166B1; 
+			outline: none;
+			color:white;
+		}
+		.affairKuang:focus span {
+			background-color: #0166B1; 
+			outline: none;
+			color:white;
+		}
+		/*伪类鼠标移动到此元素后改变样色*/
+		.affairKuang:hover{
+			background-color: #0166B1; 
+		}
+		/*伪类鼠标移动到此元素后改变此元素内的div样色*/
+		.affairKuang:hover div{
+			background-color: #0166B1; 
+			color:white;
+		}
+		.affairKuang:hover span{
+			background-color: #0166B1; 
+			color:white;
+		}
+		.affairKuangNoe{
+			font-size: 22px;
+			width:100%;
+			min-height:33px;
+			color: #333333;
+		}
+		.affairKuangTwo{
+			font-size: 14px;
+			width:100%;
+			height:20px;
+			color: #777777;
+		}
+		.affairKuangThree{
+			position: absolute;
+			right:0px;
+			bottom:15px;
+			font-size: 14px;
+			width:100%;
+			height:20px;
+		}
+		.affairKuangLeft{
+			color: #333333;
+			padding-left:15px;
+		}
+		.affairKuangRight{
+			float:right;
+			color: #0066B3;
+			padding-right:15px;
+		}
+		#fenYeLan{
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,-50%);/*绝对定位水平居中*/
+			height:20px;
+			margin:40px auto;
+		}
+		.fenYeTiao{
+			float:left;
+			width:59px;
+			height:6px;
+			margin-right:6px;
+			margin-left:auto;
+			background-color: #DFE8F2;
+		}
+		.clickFen{
+			background-color:#0066B3;
+		}
+		.fenYeTiao:hover{
+			outline: none;
+			background-color: #0066B3;
+		}
+		#advertising{
+			width:100%;
+			height:120px;
+			line-height:120px;
+			text-align: center;
+			background-color: #DFDFDF;
+			margin-bottom:0px;
+			background-image: url("../../images/cyfwImgS/banner.png")
+		}
+		/*底部信息样式修改*/
+		#pft_common {
+			padding-top:0px;
+			margin-top:0px;
+		}
+		.city-picker-span{
+			float: left;
+		}
+		.qhqy-div {
+			width: 96px;
+			height:34px;
+			line-height: 34px;
+			float:right;
+			background-color:#0066B3;
+			text-align:center;
+			border-radius: 2px;
+			color: #FFFFFF;
+			cursor: pointer;
+			margin-left: 8px;
+		}
+		.quXiaoBut{
+			background:rgba(0,102,179,0.1);
+			color: #0066B3;
+			width: 80px;
+			height: 38px;
+		}
+		.queDingBut{
+			width: 80px;
+			height: 38px;
+		}
+		.el-popper[x-placement^=bottom] {
+			margin-top: 0px;
+		}
+    </style>
+	
+	<body>
+		<div id="warp-div">
+			<div id="Warp">
+				<!--顶部导航 START-->
+				<div id="phd_common"></div>
+				
+				
+				<div id="headlineLan">
+					<!-- 创业服务专区 start -->
+					<div class="docs-methods">
+						
+						<!--当前位置 start-->
+						<div class="pbd_tab_current">当前位置：<span style="color:#0066b3">创业服务专区</span></div>
+						
+						<form class="form-inline">
+							<!--<div id="distpicker">
+								<div class="dangQian">
+									<span class="danqian-div">当前: </span>
+									<div class="form-group">
+										<div style="position: relative;">
+											<input id="city-picker3"  class="form-control" readonly type="text" value="江苏省/常州市/溧阳市" data-toggle="city-picker">
+										</div>
+									</div>
+								</div>
+							</div>-->
+						</form>
+
+						<div @click="shengshiquSHfunc" v-popover:popover class="dangQian"><span class="danqian-div">当前: </span>
+							<div class="form-group">
+								<div style="position: relative;">
+									<!--<input id="city-picker3" readonly="readonly" type="text" value="江苏省/常州市/溧阳市" data-toggle="city-picker" class="form-control city-picker-input">-->
+									<span class="city-picker-span" style="height:34px;line-height:33px;">
+										<!--<span class="placeholder" style="display: none;">请选择省/市/区</span>-->
+										<span class="title">
+											<span v-if="shengName" class="select-item" data-count="province">{{shengName}}</span>
+											<span v-if="chengshiName" class="select-item" data-count="city">/{{chengshiName}}</span>
+											<span v-if="xianName" class="select-item" data-count="district">/{{xianName}}</span>
+										</span>
+										<div class="qhqy-div">切换区域<i style="position:relative;top:-2px;left:3px;">
+											<img src="../../images/cyfwImgS/down-list.png"></i>
+										</div>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<!--/地址对话框-->
+						<el-popover v-model="visible" ref="popover" placement="bottom-start" style="padding:0px;"  trigger="click">
+							<div id="addressPopover">
+								<div id="addressHead">
+									<span v-if="shengName" class="valueText shouXing">{{shengName}}</span>
+									<span v-if="chengshiName" class="valueText"><i class="el-icon-arrow-right"></i></span>
+									<span v-if="chengshiName" class="valueText shouXing">{{chengshiName}}</span>
+									<span v-if="xianName" class="valueText"><i class="el-icon-arrow-right"></i></span>
+									<span v-if="xianName" class="valueText shouXing">{{xianName}}</span>
+									<span class="GuanBiIcon" @click="visible = !visible"><i class="el-icon-close"></i></span>
+								</div>
+								<div id="addressMes" v-show="shengDiv">
+									<div class="addressBut" @click="clickShengFunc(item)"  v-for="item in zhanShiData">{{item.address}}</div>
+								</div>
+								<div id="addressMes"  v-show="chengshiDiv">
+									<div class="addressBut" @click="clickShiFunc(index,item)" v-for="(item,index) in chengshiData">{{item}}</div>
+								</div>
+								
+								<div id="addressMes"  v-show="xianDiv">
+									<div class="addressBut"  @click="clickXianFunc(index,item)" v-for="(item,index) in xianData">{{item}}</div>
+								</div>
+								<div id="tiShiMes">
+									您选择的是：{{xuanZeTitle}}
+								</div>
+								<div class="butDiv">
+									<el-button @click="visible = !visible" class="queDingBut" tabindex="1" round>确定</el-button>
+									<el-button @click="visible = !visible" class="quXiaoBut"  round>取消</el-button>
+								</div>
+							</div>
+							
+						</el-popover>
+					</div>
+					<!--<div class="headline">热门服务</div>-->
+					<el-row style="margin-top: 25px;" :gutter="20">
+						<el-col :span="6">
+							<div class="fuWuKuang fuWuKuang_ka1">
+								<div class="mesTop">企业信用查询</div>
+								<div class="mesBottom">一键查询企业信用</div>
+							</div>
+						</el-col>
+						<el-col :span="6">
+							<div class="fuWuKuang fuWuKuang_ka2">
+								<div class="mesTop">财税库行</div>
+								<div class="mesBottom">提高纳税效率</div>
+							</div>
+						</el-col>
+						<el-col :span="6">
+							<div class="fuWuKuang fuWuKuang_ka3">
+								<div class="mesTop">缴费</div>
+								<div class="mesBottom">自助缴费，悦享生活</div>
+							</div>
+						</el-col>
+						<el-col :span="6">
+							<div class="fuWuKuang fuWuKuang_ka4">
+								<div class="mesTop">发票金融</div>
+								<div class="mesBottom">发票赋能，金融赋新</div>
+							</div>
+						</el-col>
+					</el-row>
+				</div>
+			</div>
+		
+			<div id="enterprise">
+				<el-tabs v-model="activeName" id="enterpriseDaoHang" @tab-click="handleClick">
+					<el-tab-pane label="全部" name="first">
+						<div v-for="item in enterpriseMes">
+							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+							<div class="butSizeFalse" v-else-if="item.isOk==false&&shengName=='广东省'">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+
+							
+							<div class="butSize" @click="butZhanClick('first',item.label)" v-if="item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+
+						</div>
+					</el-tab-pane>
+					<el-tab-pane label="新办企业" name="second">
+						<div v-for="item in enterpriseMes">
+							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+							<div class="butSizeFalse" v-else-if="item.classifyMes==1&&item.isOk==false&&shengName=='广东省'">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+
+							
+							<div class="butSize" @click="butZhanClick('second',item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+						</div>
+					</el-tab-pane>
+					<el-tab-pane label="企业日常" name="third">
+						<div v-for="item in enterpriseMes">
+							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+							<div class="butSizeFalse" v-else-if="item.classifyMes==2&&item.isOk==false&&shengName=='广东省'">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+
+							
+							<div class="butSize" @click="butZhanClick('third',item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+						</div>
+					</el-tab-pane>
+					<el-tab-pane label="投资项目" name="fourth">
+						<div v-for="item in enterpriseMes">
+							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+							<div class="butSizeFalse" v-else-if="item.classifyMes==3&&item.isOk==false&&shengName=='广东省'">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+
+
+							<div class="butSize" @click="butZhanClick('fourth',item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName!='广东省'" :tabindex="item.label">
+								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+								<span class="butText">{{item.butName}}</span>
+							</div>
+						</div>
+					</el-tab-pane>
+				</el-tabs>
+			</div>
+
+			<div id="Warp">
+				<div id="affair">
+					<div id="affairLan">
+						<div class="affairTitle">服务事项</div>
+						<div class="affairSouSuo">
+							<el-input placeholder="请输入关键字" size="small" prefix-icon="el-icon-search"  v-model="affairName" class="shiXiangInput">
+							</el-input>
+							<el-button class="shiXiangBut" type="primary">搜索</el-button>
+						</div>
+					</div>
+					<el-row style="height:520px;" :gutter="20">
+						<el-col :span="8" v-for="item in matterNameList.slice(beginTiao,endTiao)">
+							<div class="affairKuang" :tabindex="item.label">
+								<div class="affairKuangNoe">{{item.matterName}}</div>
+								<!--<div class="affairKuangTwo">{{item.site}}</div>-->
+								<div class="affairKuangThree">
+									<span class="affairKuangLeft">{{item.fangShiLeft}}</span>
+									<!--<span class="affairKuangRight">{{item.fangShiRight}}</span>-->
+									<!--{{item.fangShiLeft}}&nbsp&nbsp{{item.fangShiRight}}-->
+								</div>
+							</div>
+						</el-col>
+					</el-row>
+					<div id="fenYeLan">
+						<div @click="kongZhiBE(0,9)" class="fenYeTiao clickFen"></div>
+						<div v-for="index of matterListYeShu-1" @click="kongZhiBE(index*9,(index+1)*9)" class="fenYeTiao" ></div>
+						<!--<div @click="kongZhiBE(0,9,'')" class="fenYeTiao clickFen"></div>
+						<div v-for="(index,item) of matterListYeShu-1" @click="kongZhiBE(index*9,(index+1)*9,item)" class="fenYeTiao" ></div>-->
+
+						<!--<div @click="kongZhiBE(0,9)" class="fenYeTiao clickFen"></div>
+						<div @click="kongZhiBE(9,18)" class="fenYeTiao"></div>
+						<div @click="kongZhiBE(18,27)" class="fenYeTiao"></div>
+						<div @click="kongZhiBE(27,36)" class="fenYeTiao"></div>
+						<div @click="kongZhiBE(36,45)" class="fenYeTiao"></div>
+						<div @click="kongZhiBE(45,54)" class="fenYeTiao"></div>
+						<div @click="kongZhiBE(54,63)" class="fenYeTiao"></div>-->
+					</div>
+				</div>
+				<!--广告位-->
+				<div id="advertising"></div>
+				
+				
+				<!-- 创业服务专区 end -->
+
+			</div>
+
+			<!--右边功能栏-->
+			<div id="fn_menu"></div>
+			<!--底部信息-->
+			<div id="pft_common"></div>
+			<!--返回顶部-->
+			<div id="back_to_top"></div>
+			<!--通用底部悬浮层-->
+			<!--<div id="foot_float"></div>-->
+		</div>
+		<!--<script src="js/jquery.js"></script>-->
+		<script src="../../js/bootstrap.js"></script>
+		<!--<script src="../../js/city-picker.data.js"></script>
+		<script src="../../js/city-picker.js"></script>-->
+		<script src="../../js/city-picker.data.js"></script>
+		<script src="../../js/city-picker.js"></script>
+		<script src="../../js/main.js"></script>	
+		
+		<!-- import Vue before Element -->
+		<script src="../../js/vueJS.js"></script>
+		<!-- import  vue JavaScript -->
+		<script src="../../js/vue-index.js"></script>
+
+		<!-- 城市data -->
+		<script src="../../js/cityData.js"></script>
+
+		<script>
+			function loginPost2() {
+				window.location.href="../../login_content.html"+location.search;
+			}
+			//导航索引
+			$('.testIndex').on('click', function(){
+				window.parent.nav.refreshHtml(null, 1);
+				window.parent.nav.getCurrentPostion(["转账业务","待确认指令"]);
+			});
+			
+			$(function(){
+				allowDownload();
+
+				$("#nav_sya").children('.ui-sortable-handle').removeClass('active');
+				$("#nav_sya a").each(function(){
+					if($(this).html()=="创业服务专区"){
+						$(this).addClass('active');	
+					}
+				});
+				$("#mainnav").hide();
+				
+				$(".fenYeTiao").click(function(){
+					console.log("fenYeTiao")
+					$("div.fenYeTiao").removeClass("clickFen");
+					$(this).addClass("clickFen");
+				});
+					
+			});
+			
+		</script>
+        <span class="exit" onclick="loginPost2()"></span>
+	</body>
+</html>

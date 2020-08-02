@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国建设银行企业网上银行</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+		<script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery-ui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/p_pageFramework.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/p_menu.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="common" class="common_wrap">
+			<div class="common_lable common_lable_out"></div>
+			<div class="common_title_wrap text_c">
+				您好！张翔<i class="common_question_mark"></i>
+				<span><i class="common_left_arrow"></i><i class="common_right_arrow"></i></span>
+				<span class="common_title_close"><a class="white" href="#" title="关闭">×</a></span>
+			</div>
+			<div class="common_main_wrap">
+				<div id="submenu">
+					<!--tag标题-->
+				    <ul id="subnav">
+				        <li><a href="#" class="selected">常用功能</a></li>
+				        <li><a href="#" class="" style="border-left: 1px solid #ddd;">历史记录</a></li>
+				    </ul>
+					<!--二级菜单-->
+				    <div id="submenu_con">
+				        <div class="tag" style="display:block">
+				        	<ul class="common_links_wrap">
+				        		<li class="common_link"><span class="dian">●</span>账户查询<span class="icon_position"></span><i class="common_closebtn"></i></li>
+								<li class="common_link hide"><a href="javascript:;">查看工作台</a><i class="common_closebtn">×</i></li>
+								<!-- <div class="common_link"><a data-href="#" href="javascript:;">汇率查询</a><i class="common_closebtn"></i></div> -->
+							</ul>
+			         	</div> 
+			         	<div class="tag" style="display:none">
+				        	<ul class="common_links_wrap" style=" height: 282px; overflow: hidden;">
+				        		<li class="common_link"><span class="dian">●</span>指令业务<span class="icon_position"></span><i class="common_closebtn"></i></li>
+				        	</ul>
+			        	</div>
+				        
+					</div>
+				</div>
+				
+			</div>
+			<div class="common_info text_r">
+				<a class="icon_del_gray mr10" href="javasrcipt:;">清空</a>
+			</div>
+		</div>
+		<div id="Warp">
+			<!--通用页头 start-->
+			<div id="phd_common"></div>
+			<div id="login_tips"></div>
+			<!--通用页头 end-->
+			
+			<!--当前位置 start-->
+			<div class="pbd_tab_current">
+				当前位置：<b>主页</b>
+			</div>
+			<!--当前位置 end-->
+			
+			<!--主内容区 start-->
+			<div id="pbd_content">
+				<iframe id="mainIframe" src="welcome.html" scrolling="no" onload="Javascript:reinitIframe();"></iframe>
+			</div>
+			<!--主内容区 end-->
+			<!--通用页页脚 start-->
+			<!--<div class="pt80"></div>-->
+			<div id="pft_common" class="pt80"></div>
+			<!--通用页页脚 end-->
+			
+			<!--底部页面切换栏 start-->
+			<div class="scheme_d">
+				<div id="scheme_d">
+					<!-- <div class="scheme_div"><a href="javascript:;" data-href="#">业务查询</a><em></em></div>
+					<div class="scheme_div"><a href="javascript:;" data-href="#">指令业务</a><em></em> </div> -->
+					<div class="scheme_div2">
+						<div style="position:relative;">
+							<img id="bimg" />
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<div class="scheme_r">
+					<!--<a href="#" id="windowPop2">
+						<div class="scheme_r_import"><span>2</span></div>
+					</a>-->
+					<a href="#" id="windowPop">
+						<div class="scheme_r_info"><span>2</span></div>
+					</a>
+					<a href="#">
+						<div class="scheme_r_tool" onclick="tool();"></div>
+					</a>
+				</div>
+				<!--工具 start-->
+				<div class="fixed_tool hide">
+					<div class="fixed_tool_title">
+						<h2>小工具</h2>
+						<!--<div class="fixed_tool_colse"></div>-->
+						<a class="fixed_tool_colse" href="#"></a>
+					</div>
+					<div class="box-content">
+						<div class="b-tool">
+							<span onclick='opencount();'><img src='../../images/menu/bo_tool1.png'/><p><a href="javascript:;">会计计算器</p></a></p></span>
+							<span><img src='../../images/menu/bo_tool2.png'/><p><a href="javascript:;">理财计算器</p></a></p></span>
+							<span><img src='../../images/menu/bo_tool3.png'/><p><a href="javascript:;">快速截屏</p></a></p></span>
+							<span><img src='../../images/menu/bo_tool4.png'/><p><a href="javascript:;">汇率计算器</p></a></p></span>
+							<span onclick='openliv();'><img src='../../images/menu/bo_tool5.png'/><p><a href="javascript:;">利率表</p></a></p></span>
+							<span onclick='opencount2();'><img src='../../images/menu/bo_tool6.png'/><p><a href="javascript:;">手续费计算器</p></a></span>
+							<span><img src='../../images/menu/bo_tool7.png'/></span>
+						</div>
+					</div>
+					<div class="fixed_tool_arrow"></div>
+				</div>
+				<!--工具 end-->
+			</div>
+			<!--底部页面切换栏 start-->
+
+			<!--回到顶部、底部 start-->
+			<div id="back_menu"></div>
+			<!--回到顶部、底部 end-->
+		</div>
+	</body>
+	<script type="text/javascript">
+		back_menu();
+		head_menu();
+		foot_menu();
+		right_menu();
+	</script>
+	
+	<script type="text/javascript">
+	/*=============点击工具显示 start===========*/
+	$(".fixed_tool").addClass("hide");
+	function tool() {
+		$(".fixed_tool").removeClass("hide");
+	}
+	$(function () {
+		$(".fixed_tool_colse").click(function(){
+			$(".fixed_tool").addClass("hide");
+		});
+	})
+	/*=============点击工具显示 end===========*/
+	</script>
+	
+	<script type="text/javascript">
+	//右侧Tab选项卡 start
+	var tabs=function(){
+	    function tag(name,elem){
+	        return (elem||document).getElementsByTagName(name);
+	    }
+	    //获得相应ID的元素
+	    function id(name){
+	        return document.getElementById(name);
+	    }
+	    function first(elem){
+	        elem=elem.firstChild;
+	        return elem&&elem.nodeType==1? elem:next(elem);
+	    }
+	    function next(elem){
+	        do{
+	            elem=elem.nextSibling;  
+	        }while(
+	            elem&&elem.nodeType!=1  
+	        )
+	        return elem;
+	    }
+	    return {
+	        set:function(elemId,tabId){
+	            var elem=tag("li",id(elemId));
+	            var tabs=tag("div",id(tabId));
+	            var listNum=elem.length;
+	            var tabNum=tabs.length;
+	            for(var i=0;i<listNum;i++){
+	                    elem[i].onclick=(function(i){
+	                        return function(){
+	                            for(var j=0;j<tabNum;j++){
+	                                if(i==j){
+	                                    tabs[j].style.display="block";
+	                                    //alert(elem[j].firstChild);
+	                                    elem[j].firstChild.className="selected";
+	                                }
+	                                else{
+	                                    tabs[j].style.display="none";
+	                                    elem[j].firstChild.className="";
+	                                }
+	                            }
+	                        }
+	                    })(i)
+	            }
+	        }
+	    }
+	}();
+	tabs.set("subnav","submenu_con");//执行
+	//右侧Tab选项卡 end
+	
+
+	</script>
+	
+</html>

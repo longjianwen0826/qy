@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>菜单调整</title>
+  <link rel="stylesheet" type="text/css" href="../../css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/menu.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/jquery.ui.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/easyui.css"/>
+  <link rel="stylesheet" type="text/css" href="../../css/p_cddtTest.css"/>
+  
+  <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="../../js/jquery-ui.js"></script>
+  <script src="../../js/fa.browser.storage.js"  type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/p_Layout.js"  type="text/javascript" charset="utf-8"></script>
+  <script src="../../js/widget.js"    type="text/javascript" charset="utf-8"></script>
+  <style type="text/css">
+  ul{ list-style-type: none; }
+  
+
+  .main{
+    border:1px solid #96c2f1;
+  }
+  .main .main_title{
+    border-bottom:1px solid #dfe0f2;
+    background:#eff8ff;
+    height:39px;
+    line-height:39px;
+    padding-left:12px;
+    font-size:14px;
+    font-weight:bold;
+  }
+  .main .main_box{
+    padding:10px 0px 10px 49px;
+    font: "微软雅黑" !important;
+    font-size: 14px !important;
+  }
+  .menu_box .menu_list{
+    background:#FFF;
+    border:1px solid #62a7e3;
+    width:150px;
+    margin-top:15px;
+    margin-right:29px;
+    float:left;
+    cursor: pointer;
+  }
+  .menu_box .mTitle{
+    /*background:url(../../images/menu_dt.png);*/
+    /*padding-left:12px;*/
+    /*font-weight:bold;*/
+    width: 100%;
+    height:34px;
+    line-height:34px;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 14px;
+  }
+  
+  .menu_box .mTitle:hover{
+  	background: #229ee6;
+  	color: #FFFFFF;
+  }
+  
+  .menu_zb{
+  	background-image: url(../../images/menu_dz.png) !important;
+  	color: #FFFFFF;
+  	position: relative;
+  }
+  
+  .menu_box .mEdt, .menu_box .mAdd, .menu_box .mChecked{
+    background-image:url(../../images/icon_revise.png);
+    background-repeat:no-repeat;
+    background-position:center center;
+    /*float:right;*/
+    width:20px;
+    text-indent:-1000px;
+    overflow:hidden;
+    position: absolute;
+		right: 0;
+		top: 10px;
+		display: inline-block;
+		height: 12px;
+  }
+  .menu_box .mAdd{
+    background-image:url(../../images/icon_increased.png);
+  }
+  .menu_box .mChecked{
+    background-image:url(../../images/icon_confirm.png);
+  }
+  .menu_box .mText{
+    width:100px;
+    height:22px;
+    text-align: center;
+  }
+  .menu_box .mBody{
+  }
+  .menu_box .mItem{
+    /*padding-left:12px;*/
+    height:22px;
+    /*line-height:22px;*/
+    padding-top: 15px;
+		padding-bottom: 15px;
+		border-bottom: 1px dashed #CCCCCC;	
+		text-align: center;
+		font-family: "微软雅黑";
+    font-size: 14px;
+  }
+  
+	.menu_box .mItem_border{
+		border-bottom: 1px dashed #CCCCCC;	
+	}
+
+	.menu_box {
+  	position: relative;	
+  }
+  
+  
+  .menu_box .state_high{
+ 
+  }
+  
+  .menu_box .state_high_B{
+  	
+  }
+ 
+  
+  .ui-sortable .mItem{
+  	padding: 11px 0px;
+  }
+
+  .ui-sortable .mItem:hover{
+  	background: #229ee6;
+  	color: #FFFFFF;
+  }
+  
+  /*添加到分组中的每个li都加虚线*/
+  .border_bottom{
+	  border-bottom:1px dashed #CCCCCC;
+  }
+  
+  /*添加到分组中的最后一个li删除虚线*/
+  .border_none{
+	border-bottom:none !important;  
+  }
+  .feedback-infor {
+			padding-top: 15px;
+	}
+  </style>
+  <script>
+    //业务需求，注释了jq-ui 240行。 event.preventDefault();
+  $(function() {
+  	/*
+  	 *disableSelection  因为他们要拖动，所以尽量设置他们的文字不能选择
+  	 * */
+    $(".mBody ul, .menu_box").sortable({
+      connectWith: ".mBody ul, .menu_box",//允许sortable对象连接另一个sortable对象，可将item元素拖拽到另一个中。  
+      stop: function( event, ui ) {
+        
+      }
+    }).disableSelection();
+
+		
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+
+
+    var mEdt = $('<span class="mEdt"></span>');
+    function fnEdt(mEdt){
+      mEdt.on('click', function(){
+        var _text = $(this).parent()[0].childNodes[0].nodeValue;
+        $(this).parent()[0].childNodes[0].nodeValue = null;
+        $(this).parent().prepend('<input type="text" class="mText" value="'+ _text +'" name="mText"/>');
+		$("input[name=mText]").focus();
+        $(this).parent().append(mChcd);
+        fnChcd(mChcd);
+        $(this).remove();
+      });
+    }
+
+    var mChcd = $('<span class="mChecked"></span>');
+    function fnChcd(mChcd){
+      mChcd.on('click', function(){
+        $(this).parent().html($(this).siblings('input').val()).append(mEdt);
+        fnEdt(mEdt);
+      });
+    }
+    
+
+    
+    $('.mEdt').on('click', function(){
+      var text = $(this).parent()[0].childNodes[0].nodeValue;
+      $(this).parent()[0].childNodes[0].nodeValue = null;
+      $(this).parent().prepend('<input type="text" class="mText" value="'+ text +'">');
+      $(this).parent().append(mChcd);
+      $(this).remove();
+    });
+
+
+    $('.mAdd').on('click', function(){
+      var text = $(this).parent()[0].childNodes[0].nodeValue;
+      $(this).parent().siblings('.mBody').find('ul').append('<li class="mItem">'+ text +'</li>');
+      $(this).parent().html('<input type="text" class="mText" value="分组2">').append(mChcd);
+    });
+	
+    $trash = $( "#trash" );
+    // let the trash be droppable, accepting the gallery items
+    $trash.droppable({
+      accept: ".menu_box > li",
+      activeClass: "state_high",
+      autoRefresh :  false,
+      drop: function( event, ui ) {
+        deleteImage( ui.draggable );
+      }
+    }); 
+		
+
+    $trash2 = $( "#trash2" );
+    // let the trash be droppable, accepting the gallery items
+    $trash2.droppable({
+      accept: ".menu_box > li",
+      activeClass: "state_high_B",
+      drop: function( event, ui ) {
+        deleteImage2( ui.draggable );
+      }
+    });
+
+    var num = 1;
+    function deleteBorder(_id){/*所有border添加虚线，最后一个删除虚线*/
+    	$(_id+" .ui-sortable .mItem").removeClass("border_none");
+	 		$(_id+" .ui-sortable .mItem").last("li").addClass("border_none");
+    }
+   
+    function addWithPadding(_id){
+    	$(_id).eq(0).css("width","148");
+       	//$(_id).css("padding","0");
+    }
+    
+    function deleteImage( $item ) {
+      var text = $item.find('.mTitle').text();
+      $item.remove();
+      //console.log($trash.find(".mEdt").length);
+      addWithPadding("#trash");
+	   
+	  	/*第二次打后的li合并都是进入===========================================*/  
+      if($trash.find(".mEdt").length || $trash.find(".mChecked").length){
+        $("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+					//  alert(1);
+      }else{
+				/*第一次li合并进入===========================================*/  
+        $("<li class='mItem'>"+ $trash.find('.mTitle').text() +"</li>").appendTo($trash.find('ul'));
+        var mEdt_01 = $('<span class="mEdt"></span>');
+        $trash.find('.mTitle').text('分组1').append(mEdt_01);
+        $trash.find('.mTitle').addClass("menu_zb");
+        fnEdt(mEdt_01);
+        num++;
+        $("<li class='mItem'>"+ text +"</li>").appendTo($trash.find('ul'));
+      }
+	 		
+		  deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+      $trash.removeClass('state_high');
+      $trash2.removeClass('state_high_B');
+			//alert(3);
+      $trash.find('ul').sortable({
+    		connectWith: ".mBody ul, .menu_box",
+        stop: function( event, ui ){/*当已经结束选中一个元素时触发此事件*/
+          if(ui.item.parent().hasClass('menu_box')){
+        		var text = ui.item.text();
+            ui.item.text('');
+            ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+						ui.item.removeClass("border_none");
+          }
+		  	deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+      },
+			receive: function(event, ui){ /*当一个已连接的sortable对象接收到另一个sortable对象的元素后触发此事件。*/
+				deleteBorder("#trash");/*所有border添加虚线，最后一个删除虚线*/
+			}
+    	}).disableSelection()
+    }
+
+    function deleteImage2( $item ) {
+      var text = $item.find('.mTitle').text();
+      $item.remove();
+      addWithPadding("#trash2");
+      /*第二次打后的li合并都是进入===========================================*/  
+      if($trash2.find(".mEdt").length || $trash2.find(".mChecked").length){
+       	 	$("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+      }else{
+      	/*第一次li合并进入===========================================*/  
+        $("<li class='mItem'>"+ $trash2.find('.mTitle').text() +"</li>").appendTo($trash2.find('ul'));
+        var mEdt_01 = $('<span class="mEdt"></span>');
+        $trash2.find('.mTitle').text('分组2').append(mEdt_01);
+        $trash2.find('.mTitle').addClass("menu_zb");
+        fnEdt(mEdt_01);
+        num++;
+        $("<li class='mItem'>"+ text +"</li>").appendTo($trash2.find('ul'));
+      }
+      deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+      $trash.removeClass('state_high');
+      $trash2.removeClass('state_high_B');
+
+      $trash2.find('ul').sortable({
+        connectWith: ".mBody ul, .menu_box",
+        stop: function( event, ui ){
+          if(ui.item.parent().hasClass('menu_box')){
+            var text = ui.item.text();
+            ui.item.text('');
+            ui.item.removeClass('mItem').addClass('menu_list ui-sortable-handle').append('<div class="mTitle">'+ text +'</div>');
+            ui.item.removeClass("border_none");
+          }
+          deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+        },
+        receive: function(event, ui){ //当鼠标拖拽移动时，触发此事件。
+					deleteBorder("#trash2");/*所有border添加虚线，最后一个删除虚线*/
+				}
+      }).disableSelection();
+    }
+  });
+  
+   /*我的模板 start*/
+  function wdmb_k(){
+		$(".wdmb_k").removeClass("hide");	
+	}
+	
+	function wdmb_close(){
+		$(".wdmb_k").addClass("hide");
+	}
+   /*我的模板 end*/
+  </script>
+</head>
+<body>
+	<div id="Warp">
+		<!--顶部导航 START-->
+		<div id="phd_common"></div>
+		
+		<!--当前位置 start-->
+		<div class="pbd_tab_current">当前位置：设置一级菜单</div>
+		
+		<div id="phd_context">
+			<!--Tab页签 START-->
+			<div class="tabs-com" style="padding-top: 0px;">
+				<div class="tabs-com-p28">	
+					<a href="dyzfsq_1.html">菜单配置</a>
+					<a href="dyzfsq_2.html" class="current">菜单分组</a>
+				</div>
+			</div>
+			<!--Tab页签 END-->
+			<div class="wdmb" onmouseover="wdmb_k()" onmouseout="wdmb_close()">
+				<div class="wdmb_close"></div>
+				<div class="wdmb_k hide">
+					<p><a href="javascript:void(0);" title="">菜单1模板...</a></p>
+					<p><a href="javascript:void(0);" title="">菜单2模板...</a></p>
+					<p><a href="javascript:void(0);" title="">菜单3模板...</a></p>
+					<p><a href="../menu/wdmb.html" title="">更多</a></p>
+				</div>
+			</div>
+			<div class="main mt27">
+			  <div class="main_box">
+				<ul class="menu_box clearfix">
+				  <li id="trash" class="menu_list">
+					<div class="mTitle">账户信息 </div>
+					<div class="mBody">
+					  <ul>
+
+					  </ul>
+					</div>
+				  </li>
+				  <li id="trash2" class="menu_list">
+					<div class="mTitle">转账业务</div>
+					<div class="mBody">
+					  <ul>
+					  </ul>
+					</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">代发代扣</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">现金管理</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">缴费业务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">票据业务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">国际业务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">信贷融资</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">投资理财</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">电子商务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">财政社保</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">卡类业务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">服务管理</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">特色服务</div>
+				  </li>
+				  <li class="menu_list">
+					<div class="mTitle">信息维护</div>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+			<div class="mt30 text_c">
+					<a id="savesz" class="pbd_btn_standard pbd_btn_w100  mr15">保存设置</a>
+					<a id="savemb" class="pbd_btn_standard pbd_btn_w100  mr15">存为模板</a>
+					<a class="pbd_btn_standard pbd_btn_w100" href="dyzfsq_2.html">还原设置</a>
+			</div>
+			<!--温馨提示 START-->
+			<div class="tip-msg mt15">
+				<div class="pbd_tips_title">温馨提示：</div>
+				<ul>
+					<li>您可以通过拖动菜单实现菜单分组。</li>
+				</ul>
+			</div>
+			<!--温馨提示 END-->
+		</div>
+		
+		<!--右边功能栏-->
+		<div id="fn_menu"></div>
+		<!--底部信息-->
+		<div id="pft_common"></div>
+		<!--返回顶部-->
+		<div id="back_to_top"></div>
+		<!--通用底部悬浮层-->
+		<div id="foot_float"></div>
+	</div>
+	
+	<!--弹窗 start-->
+	<div id="window_blue" class="window_hide hide"></div>
+	<div class="panel window bcsz" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+		
+		<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+			<div class="panel-title">保存设置</div>
+			<div class="panel-tool">
+				<a class="panel-tool-close" href="javascript:void(0)"></a>
+			</div>
+		</div>
+		<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+			<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 20px 10px;"></div>
+			
+			<div class="alert-feedback" style="padding: 0px 40px 20px 137px;">
+				<span class="fail-icon"></span>
+				<div class="feedback-infor"><p style="line-height: 24px;">设置成功，是否保存设置？</p></div>
+			</div>
+			<div class="bnt-con text_c">
+				<span class="pbd_btn_standard pbd_btn_w100" id="saveSettings">确定</span>
+				<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel window mb_1" style="display: none; width: 478px; height: 235px; left: 50%; top: 50%; margin-left: -239px; margin-top: -119.5px; z-index: 9002; position: fixed;">
+		<div class="panel-header panel-header-noborder window-header" style="width: 478px;">
+			<div class="panel-title">存为模板</div>
+			<div class="panel-tool">
+				<a class="panel-tool-close" href="javascript:void(0)"></a>
+			</div>
+		</div>
+		<div id="mbnamewin" title="" class="panel-body panel-body-noborder window-body" style="width: 478px;">
+			<div style="background: url(../../images/CCB_popUp_logo.png) no-repeat; width: 181px; height: 20px; margin: 20px 0 15px 10px;"></div>
+			
+			<div class=" text_c" style="min-height: 65px; padding-bottom: 25px;">
+				<label class="label-style" style="width:130px;">请输入模板名称：</label>
+				<input type="text" class="pbd_input_normal" id="mbname">
+			</div>
+			<div class="bnt-con text_c pb20">
+				<span class="pbd_btn_standard pbd_btn_w100" id="sure_btn">确定</span>
+				<span class="pbd_btn_standard pbd_btn_w100 ml15">取消</span>
+			</div>
+			
+		</div>
+	</div>	
+	<!--弹窗 end-->
+</body>
+	<script type="text/javascript">
+		$(function(){
+			window.parent.nav.refreshHtml(null, 0);/*设置选中的一级菜单*/
+		})
+	</script>
+	<script type="text/javascript">
+	$("#saveSettings").click(function (){
+			window.location.href='dyzfsq_2_B.html';
+		});
+	/*保存设置 start*/
+    $("#savesz").click(function () {
+   	    $(".bcsz").show();
+   	    $(".window_hide").removeClass("hide");
+   	    
+   	    $(".bcsz").find(".panel-tool-close").click(function(){
+			$(".bcsz").hide();
+			$(".window_hide").addClass("hide");
+		})
+   	    
+   	    $(".bcsz").find(".pbd_btn_standard ").click(function(){
+   	    	$(".bcsz").hide();
+			$(".window_hide").addClass("hide");
+   	    })
+    })
+    /*保存设置 end*/
+   
+    //保存模板 start
+	$("#savemb").click(function () {
+			$(".mb_1").show();
+			$(".window_hide").removeClass("hide");
+			
+			$(".mb_1").find(".pbd_btn_standard ").click(function(){
+	   	    	$(".mb_1").hide();
+				$(".window_hide").addClass("hide");
+	   	    })
+			
+			$(".mb_1").find(".panel-tool-close").click(function(){
+				$(".mb_1").hide();
+				$(".window_hide").addClass("hide");
+			})
+	});
+	
+	/*存为模板的确认按钮*/
+		$(".mb_1 #sure_btn").click(function (){
+			var _Val=$("#mbname").val();
+			if(_Val==null||_Val==""){
+				
+			}else{
+					$(".wdmb_k").prepend('<p><a href="javascript:void(0);" title="">'+_Val+'</a></p>');
+					$(".wdmb_k p").eq(3).remove();
+					$("#mbname").val("");
+			}
+		});
+	//  保存模板 end
+</script>
+</html>
