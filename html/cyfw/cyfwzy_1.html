@@ -488,11 +488,11 @@
 						<el-popover v-model="visible" ref="popover" placement="bottom-start" style="padding:0px;"  trigger="click">
 							<div id="addressPopover">
 								<div id="addressHead">
-									<span v-if="shengName" class="valueText shouXing">{{shengName}}</span>
+									<span v-if="shengName" @click="shengDiv=true;chengshiDiv=false;xianDiv=false;" class="valueText shouXing">{{shengName}}</span>
 									<span v-if="chengshiName" class="valueText"><i class="el-icon-arrow-right"></i></span>
-									<span v-if="chengshiName" class="valueText shouXing">{{chengshiName}}</span>
+									<span v-if="chengshiName" @click="shengDiv=false;chengshiDiv=true;xianDiv=false;" class="valueText shouXing">{{chengshiName}}</span>
 									<span v-if="xianName" class="valueText"><i class="el-icon-arrow-right"></i></span>
-									<span v-if="xianName" class="valueText shouXing">{{xianName}}</span>
+									<span v-if="xianName" @click="shengDiv=false;chengshiDiv=false;xianDiv=true;" class="valueText shouXing">{{xianName}}</span>
 									<span class="GuanBiIcon" @click="visible = !visible"><i class="el-icon-close"></i></span>
 								</div>
 								<div id="addressMes" v-show="shengDiv">
