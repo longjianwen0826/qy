@@ -4182,6 +4182,7 @@ window.onload = function(){
             },
             //点击市
             clickShiFunc:function(iitem,iitemName){
+                this.xianName="";//将默认县的值先置空
                 this.chengshiDiv =false;
                 this.xianData = this.cityListData[iitem];
                 this.xianDiv = true;
