@@ -648,7 +648,23 @@
 						<el-col :span="8" v-for="item in matterNameList.slice((currPage-1)*pageSize,currPage*pageSize)">
 							<div class="affairKuang" :tabindex="item.label">
 								<div class="affairKuangNoe">{{item.matterName}}</div>
-								<div class="affairKuangThree">
+								<!-- 网约车平台公司或分公司许可证件补办 -->
+								<div v-if="item.matterName=='网约车平台公司或分公司许可证件补办'" class="affairKuangThree">
+									<span @click="linkFunc('../../html/zxbl/zxbl-wyc.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
+								</div>
+								<!-- 勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核 -->
+								<div v-else-if="item.matterName=='勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核'" class="affairKuangThree">
+									<span @click="linkFunc('../../html/zxbl/zxbl-kckz.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
+								</div>
+								<!-- 市水务局-生产建设项目水土保持设施自主验收报备 -->
+								<div v-else-if="item.matterName=='市水务局-生产建设项目水土保持设施自主验收报备'" class="affairKuangThree">
+									<span @click="linkFunc('../../html/zxbl/zxbl-gcjs.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
+								</div>
+								<!-- 设立社会艺术水平考级机构审批 -->
+								<div v-else-if="item.matterName=='设立社会艺术水平考级机构审批'" class="affairKuangThree">
+									<span @click="linkFunc('../../html/zxbl/zxbl-ysjgsp.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
+								</div>
+								<div v-else class="affairKuangThree">
 									<span class="affairKuangLeft">{{item.fangShiLeft}}</span>
 								</div>
 							</div>

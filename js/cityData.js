@@ -4273,6 +4273,10 @@ window.onload = function(){
         },
         //声明方法
         methods : {
+            //link 页面跳转
+            linkFunc:function(linkAd){
+                window.location.href=linkAd;
+            },
             //搜索
             searchFunc:function(){
                 // debugger
