@@ -4105,7 +4105,7 @@ window.onload = function(){
                 theMattersOne: [			//事项名称选项(全部)，用于循环
                     //信息查询1
                     {label:"1",navigation: 1,screeningBut:1,matterName: '建筑施工企业资质认定（总承包特级、一级及部分专业一级除外）-资质注销',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
-                    {label:"2",navigation: 1,screeningBut:1,matterName: '律师事务所信息查询',site:'公共服务局',fangShiLeft:'公共服务局',fangShiRight:'办事指南'},
+                    {label:"2",navigation: 1,screeningBut:1,matterName: '律师事务所信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                     {label:"3",navigation: 1,screeningBut:1,matterName: '执业律师信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                     {label:"4",navigation: 1,screeningBut:1,matterName: '法律援助机构信息查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},
                     {label:"5",navigation: 1,screeningBut:1,matterName: '仲裁委员会机构查询',site:'公共服务局',fangShiLeft:'在线办理',fangShiRight:'办事指南'},

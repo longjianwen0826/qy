@@ -41,9 +41,9 @@
 		}
 		#addressPopover{
 			width:800px;
-			background:rgba(255,255,255,1);
+			/*background:rgba(255,255,255,1);
 			box-shadow:0px 20px 40px 0px rgba(239,239,239,0.5);
-			border:1px solid rgba(239,239,239,1);
+			border:1px solid rgba(239,239,239,1);*/
 			padding:24px 22px 30px 20px;
 			margin:0px;
 		}
@@ -130,6 +130,10 @@
 			float: left;
 			padding-left: 10px;
 		}
+		#headlineLan{
+			width:100%;
+			padding:0px 20px;
+		}
 		.headline{
 			margin-top:40px;
 			height:60px;
@@ -137,10 +141,8 @@
 			font-size: 26px;
 			font-weight: bold;
 		}
-		#headlineLan{
-			width:100%;
-			height:270px;
-			padding:0px 20px;
+		.firmCard{
+			margin:30px 0px;
 		}
 		.fuWuKuang{
 			width:100%;
@@ -175,9 +177,7 @@
 		}
 		#enterprise{
 			Width:100%;
-			min-height:358px;
-			margin-top:40px;
-			padding:40px 10px 20px 20px;
+			padding:20px 10px 0px 20px;
 			background-color: #F9F9FB;
 		}
 		#enterpriseDaoHang{
@@ -205,12 +205,12 @@
 			width:165px;
 			height:60px;
 			line-height:60px;
-			text-align:center;
+			text-align:left;
 			background-color: white;
 			font-size:18px;
 			border-radius:4px;
 			margin-right:20px;
-			margin-bottom:30px;
+			margin-bottom:15px;
 			cursor:pointer;/*获得鼠标焦点时变成手型箭头*/
 		}
 		.butSizeFalse{
@@ -218,13 +218,13 @@
 			width:165px;
 			height:60px;
 			line-height:60px;
-			text-align:center;
+			text-align:left;
 			color:#999999;
 			background-color: white;
 			font-size:18px;
 			border-radius:4px;
 			margin-right:20px;
-			margin-bottom:30px;
+			margin-bottom:15px;
 		}
 		.butSize:focus{
 			background-color: #0166B1; 
@@ -237,14 +237,22 @@
 			color:white;
 		}
 		.butIcon{
-			width: 22px; 
-			height: 22px;
+			width: 28px; 
+			height: 28px;
+			margin-left:15px;
+			margin-right:0px;
 			vertical-align: middle;/*把此元素放在父类的中部*/
 		}
 		.butIcon_w{
-			width: 22px; 
-			height: 22px;
+			width: 28px; 
+			height: 28px;
+			margin-left:15px;
+			margin-right:0px;
 			display:none;
+			vertical-align: middle;/*把此元素放在父类的中部*/
+		}
+		.butText{
+			margin-left:15px;
 			vertical-align: middle;/*把此元素放在父类的中部*/
 		}
 		.butSize:focus .butIcon{
@@ -263,9 +271,6 @@
 			display:inline-block;	/*显示行内块元素。（CSS2.1 新增的值）*/
 			vertical-align: middle;/*把此元素放在父类的中部*/
 		}
-		.butText{
-			vertical-align: middle;/*把此元素放在父类的中部*/
-		}
 		#affair{
 			width:100%;
 			height:650px;
@@ -277,15 +282,16 @@
 		#affairLan{
 			width:100%;
 			height:40px;
-			margin-top:40px;
-			margin-bottom: 20px;
+			line-height:40px;
+			margin-top:36px;
+			margin-bottom: 36px;
 		}
 		.affairTitle{
+			float:left;
 			width:150px;
 			height:32px;
 			font-size: 26px;
-			font-weight: bold;
-			float:left;
+			/*font-weight: bold;*/
 		}
 		.affairSouSuo{
 			height:40px;
@@ -304,13 +310,18 @@
 			padding:0px;
 			background-color: #0166B1; 
 		}
+		.serveCard{
+			height:500px;
+			margin-top:0px;
+		}
 		.affairKuang{
             position: relative;
 			padding:20px 20px 0px 20px;
-			margin-top:20px;
+			margin-bottom:20px;
 			width:100%;
 			height:150px;
 			background-color: #F9F9FB;
+			border-radius: 3px;
 			cursor:pointer;
 		}
 		/*伪类点击后改变样色，不过需要在此元素中绑定tabindex="1"以此来绑定对应的元素*/
@@ -343,16 +354,11 @@
 			color:white;
 		}
 		.affairKuangNoe{
-			font-size: 22px;
+			font-size: 20px;
 			width:100%;
-			min-height:33px;
+			height:28px;
+			line-height:28px;
 			color: #333333;
-		}
-		.affairKuangTwo{
-			font-size: 14px;
-			width:100%;
-			height:20px;
-			color: #777777;
 		}
 		.affairKuangThree{
 			position: absolute;
@@ -363,7 +369,7 @@
 			height:20px;
 		}
 		.affairKuangLeft{
-			color: #333333;
+			color: #0066B3;
 			padding-left:15px;
 		}
 		.affairKuangRight{
@@ -376,7 +382,7 @@
 			left: 50%;
 			transform: translate(-50%,-50%);/*绝对定位水平居中*/
 			height:20px;
-			margin:40px auto;
+			margin:20px auto 40px auto;
 		}
 		#fenYeLan .active{
 			background-color: #0066B3;
@@ -398,8 +404,8 @@
 		}
 		#advertising{
 			width:100%;
-			height:120px;
-			line-height:120px;
+			height:149px;
+			line-height:149px;
 			text-align: center;
 			background-color: #DFDFDF;
 			margin-bottom:0px;
@@ -453,19 +459,6 @@
 						
 						<!--当前位置 start-->
 						<div class="pbd_tab_current">当前位置：<span style="color:#0066b3">创业服务专区</span></div>
-						
-						<form class="form-inline">
-							<!--<div id="distpicker">
-								<div class="dangQian">
-									<span class="danqian-div">当前: </span>
-									<div class="form-group">
-										<div style="position: relative;">
-											<input id="city-picker3"  class="form-control" readonly type="text" value="江苏省/常州市/溧阳市" data-toggle="city-picker">
-										</div>
-									</div>
-								</div>
-							</div>-->
-						</form>
 
 						<div @click="shengshiquSHfunc" v-popover:popover class="dangQian"><span class="danqian-div">当前: </span>
 							<div class="form-group">
@@ -514,7 +507,7 @@
 						</el-popover>
 					</div>
 					<!--<div class="headline">热门服务</div>-->
-					<el-row style="margin-top: 25px;" :gutter="20">
+					<el-row class="firmCard" :gutter="20">
 						<el-col :span="6">
 							<div class="fuWuKuang fuWuKuang_ka1">
 								<div class="mesTop">企业信用查询</div>
@@ -638,7 +631,7 @@
 						</div>
 					</div>
 				
-					<el-row style="height:520px;" :gutter="20">
+					<el-row class="serveCard" :gutter="20">
 						<el-col :span="8" v-for="item in matterNameList.slice((currPage-1)*pageSize,currPage*pageSize)">
 							<div class="affairKuang" :tabindex="item.label">
 								<div class="affairKuangNoe">{{item.matterName}}</div>
