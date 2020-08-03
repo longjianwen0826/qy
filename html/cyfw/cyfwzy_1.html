@@ -44,14 +44,13 @@
 			background:rgba(255,255,255,1);
 			box-shadow:0px 20px 40px 0px rgba(239,239,239,0.5);
 			border:1px solid rgba(239,239,239,1);
-			padding:0px;
+			padding:24px 22px 30px 20px;
 			margin:0px;
 		}
 		#addressHead{
 			width:100%;
 			padding-bottom:11px;
 			border-bottom:1px solid #E4E9EF;
-			padding:24px 22px 20px 20px;
 		}
 		.valueText{
 			margin-right:9px;
@@ -70,10 +69,8 @@
 		#addressMes{
 			width:100%;
 			float: left;
-			padding:24px 22px 30px 20px;
+			padding:30px 0px 10px 0px;
 			border-bottom:1px solid #E4E9EF;
-			background: rgba(255,255,255,1);
-			
 		}
 		.addressBut{
 			float:left;
@@ -491,7 +488,7 @@
 					</div>
 					<div>
 						<!--/地址对话框-->
-						<el-popover v-model="visible" ref="popover" placement="bottom-start" style="padding:0px;background:#ffffff;"  trigger="click">
+						<el-popover v-model="visible" ref="popover" placement="bottom-start" style="padding:0px;"  trigger="click">
 							<div id="addressPopover">
 								<div id="addressHead">
 									<span v-if="shengName" @click="shengDiv=true;chengshiDiv=false;xianDiv=false;" class="valueText shouXing">{{shengName}}</span>
@@ -511,13 +508,7 @@
 								<div id="addressMes"  v-show="xianDiv">
 									<div class="addressBut"  @click="clickXianFunc(index,item)" v-for="(item,index) in xianData">{{item}}</div>
 								</div>
-								<!--<div id="tiShiMes">
-									您选择的是：{{xuanZeTitle}}
-								</div> -->
-								<!-- <div class="butDiv">
-									<el-button @click="visible = !visible" class="queDingBut" tabindex="1" round>确定</el-button>
-									<el-button @click="visible = !visible" class="quXiaoBut"  round>取消</el-button>
-								</div> -->
+								 
 							</div>
 							
 						</el-popover>
@@ -651,23 +642,7 @@
 						<el-col :span="8" v-for="item in matterNameList.slice((currPage-1)*pageSize,currPage*pageSize)">
 							<div class="affairKuang" :tabindex="item.label">
 								<div class="affairKuangNoe">{{item.matterName}}</div>
-								<!-- 网约车平台公司或分公司许可证件补办 -->
-								<div v-if="item.matterName=='网约车平台公司或分公司许可证件补办'" class="affairKuangThree">
-									<span @click="linkFunc('../../html/zxbl/zxbl-wyc.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
-								</div>
-								<!-- 勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核 -->
-								<div v-else-if="item.matterName=='勘查、开采矿藏和各项建设工程占用或者征收、征用林地审核'" class="affairKuangThree">
-									<span @click="linkFunc('../../html/zxbl/zxbl-kckz.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
-								</div>
-								<!-- 市水务局-生产建设项目水土保持设施自主验收报备 -->
-								<div v-else-if="item.matterName=='市水务局-生产建设项目水土保持设施自主验收报备'" class="affairKuangThree">
-									<span @click="linkFunc('../../html/zxbl/zxbl-gcjs.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
-								</div>
-								<!-- 设立社会艺术水平考级机构审批 -->
-								<div v-else-if="item.matterName=='设立社会艺术水平考级机构审批'" class="affairKuangThree">
-									<span @click="linkFunc('../../html/zxbl/zxbl-ysjgsp.html')" class="affairKuangLeft">{{item.fangShiLeft}}</span>
-								</div>
-								<div v-else class="affairKuangThree">
+								<div class="affairKuangThree">
 									<span class="affairKuangLeft">{{item.fangShiLeft}}</span>
 								</div>
 							</div>

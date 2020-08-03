@@ -4373,8 +4373,8 @@ window.onload = function(){
             },
             //企业导航点击事件
             handleClick() {
-                this.beginTiao=0 	//限制循环数量开始
-                this.endTiao=9		//限制循环数量结尾
+                this.pageSize=9 	//分页每业条数
+                this.currPage=1		//分页当前页
                 if(this.activeName=="first"){
                     this.matterZhanList(1)
                 }else if(this.activeName=="second"){
@@ -4402,31 +4402,10 @@ window.onload = function(){
             },
             //导航下的按钮点击筛选
             butZhanClick:function(numBut){
-                this.beginTiao=0 	//限制循环数量开始
-                this.endTiao=9		//限制循环数量结尾
+                this.pageSize=9 	//分页每业条数
+                this.currPage=1		//分页当前页
                 this.butZhanList(numBut)
             },
-            // //控制分页起始条和结束条
-            // kongZhiBE:function(begin,end,iiitem){
-            //     iiitem = true
-            //     this.beginTiao=begin 	//限制循环数量开始
-            //     this.endTiao=end		//限制循环数量结尾
-            //     iiitem.thisList=true;
-            // },
-            //获取matterNameList数组页数
-            // matterNLLength:function(){
-            //     var listLength=this.matterNameList.length
-            //     if(listLength%9==0){
-            //         this.matterListYeShu=parseInt(listLength/9)
-            //     }else{
-            //         this.matterListYeShu=Math.ceil(listLength/9)
-            //     }
-            //     if(this.matterListYeShu>=1){
-            //         this.matterListYeShu=this.matterListYeShu-1
-            //     }
-            // },
-
-            //分页
             handleSizeChange:function(val){
                 //每页几条
                 this.pageSize=val;
