@@ -316,7 +316,7 @@
 		}
 		.affairKuang{
             position: relative;
-			padding:20px 20px 0px 20px;
+			padding:16px 20px 0px 20px;
 			margin-bottom:20px;
 			width:100%;
 			height:150px;
@@ -369,8 +369,12 @@
 			height:20px;
 		}
 		.affairKuangLeft{
-			color: #0066B3;
 			padding-left:15px;
+		}
+		.affairKuangRight{
+			float:right;
+			color: #0066B3;
+			padding-right:15px;
 		}
 		.affairKuangRight{
 			float:right;
@@ -539,7 +543,7 @@
 			<div id="enterprise">
 				<el-tabs v-model="activeName" id="enterpriseDaoHang" @tab-click="handleClick">
 					<el-tab-pane label="全部" name="first">
-						<div v-for="item in enterpriseMes">
+						<!--<div v-for="item in enterpriseMes">
 							<div class="butSize" @click="butZhanClick(item.label)" v-if="item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
@@ -555,10 +559,30 @@
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-						</div>
+						</div>-->
+							
+						<el-row :gutter="20">
+							<el-col :span="4" v-for="item in enterpriseMes">
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+								<div class="butSizeFalse" v-if="item.isOk==false&&shengName=='广东省'">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="shengName!='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+							</el-col>
+						</el-row>
 					</el-tab-pane>
 					<el-tab-pane label="新办企业" name="second">
-						<div v-for="item in enterpriseMes">
+						<!--<div v-for="item in enterpriseMes">
 							<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
@@ -569,16 +593,34 @@
 								<span class="butText">{{item.butName}}</span>
 							</div>
 
-
 							<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==1&&shengName!='广东省'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-						</div>
+						</div>-->
+						<el-row :gutter="20">
+							<el-col :span="4" v-for="item in enterpriseMes">
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==1&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+								<div class="butSizeFalse" v-if="item.classifyMes==1&&item.isOk==false&&shengName=='广东省'">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==1&&shengName!='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+							</el-col>
+						</el-row>
 					</el-tab-pane>
 					<el-tab-pane label="企业日常" name="third">
-						<div v-for="item in enterpriseMes">
+						<!--<div v-for="item in enterpriseMes">
 							<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
@@ -595,10 +637,30 @@
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-						</div>
+						</div>-->
+						<el-row :gutter="20">
+							<el-col :span="4" v-for="item in enterpriseMes">
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==2&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+								<div class="butSizeFalse" v-if="item.classifyMes==2&&item.isOk==false&&shengName=='广东省'">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+
+
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==2&&shengName!='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+							</el-col>
+						</el-row>
 					</el-tab-pane>
 					<el-tab-pane label="投资项目" name="fourth">
-						<div v-for="item in enterpriseMes">
+						<!--<div v-for="item in enterpriseMes">
 							<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
 								<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
@@ -615,7 +677,27 @@
 								<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
 								<span class="butText">{{item.butName}}</span>
 							</div>
-						</div>
+						</div>-->
+						<el-row :gutter="20">
+							<el-col :span="4" v-for="item in enterpriseMes">
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==3&&item.isOk==true&&shengName=='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+								<div class="butSizeFalse" v-if="item.classifyMes==3&&item.isOk==false&&shengName=='广东省'">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+
+
+								<div class="butSize" @click="butZhanClick(item.label)" v-if="item.classifyMes==3&&shengName!='广东省'" :tabindex="item.label">
+									<el-image class="butIcon" :src="item.butImg" fit="fill"></el-image>
+									<el-image class="butIcon_w" :src="item.butImgTwo" fit="fill"></el-image>
+									<span class="butText">{{item.butName}}</span>
+								</div>
+							</el-col>
+						</el-row>
 					</el-tab-pane>
 				</el-tabs>
 			</div>
@@ -636,7 +718,8 @@
 							<div class="affairKuang" :tabindex="item.label">
 								<div class="affairKuangNoe">{{item.matterName}}</div>
 								<div class="affairKuangThree">
-									<span class="affairKuangLeft">{{item.fangShiLeft}}</span>
+									<span class="affairKuangLeft">{{item.site}}</span>
+									<span class="affairKuangRight">{{item.fangShiLeft}}</span>
 								</div>
 							</div>
 						</el-col>
