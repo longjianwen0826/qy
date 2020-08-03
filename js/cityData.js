@@ -4344,6 +4344,7 @@ window.onload = function(){
             },
             //点击县
             clickXianFunc:function(iitem,iitemName){
+                this.visible = !this.visible
                 this.xianName = iitemName;
                 // this.xianName = this.shengName+this.chengshiName+iitemName
             },
