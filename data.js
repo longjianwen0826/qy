@@ -1,4 +1,4 @@
-$(document).ready(function () {
+//$(document).ready(function () {
     var Chineses = {
         enterpriseMes:[
 
@@ -203,7 +203,7 @@ $(document).ready(function () {
         ],	
     };
 
-    localStorage.setItem('listData', JSON.stringify(Chineses));
-    return Chineses;
+    //localStorage.setItem('listData', JSON.stringify(Chineses));
+    //return Chineses;
 
-});
+//});
